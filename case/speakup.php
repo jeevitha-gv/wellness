@@ -1274,7 +1274,7 @@ First off, this is a secure consulting room and your identity is protected. We u
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
             </a>
-            <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step" onclick="numb()">
+            <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step" >
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
                   <span>5</span> Review 
@@ -2135,10 +2135,15 @@ First off, this is a secure consulting room and your identity is protected. We u
 </body>
 </html>
 
-
-
 <script type="text/javascript">
   function mum(){
+  numb();
+  num();
+}
+</script>
+
+<script type="text/javascript">
+  function num(){
   var test = document.querySelector('input[name=quitetrivial]:checked').value;
   document.getElementById('res1').innerHTML = test;
   var age = document.querySelector('input[name=dryness]:checked').value;
@@ -2360,7 +2365,6 @@ First off, this is a secure consulting room and your identity is protected. We u
            sum=sum+1;    
          } 
   if(f2.checked==true)
-
          {
            sum=sum+1; 
           }
@@ -2420,7 +2424,7 @@ First off, this is a secure consulting room and your identity is protected. We u
          {
            sum=sum+1; 
           }
-         if(n.checked==true)
+ if(n.checked==true)
         {
            sum=sum+1;
         } 
@@ -2428,11 +2432,9 @@ First off, this is a secure consulting room and your identity is protected. We u
          {
            sum=sum+1; 
           }
-        
-         if(o.checked==true)
+  if(o.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1;   
         } 
   if(o2.checked==true)
       {
@@ -2448,8 +2450,7 @@ First off, this is a secure consulting room and your identity is protected. We u
        }
    if(q.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1;    
         } 
  if(q2.checked==true)
       {
@@ -2457,17 +2458,15 @@ First off, this is a secure consulting room and your identity is protected. We u
        }
    if(r.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1; 
         } 
   if(r2.checked==true)
          {
            sum=sum+1; 
-       }
-         if(s.checked==true)
+         }
+  if(s.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1;  
         } 
   if(s2.checked==true)
       {
@@ -2475,17 +2474,15 @@ First off, this is a secure consulting room and your identity is protected. We u
        }
   if(t.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1; 
         }   
  if(t2.checked==true)
           {
            sum=sum+1; 
           }
-         if(u.checked==true)
+ if(u.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1; 
          }  
     if(u2.checked==true)
           {
@@ -2493,8 +2490,7 @@ First off, this is a secure consulting room and your identity is protected. We u
        }
      if(v.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1;  
         }  
      if(v2.checked==true)
         {
@@ -2508,7 +2504,6 @@ First off, this is a secure consulting room and your identity is protected. We u
          {
            sum=sum+1; 
          }
-        
     if(x.checked==true)
         {
            sum=sum+1;   
@@ -2527,8 +2522,7 @@ First off, this is a secure consulting room and your identity is protected. We u
           }
        if(z.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1;  
         }  
       if(z2.checked==true)
          {
@@ -2536,8 +2530,7 @@ First off, this is a secure consulting room and your identity is protected. We u
          }
          if(a1.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1; 
         }   
     if(a3.checked==true)
           {
@@ -2583,15 +2576,14 @@ First off, this is a secure consulting room and your identity is protected. We u
          {
            sum=sum+1; 
           }
-      if(g1.checked==true)
+   if(g1.checked==true)
         {
            sum=sum+1;  
         } 
   if(g3.checked==true)
          {
            sum=sum+1; 
-          }
-              {
+          }  
   if(h1.checked==true)
         {
            sum=sum+1;  
@@ -2607,12 +2599,10 @@ First off, this is a secure consulting room and your identity is protected. We u
     if(i3.checked==true)
          {
            sum=sum+1; 
-          }
-               } 
+          }  
   if(j1.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1; 
         } 
     if(j3.checked==true)
         {
@@ -2636,9 +2626,8 @@ First off, this is a secure consulting room and your identity is protected. We u
        } 
    if(m1.checked==true)
         {
-           sum=sum+1;
-           
-        } 
+           sum=sum+1; 
+    } 
     if(m3.checked==true)
         {
             sum=sum+1; 
@@ -2646,7 +2635,6 @@ First off, this is a secure consulting room and your identity is protected. We u
    if(n1.checked==true)
         {
            sum=sum+1;
-           
         } 
     if(n3.checked==true)
          {
@@ -2661,10 +2649,9 @@ First off, this is a secure consulting room and your identity is protected. We u
       {
            sum=sum+1; 
        } 
-          if(p1.checked==true)
+    if(p1.checked==true)
         {
-           sum=sum+1;
-           
+           sum=sum+1; 
         } 
   if(p3.checked==true)
       {
@@ -2683,10 +2670,7 @@ else if(sum>30)
 { 
   document.getElementById("wlow").value="High";
 }
-else
-{
-   document.write("eror");
-}
+
 
   }
 </script>
@@ -2753,4 +2737,4 @@ $("#details1").show();
 <?php include '../footer.php'; ?>
 
 
-<!-- updated the speakup message -->
+<!-- updated the speakup page for updation-->
