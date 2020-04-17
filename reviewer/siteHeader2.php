@@ -174,9 +174,9 @@ a
                  $.ajax({
                         dataType: "json",
                         type: "POST",
-                        url: "/coronaspeak/login.php"
+                        url: "/wellness/login.php"
                          });
-                 window.location="/coronaspeak/login.php";
+                 window.location="/wellness/login.php";
             }
 </script>
 
