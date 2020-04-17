@@ -348,7 +348,7 @@ else
 <base href="/wellness/">
         <meta charset="utf-8"/>
 
-        <title>wellness</title>
+        <title>Wellness Speak</title>
         <meta name="description" content="Base form control examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -457,8 +457,8 @@ else
         <div class="alert alert-light alert-elevate fade show" role="alert" id="disc">
             <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
             <div class="alert-text">
-            Do not hesitate to share your symptoms about Covid 19 (Corona). Los Angeles County Medical Association will make best effort to reach out through the near by testing center, clinic or hospital based on your criticality.
-You can stay anonymous and choose to followup with us also
+            We are here to help. 
+First off, this is a secure consulting room and your identity is protected. We use the latest technology of Block Chain to provide this completely anonymous way of communicating. Neither your name, nor your telephone number is captured unless you voluntarily provide it. Please save the Speak number and key and should you need to visit us again, you may use them to log in to view your previous report with us.  There will be no trace of your contact with us other than this speak number. Should you choose to use the “Chat to a Wellness Expert” facility, it will connect to our telegram group from where a realtime counsellor team  will be available on call.  How may we help you?
             </div>
         </div>
     </div>
