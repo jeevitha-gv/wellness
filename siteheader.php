@@ -345,7 +345,7 @@ span.psw {
         <a class="nav-link active" href="case/speakup.php" role="tab" style="font-size: 1.2rem;border-bottom:none;">SPEAK</a>
       </li>
       <li class="nav-item" id="hchat">
-        <a class="nav-link" href="https://t.me/joinchat/Ns1370kzYCWjzU-DMM00HA" role="tab" style="font-size: 1.2rem;border-bottom:none;">CHAT</a>
+        <a class="nav-link" href="https://telegra.ph/Wellness-Speak-04-17-3" role="tab" style="font-size: 1.2rem;border-bottom:none;">CHAT</a>
       </li>
       <!-- <li class="nav-item" id="infection">
         <a class="nav-link" href="https://www.coronaspeak.com/coronaspeak/infection_db/infection_records.html" role="tab" style="font-size: 1.2rem;border-bottom:none;">INFECTION DATABASE</a>
