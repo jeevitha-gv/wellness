@@ -12,53 +12,50 @@
                $_SESSION['email']=$email;
            $_SESSION['password']=$password;  
             $_SESSION['last_name']=$name;   
-              $password == 'CoronaSpeak';
-                if(md5($password) == 'aa18ca633f8192787eaef03a9d31187d'){
-              
-               if($_SESSION['email']=='CoronaSpeak@nixwhistle.com'&& $rows['password'] == 'CoronaSpeak')
+              $password == 'wellness';
+               if($_SESSION['email']=='wellness@nixwhistle.com'&& $rows['password'] == 'wellness')
                {
-               
                  // echo "Sucessfully";
-                header("location:/coronaspeak/view/common/overview.php");
+                header("location:/wellness/view/common/overview.php");
                // break;
                }
-             }
+         
 
-               if($_SESSION['email']=='clinic' && $_SESSION['password'] == 'coronaspeak')
+               if($_SESSION['email']=='clinic' && $_SESSION['password'] == 'wellness')
                {
                
                  // echo "Sucessfully";
-                header("location:/coronaspeak/case/clinicview.php");
+                header("location:/wellness/case/clinicview.php");
                // break;
                }
-               if($_SESSION['email']=='testing' && $_SESSION['password'] == 'coronaspeak')
+               if($_SESSION['email']=='testing' && $_SESSION['password'] == 'wellness')
                {
                
                  // echo "Sucessfully";
-                header("location:/coronaspeak/case/testingview.php");
+                header("location:/wellness/case/testingview.php");
                // break;
                }
-                 if($_SESSION['email']=='hospital' && $_SESSION['password'] == 'coronaspeak')
+                 if($_SESSION['email']=='hospital' && $_SESSION['password'] == 'wellness')
                {
                
                  // echo "Sucessfully";
-                header("location:/coronaspeak/case/hospitalview.php");
+                header("location:/wellness/case/hospitalview.php");
                // break;
                }
            else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
                {
                  // echo "Sucessfully";
-                header("location:/coronaspeak/idea/view.php");
+                header("location:/wellness/idea/view.php");
                }
             else if($rows['email']=='investigator@nixwhistle.co'&& $rows['password']=='investigator')
                {
                  // echo "Sucessfully";
-                header("location:/coronaspeak/investigator/view.php");
+                header("location:/wellness/investigator/view.php");
                }
                else if($rows['email']=='reviewer@nixwhistle.co'&& $rows['password']=='reviewer')
                {
                  // echo "Sucessfully";
-                header("location:/coronaspeak/reviewer/reviewerview.php");
+                header("location:/wellness/reviewer/reviewerview.php");
                }
              }
              else
@@ -82,7 +79,7 @@
                if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
                {
                   echo "Sucessfully";
-                header("location:/coronaspeak/case/followup.php?ran=".$rows['ran']);
+                header("location:/wellness/case/followup.php?ran=".$rows['ran']);
                }
              }
            
@@ -95,7 +92,7 @@
                if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
                {
                   echo "Sucessfully";
-                header("location:/coronaspeak/info/followup.php?ran=".$rows['ran']);
+                header("location:/wellness/info/followup.php?ran=".$rows['ran']);
                }
              }
                }
@@ -1134,4 +1131,4 @@ The maps and district information provides latest data on Covid19 infections, de
       </body>
       </html>
 
-      <!-- updated with new requirements SDD-->
+      <!-- updated with footer 18-04-->
