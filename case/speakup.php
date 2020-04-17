@@ -2752,3 +2752,5 @@ $("#details1").show();
 </script>
 <?php include '../footer.php'; ?>
 
+
+<!-- updated the speakup message -->
