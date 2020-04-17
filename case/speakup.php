@@ -2737,4 +2737,4 @@ $("#details1").show();
 <?php include '../footer.php'; ?>
 
 
-<!-- updated the speakup page for updation 18-04-->
+<!-- updated the speakup page for updation 18-04-20-->
