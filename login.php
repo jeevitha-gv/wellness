@@ -13,7 +13,7 @@
            $_SESSION['password']=$password;  
             $_SESSION['last_name']=$name;   
               $password == 'wellness';
-                if(md5($password) == 'aa18ca633f8192787eaef03a9d31187d'){
+                
               
                if($_SESSION['email']=='wellness@nixwhistle.com'&& $rows['password'] == 'wellness')
                {
@@ -22,7 +22,7 @@
                 header("location:/wellness/view/common/overview.php");
                // break;
                }
-             }
+        
 
                if($_SESSION['email']=='clinic' && $_SESSION['password'] == 'wellness')
                {
