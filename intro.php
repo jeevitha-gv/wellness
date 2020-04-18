@@ -1122,4 +1122,4 @@ The maps and district information provides latest data on Covid19 infections, de
       </body>
       </html>
 
-      <!-- updated with footer 18-04-20-->
+      <!-- updated with footer all A-->
