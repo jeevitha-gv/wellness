@@ -106,7 +106,7 @@ include "../php/common/config.php";
   text:'Your Info has been created!',
   type:'success'
   }).then(function() {
-      window.location="/coronaspeak/intro.php";
+      window.location="/wellness/intro.php";
   });
   }
 </script>

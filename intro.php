@@ -106,7 +106,7 @@
 <base href="/wellness/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-       <title>Corona Speak | Coronavirus Prevention and Updated News</title>
+       <title>Emotional Wellness</title>
         <meta name="description" content="Support center home example">
    
 
@@ -379,7 +379,7 @@ width:100%;
   <div class="kt-portlet__body" id="banner">
    <div class="banner-container">
 <div class="heading">
-Speak.Get helps - It get better.
+Speakup.Get help - It gets better.
 </div>
 <div class="sub-heading">
 No matter what's troubling, get the support needed, right here, right now
@@ -445,7 +445,7 @@ How it Works
 <div class="content-container">
 <div class="details-container">
 <span>1</span>
-<span class="details">Self Assess your Corona Symptoms</span>
+<span class="details">Self Assess your Emotional Wellness</span>
 </div>
 <div class="desc">
 If something bothering you feel free to connect with us. We will help you irrespective of any situation.
