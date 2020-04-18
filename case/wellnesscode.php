@@ -30,7 +30,7 @@ if(isset($_POST['submit']))
 <base href="/wellness/"><!--end::Base Path -->
      <meta charset="utf-8"/>
 
-        <title>TN CoronaSpeak</title>
+        <title>Emotional Wellness</title>
         <meta name="description" content="Base form control examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
