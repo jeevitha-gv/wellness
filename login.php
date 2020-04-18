@@ -12,53 +12,53 @@
                $_SESSION['email']=$email;
            $_SESSION['password']=$password;  
             $_SESSION['last_name']=$name;   
-              $password == 'CoronaSpeak';
+              $password == 'wellness';
                 if(md5($password) == 'aa18ca633f8192787eaef03a9d31187d'){
               
-               if($_SESSION['email']=='CoronaSpeak@nixwhistle.com'&& $rows['password'] == 'CoronaSpeak')
+               if($_SESSION['email']=='wellness@nixwhistle.com'&& $rows['password'] == 'wellness')
                {
                
                  // echo "Sucessfully";
-                header("location:/coronaspeak/view/common/overview.php");
+                header("location:/wellness/view/common/overview.php");
                // break;
                }
              }
 
-               if($_SESSION['email']=='clinic' && $_SESSION['password'] == 'coronaspeak')
+               if($_SESSION['email']=='clinic' && $_SESSION['password'] == 'wellness')
                {
                
                  // echo "Sucessfully";
-                header("location:/coronaspeak/case/clinicview.php");
+                header("location:/wellness/case/clinicview.php");
                // break;
                }
-               if($_SESSION['email']=='testing' && $_SESSION['password'] == 'coronaspeak')
+               if($_SESSION['email']=='testing' && $_SESSION['password'] == 'wellness')
                {
                
                  // echo "Sucessfully";
-                header("location:/coronaspeak/case/testingview.php");
+                header("location:/wellness/case/testingview.php");
                // break;
                }
-                 if($_SESSION['email']=='hospital' && $_SESSION['password'] == 'coronaspeak')
+                 if($_SESSION['email']=='hospital' && $_SESSION['password'] == 'wellness')
                {
                
                  // echo "Sucessfully";
-                header("location:/coronaspeak/case/hospitalview.php");
+                header("location:/wellness/case/hospitalview.php");
                // break;
                }
            else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
                {
                  // echo "Sucessfully";
-                header("location:/coronaspeak/idea/view.php");
+                header("location:/wellness/idea/view.php");
                }
             else if($rows['email']=='investigator@nixwhistle.co'&& $rows['password']=='investigator')
                {
                  // echo "Sucessfully";
-                header("location:/coronaspeak/investigator/view.php");
+                header("location:/wellness/investigator/view.php");
                }
                else if($rows['email']=='reviewer@nixwhistle.co'&& $rows['password']=='reviewer')
                {
                  // echo "Sucessfully";
-                header("location:/coronaspeak/reviewer/reviewerview.php");
+                header("location:/wellness/reviewer/reviewerview.php");
                }
              }
              else
@@ -78,7 +78,7 @@
 <base href="/wellness/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>coronaspeak | Login</title>
+        <title>wellness | Login</title>
         <meta name="description" content="Login page example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -160,7 +160,7 @@
 
           <div class="kt-login__head">
           <center><h3 class="kt-login__title" style="color:black;">
- If you are country authority, regulator who are officially handling the cases, information, please apply for login with us for your country data mailing to CoronaSpeak@nixwhistle.com
+ If you are country authority, regulator who are officially handling the cases, information, please apply for login with us for your country data mailing to wellness@nixwhistle.com
 
 </h3></center>
             
