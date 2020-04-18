@@ -96,7 +96,7 @@ if(isset($_POST['submit']))
   text:'Your Info has been created!',
   type:'success'
   }).then(function() {
-      window.location="/tncorona/intro.php";
+      window.location="/wellness/intro.php";
   });
   }
 </script>
