@@ -222,37 +222,31 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
       }
  
 ?>
+
 <?php
-  if(isset($_POST['track']))
-  {
-   $ran=$_POST['ran'];
-    $secretkey=$_POST['secretkey'];
-      $sql="SELECT secretkey,ran FROM `case` where ran='$ran' and secretkey='$secretkey'";
+if(isset($_POST['submit']))
+{
+     $infowellsec=$_POST['infowellsec'];
+     $infowellkey=$_POST['infowellkey'];
+
+     $sql="SELECT infowellsec, infowellkey from wellness where infowellsec='$infowellsec' and infowellkey='$infowellkey'";
      $result=mysqli_query($link,$sql);
-             if($rows=mysqli_fetch_assoc($result))
-             {    
-               if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
-               {
-                  echo "Sucessfully";
-                header("location:/wellness/case/followup.php?ran=".$rows['ran']);
-               }
-             }
-            
-               else
-               {
-                 $sql="SELECT secretkey,ran FROM `info` where ran='$ran' and secretkey='$secretkey'";
-     $result=mysqli_query($link,$sql);
-             if($rows=mysqli_fetch_assoc($result))
-             {    
-               if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
-               {
-                  echo "Sucessfully";
-                header("location:/wellness/info/followup.php?ran=".$rows['ran']);
-               }
-             }
-               }
-  }
+     if($row=mysqli_fetch_assoc($result))
+     {
+         if($row['infowellsec']==$infowellsec && $row['infowellkey']==$infowellkey)
+         {
+             header("location:../case/followup.php?infowellsec=".$row['infowellsec']);
+         }
+     }
+     else
+     {
+         echo "error".$sql.$link->error;
+     }
+}
+
+
 ?>
+
 <?php
 
 if(isset($_POST['sub']))
