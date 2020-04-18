@@ -68,6 +68,29 @@
                }
   }
 ?>
+<?php
+if(isset($_POST['submit']))
+{
+     $infowellsec=$_POST['infowellsec'];
+     $infowellkey=$_POST['infowellkey'];
+
+     $sql="SELECT infowellsec, infowellkey from wellness where infowellsec='$infowellsec' and infowellkey='$infowellkey'";
+     $result=mysqli_query($link,$sql);
+     if($row=mysqli_fetch_assoc($result))
+     {
+         if($row['infowellsec']==$infowellsec && $row['infowellkey']==$infowellkey)
+         {
+             header("location:./case/followup.php?infowellsec=".$row['infowellsec']);
+         }
+     }
+     else
+     {
+         echo "error".$sql.$link->error;
+     }
+}
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -342,4 +365,4 @@
     <!-- end::Body -->
 </html>
 
-<!-- updated with footer all A-->
+<!-- updated with footer all A2-->
