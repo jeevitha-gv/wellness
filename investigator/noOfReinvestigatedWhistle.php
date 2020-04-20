@@ -1,6 +1,7 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM `case` WHERE status='reinvestigate' ORDER BY id DESC";
+    session_start();
+    $query = "SELECT * FROM `wellness` WHERE status='reinvestigate' ORDER BY id DESC";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   

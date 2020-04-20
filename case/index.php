@@ -1,9 +1,10 @@
 <?php
     include "../php/common/config.php";
+    session_start();
       $infowellsec = $_GET['id'];
-    $query = "SELECT * FROM `wellness` WHERE (status='created' and risk='Low') and infowellsec='$infowellsec'";
+    $query = "SELECT * FROM `wellness` WHERE (status='created' and risk='Low') and infowellsec='$infowellsec' or (status='Reported' and risk='Low') and infowellsec='$infowellsec'";
   $result=mysqli_query($link,$query);
-     $query1 = "SELECT * FROM `wellness` WHERE (status='created' and risk='Low') and infowellsec='$infowellsec'";
+     $query1 = "SELECT * FROM `wellness` WHERE (status='created' and risk='Low') and infowellsec='$infowellsec' or (status='Reported' and risk='Low') and infowellsec='$infowellsec'";
   $result2 = mysqli_query($link,$query2);
    if(isset($_POST['submit']))
     {

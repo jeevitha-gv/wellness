@@ -133,11 +133,11 @@
          </div>&nbsp;
 
 
-      <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
+     <!--  <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
           <a href="view/policy/ModuleSelection.php?i=1" class="kt-header__topbar-icon" title="Setup Guide">
            <i class="fa flaticon-globe" style="color: #034EA2"></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
-         </div>&nbsp;
-          <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
+         </div>&nbsp; -->
+   <!--        <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
           <a href="view/common/paymentoverview.php" class="kt-header__topbar-icon" title="Payment">
            <i class="fa flaticon-presentation-1" style="color: #034EA2"></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
 
@@ -145,7 +145,7 @@
 
    </div>
  </div>&nbsp;
-
+ -->
    <div class="kt-header__topbar-item kt-header__topbar-item--langs">
    <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
      <span class="kt-header__topbar-icon" title="Logout" onclick="logout();">

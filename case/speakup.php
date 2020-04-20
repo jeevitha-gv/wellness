@@ -69,161 +69,6 @@ include "../php/common/config.php";
 
 
 <?php
-   $target_dir = "../documents/";
-$target_file = $target_dir . basename($_FILES["Artifacts"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-   if(isset($_POST['submit']))
-   {
-     $category=$_POST['selimg'];
-     
-          $district=$_POST['district'];
-           $Description=htmlspecialchars($_POST['Description']);
-           $name=$_POST['name'];
-           $email=$_POST['email'];
-           $phone=$_POST['phone'];
-               $ran=$_POST['ran'];
-                $secretkey=$_POST['secretkey'];
-                 $status="created";
-                $Artifacts=$_FILES['Artifacts']['name'];
-                $taking_test=$_POST['taking_test'];
-                 $age=$_POST['age'];
-
-                  $gender=$_POST['gender'];
-                  $fever=$_POST['fever'];
-                  $drycough=$_POST['drycough'];
-                   $feelingsmell=$_POST['feelingsmell'];
-
-                 $throatpain=$_POST['throatpain'];
-                  $bodyweak=$_POST['bodyweak'];
-
- $nohunger=$_POST['nohunger'];
-
- $coughrange=$_POST['coughrange'];
-
- $shortness=$_POST['shortness'];
-
- $breathing=$_POST['breathing'];
-
- $drowsy=$_POST['drowsy'];
-
- $chestpain=$_POST['chestpain'];
-
- $weaknessbody=$_POST['weaknessbody'];
-
- $visitedoutside=$_POST['visitedoutside'];
-
- $contactaffect=$_POST['contactaffect'];
-
- $infectedcountry=$_POST['infectedcountry'];
-
- $familycontact=$_POST['familycontact'];
-
- $healthcondition=$_POST['healthcondition'];
-
- $diseasesymptoms=$_POST['diseasesymptoms'];
- $city=$_POST['city'];
- $zipcode=$_POST['zipcode'];
- if($coughrange=="")
- {
-    $heat="low";
-    $sql="INSERT INTO `case`(category,district,Description,name,email,phone,ran,secretkey,Artifacts,status,taking_test,age,gender,fever,drycough,feelingsmell,throatpain,bodyweak,nohunger,coughrange,shortness,breathing,drowsy,chestpain,weaknessbody,visitedoutside,contactaffect,infectedcountry,familycontact,healthcondition,diseasesymptoms,city,zipcode,heat)
-     values('$category','$district','$Description','$name','$email','$phone','$ran','$secretkey','$Artifacts','$status','$taking_test','$age','$gender','$fever','$drycough','$feelingsmell','$throatpain','$bodyweak','$nohunger','$coughrange','$shortness','$breathing','$drowsy','$chestpain','$weaknessbody','$visitedoutside','$contactaffect','$infectedcountry','$familycontact','$healthcondition','$diseasesymptoms','$city','$zipcode','$heat')";
-
-        if(mysqli_query($link,$sql))
-        {
-           
-           if (move_uploaded_file($_FILES["Artifacts"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["Artifacts"]["name"]). " has been uploaded.";
-            }
-              echo "successfully";
-           header("location:casecode.php");
-        }
-
-     
-        }
-        
-     else if($coughrange!=""||$shortness!=""||$breathing!==""||$drowsy!=""||$chestpain!=""||$weaknessbody!="")
-        {
-         $heat="medium";
-    $sql="INSERT INTO `case`(category,district,Description,name,email,phone,ran,secretkey,Artifacts,status,taking_test,age,gender,fever,drycough,feelingsmell,throatpain,bodyweak,nohunger,coughrange,shortness,breathing,drowsy,chestpain,weaknessbody,visitedoutside,contactaffect,infectedcountry,familycontact,healthcondition,diseasesymptoms,city,zipcode,heat)
-     values('$category','$district','$Description','$name','$email','$phone','$ran','$secretkey','$Artifacts','$status','$taking_test','$age','$gender','$fever','$drycough','$feelingsmell','$throatpain','$bodyweak','$nohunger','$coughrange','$shortness','$breathing','$drowsy','$chestpain','$weaknessbody','$visitedoutside','$contactaffect','$infectedcountry','$familycontact','$healthcondition','$diseasesymptoms','$city','$zipcode','$heat')";
-
-        if(mysqli_query($link,$sql))
-        {
-           
-           if (move_uploaded_file($_FILES["Artifacts"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["Artifacts"]["name"]). " has been uploaded.";
-            }
-              echo "successfully";
-           header("location:casecode.php");
-        } 
-        }
-       else if($visitedoutside!=""||$contactaffect!=""||$infectedcountry!=""||$familycontact!=""||$healthcondition!=""||$diseasesymptoms!="")                                 
-        {
-    $heat="high";
-    $sql="INSERT INTO `case`(category,district,Description,name,email,phone,ran,secretkey,Artifacts,status,taking_test,age,gender,fever,drycough,feelingsmell,throatpain,bodyweak,nohunger,coughrange,shortness,breathing,drowsy,chestpain,weaknessbody,visitedoutside,contactaffect,infectedcountry,familycontact,healthcondition,diseasesymptoms,city,zipcode,heat)
-     values('$category','$district','$Description','$name','$email','$phone','$ran','$secretkey','$Artifacts','$status','$taking_test','$age','$gender','$fever','$drycough','$feelingsmell','$throatpain','$bodyweak','$nohunger','$coughrange','$shortness','$breathing','$drowsy','$chestpain','$weaknessbody','$visitedoutside','$contactaffect','$infectedcountry','$familycontact','$healthcondition','$diseasesymptoms','$city','$zipcode','$heat')";
-
-        if(mysqli_query($link,$sql))
-        {
-           
-           if (move_uploaded_file($_FILES["Artifacts"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["Artifacts"]["name"]). " has been uploaded.";
-            }
-              echo "successfully";
-           header("location:casecode.php");
-        }  
-        }
-
-        }
- 
-?>
-<?php
-   $target_dir = "../documents/";
-$target_file = $target_dir . basename($_FILES["Artifacts"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-   if(isset($_POST['login']))
-   {
-     $category=$_POST['info'];
-     
-          $countries1=$_POST['countries1'];
-           $Description1=htmlspecialchars($_POST['Description1']);
-           $name1=$_POST['name1'];
-           $email1=$_POST['email1'];
-           $phone1=$_POST['phone1'];
-               $ran1=$_POST['tipno1'];
-                $secretkey1=$_POST['passkey1'];
-               
-                 $status1="created";
-                $Artifacts1=$_FILES['Artifacts']['name1'];
-
-
- $sql1="INSERT INTO `info` (category,countries,Description,name,email,phone,ran,secretkey,Artifacts,status)
-     values('$category1','$countries1','$Description1','$name1','$email1','$phone1','$ran1','$secretkey1','$Artifacts1','$status1')";
-
-        if(mysqli_query($link,$sql1))
-        {
-           
-           if (move_uploaded_file($_FILES["Artifacts"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["Artifacts"]["name"]). " has been uploaded.";
-            }
-              echo "successfully";
-           header("location:../info/infocode.php");
-        }
-        else
-        {
-           echo "Error: " . $sql1 . "<br>" . $link->error;
-          }
-   
-     
-     
-      }
- 
-?>
-
-<?php
 if(isset($_POST['submit']))
 {
      $infowellsec=$_POST['infowellsec'];
@@ -302,9 +147,11 @@ $trembling=$_POST['trembling'];
 $difficultwork=$_POST['difficultwork'];
 $infowellkey=$_POST['infowellkey'];
 $infowellsec=$_POST['infowellsec'];
-$risk=$_POST['risk'];
-$status="created";
 
+$status="created";
+if($upset=="")
+{
+  $risk="Low";
 $sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
 
 values('$dist','$udetails','$name','$email','$phone','$address','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','created')";
@@ -313,9 +160,35 @@ if(mysqli_query($link,$sql))
          echo "successfully";
          header("location:wellnesscode.php");
 }
+}
+if($nervous!=""||$saddepressed!=""||$impatient!=""||$faintness!=""||$lostinterest!=""||$worthperson!=""||$touchy!=""||$noticeably!=""||$goodreason!="")
+{
+$risk="Medium";
+$sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
+
+values('$dist','$udetails','$name','$email','$phone','$address','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','created')";
+if(mysqli_query($link,$sql))
+{
+         echo "successfully";
+         header("location:wellnesscode.php");
+}
+}
+if($worthwhile1!=""||$winddown!=""||$swallowing!=""||$enjoyment!=""||$physicalexertion!=""||$feltdown!=""||$irritable!=""||$closepanic!=""||$somethingupset!=""||$trivial!=""||$enthusiastic!=""||$interruptions!=""||$nervoustension!=""||$prettyworthless!=""||$intolerant!=""||$terrified!=""||$hopefulabout!=""||$meaningless!=""||$agitated!=""||$panic!=""||$trembling!=""||$difficultwork!="")
+{
+  $risk="High";
+$sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
+
+values('$dist','$udetails','$name','$email','$phone','$address','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','created')";
+if(mysqli_query($link,$sql))
+{
+         echo "successfully";
+         header("location:wellnesscode.php");
+}
+
+}
 else
 {
-   echo "Error".$sql.$link->error;
+
 }
 
 
@@ -666,6 +539,7 @@ First off, this is a secure consulting room and your identity is protected. We u
 
       </div>
      </div>
+
      <div id="details">
             <div class="row">
          <div class="col-md-4 ">
@@ -690,8 +564,7 @@ First off, this is a secure consulting room and your identity is protected. We u
        
    <input type="hidden" name="secretkey" id="secretkey">
           <input type="hidden" name="ran" id="ran">
-
-
+  
 
    <!--              <div class="form-group">
                   <p style="font-size: 20px; font-weight: 500">1. For whom are You taking this test?</p>
@@ -1397,6 +1270,25 @@ First off, this is a secure consulting room and your identity is protected. We u
 
 
 <br>
+  <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500"> How many people living in your home?</p>
+                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yourself" name="family" value="For yourself">
+                    <label for="yourself">one</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="parent" name="family" value="Parent">
+                    <label for="parent">Two</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="spouce" name="family" value="Spouce">
+                    <label for="spouce">Three</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="Child" name="family" value="Child">
+                    <label for="Child">Four</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="someone_else" name="family" value="Someone else">
+                    <label for="someone_else">Five</label><span></span></label><br>
+                </div>
+<br>
 
                 <div id="div0" name="Description" style="display: ;">
             <p style="font-size: 20px; font-weight: 500">Category :</p>
@@ -1936,7 +1828,7 @@ First off, this is a secure consulting room and your identity is protected. We u
                     Your info
                   </div>
                   <div class="kt-wizard-v1__review-content">
-                    <input type="text" name="risk" id="wlow">
+                  
                     <label><b>1. I found myself getting upset by quite trivial things :  </b></label><p id="res1"></p>
                     <label><b>2. I was aware of dryness of my mouth :  </b></label><p id="res2"></p>
                     <label><b>3. I couldn't seem to experience any positive feeling at all :  </b></label><p id="res3"></p>

@@ -1,9 +1,9 @@
 <?php
     include "../php/common/config.php";
-  $query="SELECT * FROM `wellness` where (status='Reported' and risk='Medium') order by id desc";
-  $result=mysqli_query($link,$query);
+    $query = "SELECT * FROM `wellness` where status='permanentlyclosed' order by id desc";
+    $result = mysqli_query($link,$query);
 ?>
-<!DOCTYPE html>     
+<!DOCTYPE html>   
 
 <html lang="en" >
     <!-- begin::Head -->
@@ -11,7 +11,7 @@
 <base href="/wellness/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Reviewer | Case</title>
+        <title>Reviewer | Case Report</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -76,7 +76,6 @@
     .then(data => console.log(data)); //
   </script> -->
 
-
   <?php 
    include 'siteHeader2.php';
 ?>
@@ -89,7 +88,7 @@
 <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-10%;">
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-15%;">
 
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
@@ -104,7 +103,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-
+Idea Lists
 </h3>
 </div>
 
@@ -121,27 +120,42 @@
   <th>District</th>
   <th>Name</th>
   <th>Phone</th>
-    <th>Infection</th>
+   <th>Infection</th>
   <th>Status</th>
   <th>Action</th>
   </tr>
 </thead>
-<?php
-   while ($rows=mysqli_fetch_assoc($result)) {
-     # code...
-?>
+ <?php
+ while($rows=mysqli_fetch_assoc($result)) {
+  ?>
 <tbody>
-  <tr>
    <td><?php echo $rows['infowellsec'];?></td>
-     <td><?php echo $rows['createat'];?></td>
-     <td><?php echo $rows['dist'];?></td>
-      <td><?php echo $rows['name'];?></td>
-       <td><?php echo $rows['phone'];?></td>
-        <td><?php echo $rows['risk'];?></td>
-        
-         <td><button class="btn btn-warning" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
-           <td><button type="button" class="btn btn-primary"><a href="reviewer/testingindex.php?id=<?php echo $rows['infowellsec'];?>" style="color: white;"> Review</a></button></td>
-  </tr>
+   <td><?php echo $rows['createat'];?></td>
+   
+      <td><?php echo $rows['dist'];?></td>
+     <td><?php echo $rows['name'];?></td>
+      <td><?php echo $rows['phone'];?></td>
+     
+       
+       <td>
+        <?php 
+        if ($rows['risk']=="High")
+          {
+            ?>
+            <button class="btn btn-danger" style="border-radius: 50px;height: 20px; padding: 1%;background-color: #F58711;" ><?php echo $rows['risk'];?></button>
+          <?php }
+          ?></td>
+
+      <td>
+
+      <?php
+      if($rows['status']=="permanentlyclosed"){
+        ?>
+       <button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
+     <?php } ?>
+
+</td>
+         <td><a href="reviewer/casereportgenerator.php?id=<?php echo $rows['infowellsec'];?>" class="btn btn-primary">Report</a></td>
 </tbody>
 <?php
 }
