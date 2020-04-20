@@ -120,7 +120,7 @@ List
   <th >Case No</th>
   <th>Created Date</th>
   <th>Category</th>
-  <th>Country</th>
+  <th>District</th>
   <th>Name</th>
   <th>Email</th>
   <th>Status</th>
@@ -131,10 +131,10 @@ List
  while($rows=mysqli_fetch_assoc($result)) {
   ?>
 <tbody>
-  <td><?php echo $rows['ran'];?></td>
+  <td><?php echo $rows['infowellsec'];?></td>
    <td><?php echo $rows['createat'];?></td>
     <td><?php echo $rows['category'];?></td>
-      <td><?php echo $rows['countries'];?></td>
+      <td><?php echo $rows['dist'];?></td>
      <td><?php echo $rows['name'];?></td>
       <td><?php echo $rows['email'];?></td>
       <td>
