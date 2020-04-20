@@ -298,6 +298,7 @@ span.psw {
     <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">ADMIN</button>&nbsp;&nbsp;&nbsp;
             </span> -->
               <span class="kt-header__topbar-icon">
+
        <button class="btn btn-success" onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;">TRACK</button>
             </span>
     </div>
@@ -375,7 +376,9 @@ span.psw {
     <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">ADMIN</button>
             </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
               <span class="kt-header__topbar-icon">
-       <button class="btn btn-success drop"  onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;">TRACK</button>
+                  <button type="button" class="btn btn-success" title="Admin"  onclick="document.getElementById('id01').style.display='block'"style="background: white;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;">Admin</button>&nbsp;
+        
+       <button class="btn btn-success drop"  onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;">Track</button>
             </span>
     </div>
  

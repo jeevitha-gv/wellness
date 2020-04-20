@@ -1,7 +1,4 @@
 <?php
-session_start();
-  
-  $link = mysqli_connect("localhost","root","Admin1234#@","database");
 require_once __DIR__.'/../../php/user/userManager.php';
 $companyId=$_POST['companyId'];
     // error_log("userid".print_r($companyId,true));
@@ -59,7 +56,7 @@ $companyId=$id[0]['id'];
 <base href="/wellness/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Emotional Wellness -Dashboard</title>
+        <title>Wellness-NixWhistle</title>
         <meta name="description" content="Add user example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -105,17 +102,44 @@ $companyId=$id[0]['id'];
  <link href="./assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
  <!-- <link rel="shortcut icon" href="./assets/media/logos/fixnix.png" /> -->
  <!-- <script src="js/superAdmin/userManagement.js"></script> -->
+ <style type="text/css">
+   #shadow
+{
+display: inline-block;
+border-radius: 8px !important;
+  width:90%;
+  margin-left: 80px;
+ 
+}
+@media only screen and (max-width: 767px)
+{
+  #shadow
+{
+display: inline-block;
+
+  border-radius: 8px !important;
+margin-left: -1px;
+width:100%;
+
+
+}
+}
+.shadow{
+  box-shadow:3px 3px 5px 6px #ccc;
+}
+ </style>
+ <link rel="shortcut icon" href="./assets/media/company-logos/speakup1.png" />
     </head>
     <?php
     include '../siteHeader.php';
     ?>
-  <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: #e0d9d9;">
+  <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading kt-container" style="background-color: white;">
 
        
 
       <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper" style="margin-top:-10%;">
 
-<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-container" id="kt_content">
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <!--Begin::App-->
 <div class="kt-grid kt-grid--desktop kt-grid--ver kt-grid--ver-desktop kt-app">
@@ -128,190 +152,154 @@ $companyId=$id[0]['id'];
     <!--Begin:: App Aside-->
     <div class="kt-grid__item kt-app__toggle kt-app__aside" id="kt_user_profile_aside" >
         <!--begin:: Widgets/Applications/User/Profile4-->
-<div class="kt-portlet kt-portlet--height-fluid-">
-    <div class="kt-portlet__body" >
+        <div style="box-shadow:3px 3px 5px 6px #ccc;">
+        <div class="kt-header--fixed" style="background-color:#afd135;height: 6px;" >
+             
+              </div> 
+<div class="kt-portlet kt-portlet--height-fluid- shadow" >
+    <div class="" style="border-bottom:2px solid  #DAD8D7;">
+               <h4 style="text-align: center;color: black;"> User Profile</h4>
+              </div>
+
+    <div class="kt-portlet__body">
         <!--begin::Widget -->
         <div class="kt-widget kt-widget--user-profile-4">
+
             <div class="kt-widget__head">
+
                 <div class="kt-widget__media">
+                    <img class="kt-widget__img kt-hidden-" src="./assets/media/company-logos/speakup1.png" height="50" width="100">
 
-                    <a href="view/common/overview.php"><img src=" ./assets/media/logos/fixnix.png" alt="" width="100px" height="80px" /></a>     <label class="kt-avatar__upload" data-toggle="kt-tooltip" title="Change avatar">
-                                                                <i class="fa fa-pen"></i>
-                                                                <input type="file" name="kt_user_add_user_avatar" style="display: none;">
-                                                            </label>
-
-                </div>                
-                <div class="kt-widget__content">
+                    <div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
+                        JD
+                    </div>
+                </div><br><br>                
+           <!--      <div class="kt-widget__content">
                     <div class="kt-widget__section">
+                        <a href="#" class="kt-widget__username">
+                            Corona Speak                                                              
+                        </a>
+                        
+                      
+                    </div>
+                </div> -->
+            </div>
+           <div class="kt-widget__content">
+                    <div class="kt-widget__section" style="font-size: 14px;color: #393D4C;">
                        
                         <div>                            
-                            <a href="#" class="btn btn-icon btn-circle btn-label-facebook">
-                                <i class="fa flaticon-users-1"></i>
+                            <a href="#" class="btn btn-outline btn-circle btn-icon"style="background-color: #034ea2">
+                                <i class="flaticon-users-1" style="color: #afd135"></i>
                             </a>
                             <i>coronaspeakSpeak</i>
                           </div>&nbsp;
                           <div>
-                            <a href="#" class="btn btn-icon btn-circle btn-label-twitter">
-                                <i class="la la-phone"></i>
+                            <a href="#" class="btn btn-outline btn-circle btn-icon" style="background-color: #034ea2">
+                                <i class="fa fa-phone-alt"style="color: #afd135" ></i>
                             </a>
                             <i>044-24521452</i>
                           </div>&nbsp;
                           <div>
-                            <a href="#" class="btn btn-icon btn-circle btn-label-google">
-                                <i class="fa flaticon2-black-back-closed-envelope-shape"></i>
+                            <a href="#" class="btn btn-outline btn-circle btn-icon" style="background-color: #034ea2">
+                                <i class="fa fa-envelope"style="color: #afd135"></i>
                             </a>
                             <i>coronaspeakSpeak@nixwhistle.com</i>                            
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
         <!--end::Widget -->
     </div>
 </div>
-<!--end:: Widgets/Applications/User/Profile4-->
-        <!--Begin:: Portlet-->
-     
-        <!--end:: Portlet-->
+</div>
     </div>
     <!--End:: App Aside-->
    
     <!--Begin:: App Content-->
-    <div class="kt-grid__item kt-grid__item--fluid kt-app__content">
-        <div class="row">
-            <div class="col-xl-12">
-                <!--begin:: Widgets/Trends-->
-<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
-  <div class="kt-portlet__head kt-portlet__head--noborder">
-    <div class="kt-portlet__head-label">
-       <h3 class="kt-portlet__head-title">
-              Feeds
-         </h3>
-    </div>
-   
-  </div>
-
+    <div class="kt-grid__item kt-grid__item--fluid kt-app__content" >
+<div style="box-shadow:3px 3px 5px 6px #ccc;">
+      
+       <div class="kt-header--fixed" style="background-color:#afd135;height: 6px;">
+             
+              </div>      
+<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid shadow">
+  <div class="" style="border-bottom:2px solid #DAD8D7;">
+               <h4 style="text-align: center;color: black;">Feeds</h4>
+              </div>
                                      
   <div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit">
     <div class="kt-widget4 kt-widget4--sticky">
       <div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
-       <div class="portlet-body" style="overflow-x:scroll;">                                              
+       <div class="portlet-body">                                              
                       <div class="tab-content">
                         <div class="tab-pane active" id="tab_1_1">
-                          <div class="scroller kt-scroll" data-scroll="true" data-height="245" data-mobile-height="200" data-always-visible="1" data-rail-visible1="0" data-handle-color="#FFA130">
+                          <div class="scroller kt-scroll" data-scroll="true" data-height="290" data-mobile-height="200" data-always-visible="1" data-rail-visible1="0" data-handle-color="#FFA130">
                             <ul class="feeds">
                               <?php
+  $link=mysqli_connect("localhost","root","password","database");
 
-  $que="SELECT * from wellness order by id desc ";
+  $que="SELECT * from `wellness` order by id desc ";
   $res=mysqli_query($link,$que);
   while ($row=mysqli_fetch_assoc($res)) {
-  ?>
-                                  <p style="font-size:14px;"><?php echo $row['category'];?> has been created</p>
+  ?>                                    <div class="label label-sm label-success" style="font-size: 14px;color: #393D4C;">
+                                          <a href="#" class="btn btn-outline btn-circle btn-icon"style="background-color: #034ea2;">
+                                <i class="flaticon2-menu-2" style="color: #afd135"></i>
+                            </a>-<?php echo $row['city'];?>-<?php echo $row['name'];?> Case has been submited.
+                                           
+                                        </div><br>
+                                           <span class="kt-widget4__ext">
+                                                <span class="kt-widget4__number" style="font-size:12px; color:blue; float: right;">Just now</span>
+                                              </span>
+                                
                                   <?php
                                 }
                                 ?>
-                              <?php foreach($feeds as $feed){ ?>
-                                <li>
-                                  <div class="col1">                                
-                                    <div class="cont">
-                                      <div class="cont-col1">
-                                        <div class="kt-widget4__item">
-                                        <!-- <div class="label label-sm label-success"> -->
-                                          <i class="btn btn-icon btn-circle btn-label-facebook" style=""><a class="la la-bell"></a></i>
-                                        <!-- </div> -->
-                                      </div>
-                                      <div class="cont-col2">
-                                      <?php if($userRole == 'compliance_author'){ ?>
-                                          <div class="desc" id="feed<?php echo $auditId ?>">New <?php echo $feed['procedure']?>  <?php echo $feed['name']?> is created by <?php echo $feed['last_name'] ?> <?php echo $feed['name'] ?>
-                                      <?php } else if($userRole == 'compliance_reviewer') { ?>
-                                          <div class="desc" id="feed<?php echo $auditId; ?>"> <?php echo $feed['name'];?> is <?php echo $feed['status'];?>                                          
-                                      <?php }
-                                      else if($userRole == 'incident_analyst' || $userRole == 'incident_manager') { ?>
-                                          <div class="desc" id="feed<?php echo $auditId; ?>"> <?php echo $feed['Title'];?> is <?php echo $feed['status'];?> on <?php echo $feed['date_occured'];?> by                                        
-                                      <?php }
-                                      else if($userRole == 'incident_resolver') { ?>
-                                          <div class="desc" id="feed<?php echo $auditId; ?>"> <?php echo $feed['Title'];?> is <?php echo $feed['status'];?> on <?php echo $feed['date_occured'];?> by                                        
-                                      <?php }
-                                      else if($userRole == 'incident_reviewer') { ?>
-                                          <div class="desc" id="feed<?php echo $auditId; ?>"> <?php echo $feed['Title'];?> is <?php echo $feed['status'];?> on <?php echo $feed['date_occured'];?> by                                        
-                                      <?php }
-                                       else {?>
-                                        <div class="desc" id="feed<?php echo $auditId ?>"><?php echo $feedMessage." " ?> <?php echo $feed['last_name'] ?><?php echo $feed['name'] ?>
-                                      <?php } ?>
-
-                                      <?php if($userRole == 'policy_owner'){ ?>
-                                          <div class="desc" id="feed<?php echo $auditId ?>">New <?php echo $feed['procedure']?> - <?php echo $feed['title']?> is created by <?php echo $feed['last_name'] ?> <?php echo $feed['name'] ?>
-                                      <?php } else if($userRole == 'policy_reviewer' || $userRole == 'policy_approver') { ?>
-                                          <div class="desc" id="feed<?php echo $auditId; ?>"> <?php echo $feed['title'];?> is <?php echo $feed['status'];?>                                          
-                                      <?php } else {?>
-                                        <div class="desc" id="feed<?php echo $auditId ?>"><?php echo $feedMessage." " ?> <?php echo $feed['last_name'] ?>     <?php echo $feed['title'] ?>
-                                      <?php } ?>
-                                          <?php if($isAuditor==1){ ?>
-                                            <span class="label label-sm label-info">
-                                             
-                                              <a  <?php if($feed['status']=="create") {?> href="view/audit/auditDoPage.php?auditId=<?php echo $feed['id'] ?>" <?php }?>  <?php if($feed['status']=="prepared") {?> href="view/audit/auditeeDoPage?auditId=<?php echo $feed['id'] ?>" <?php }?> <?php if($feed['status']=="performed") {?> href="view/audit/auditCheckPage.php?auditId=<?php echo $feed['id'] ?>" <?php }?> <?php if($feed['status']=="returned") {?> href="view/audit/auditActPage.php?auditId=<?php echo $feed['id'] ?>" <?php }?>> Take action</a>  <?php } ?>
-                                            </span>
-                                        </div>
-                                      </div>
-                                    </div>                                  
-                                  </div>
-                                  <div class="col2">
-                                      <?php if($userRole == 'policy_owner' || $userRole == 'policy_reviewer' || $userRole == 'policy_approver' || $user_role == 'compliance_author' || $user_role == 'compliance_reviewer'){?>
-                                        <div class="date"><?php echo $feed['date']?></div>
-                                      <?php } else {  ?>
-                                        <span class="kt-widget4__ext">
-                                          <span class="kt-widget4__number kt-font-danger">Just now</span>
-                                        </span>
-                                      <?php } ?>
-                                  </div>
-                                </div>
-                                </li>
-                              <?php
-                            } ?>
+                           
+                            
+                          
                           </div>
                         </div>                        
                       </div>
                     </div>
       </div>      
     </div>        
-  </div>
-</div>
-</div>
- </div>
-</div>
-
+ 
 </div>
  </div>
 </div>
 </div>
 
+</div>
+ </div>
+</div>
+</div>
+<br><br>
 <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper" style="margin-top:-10%;">
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper" style="margin-top:-9%;">
 
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content"style="margin-top:-3%;">
 
 <!-- begin:: Content -->
-<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-
-
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid shadow">
 <div class="kt-portlet">
-<div class="kt-portlet__head kt-portlet__head--lg" style="background-color:#2a5aa8;">
+<div class="kt-portlet__head kt-portlet__head--lg" style="">
 <div class="kt-portlet__head-label">
 <span class="kt-portlet__head-icon">
-<i class="kt-font-brand flaticon2-line-chart"></i>
+<i class="kt-font flaticon2-line-chart" style="color:#034ea2;"></i>
 </span>
 
-<h3 class="kt-portlet__head-title" style="color: white;">
+<h3 class="kt-portlet__head-title">
 District
 </h3>
 
 </div>
-<div>
-  <button class="btn btn-success" style="float: right;"><a href="view/common/addadminuser.php" style="color:white;">Adduser</a></button>
-   <button class="btn btn-danger" style=""><a href="view/common/bulkbusinessunit.php" style="color:white;">Add District</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- 
+<div class="" style="margin-top: 10px;">
+  <button class="btn" style="background-color: #034ea2"><a href="view/common/bulkbusinessunit.php" style="color:white;">Add District</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <button class="btn" style="background-color: #afd135"><a href="view/common/addadminuser.php" style="color:white;">Adduser</a></button>
+   
 </div>
 
 
@@ -323,8 +311,8 @@ District
 <thead>
   <tr>
                     <th>User Id</th>
-                    <th>District</th>
-                                         
+                    <th>Distict Name</th>
+                                     
                    
                     <th>Action</th>
                    
@@ -334,17 +322,16 @@ District
 <tbody>
                       <?php
   
-  // $link = mysqli_connect("localhost","root","Admin1234#@","database");
-  $que="SELECT * from wellness order by id asc ";
+  $que="SELECT * from wellness order by id asc";
   $res=mysqli_query($link,$que);
   while ($row=mysqli_fetch_assoc($res)) {
   ?>
                              
             <td><?php echo $row['id'];?></td>
                     <td><?php echo $row['dist'];?></td>
-                   
+                    
                  
-                      <td><button class="btn btn-primary"><a href="/wellness/view/common/editbulkbussinessunit.php?userId=<?php echo $row['id']; ?>" style="color: white;">Edit</a></button></td>
+                      <td><button class="btn btn-primary" style="background-color: #034ea2;"><a style="color: white;">Edit</a></button></td>
                    </tr>
                    
                   <?php } ?>
@@ -355,13 +342,19 @@ District
 </table>
 <!--end: Datatable -->
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 
 
 
 
 <?php
 include '../sidemenu.php';
-
 
  ?>
         <!-- begin::Global Config(global config for global JS sciprts) -->

@@ -1430,11 +1430,7 @@ public function noOfAssetPublished(){
         $dbOps = new DBOperations();
         return $dbOps->fetchData($sql);
     }
-      public function getAllUsers(){
-          $sql = 'SELECT * FROM user WHERE company_id=7 ORDER BY `id` DESC';
-         $dbOps = new DBOperations();
-        return $dbOps->fetchData($sql);
-    } 
+   
      public function actionitems(){
     $sql='SELECT boardindex.m_no as m_no, boardindex.title as title,count(*) AS count FROM  boardminutes,boardindex WHERE boardminutes.m_no=boardindex.m_no GROUP BY boardminutes.m_no';
     $dbOps=new DBOperations();

@@ -1,4 +1,3 @@
-
 <?php 
 require_once __DIR__.'/../../php/user/userManager.php';
 $companyId=$_POST['companyId'];
@@ -57,7 +56,7 @@ $companyId=$id[0]['id'];
 <base href="/wellness/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Add User| coronaspeak</title>
+        <title>Add User| wellness</title>
         <meta name="description" content="Add user example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -98,12 +97,12 @@ $companyId=$id[0]['id'];
 <link href="./assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
  <link href="./assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
- <link rel="shortcut icon" href="./assets/media/logos/fixnix.png" />
+  <link rel="shortcut icon" href="./assets/media/company-logos/speakup1.png" />
  <script src="js/superAdmin/userManagement.js"></script>
 
  <link href="./assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
 
-        <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
+        <link rel="shortcut icon" href="./assets/media/company-logos/speakup1.png" />
             <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
@@ -127,7 +126,8 @@ function googleTranslateElementInit() {
     }
     .goog-te-banner-frame.skiptranslate {
     display: none !important;
-    } 
+    }
+    .goog-te-combo  { margin: 0; border:1px solid #D5DAD9; border-radius:4px; padding: 5px 0px 5px 35px; background: #fff url(images/google-logo.gif) no-repeat 10px center; -moz-appearance: none; appearance: none; -webkit-appearance: none;width:526px;height:40px; } 
 body {
     top: 0px !important; 
     }
@@ -154,36 +154,36 @@ a
   <?php
   include '../siteHeader.php';
   ?>
-  <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: #e0d9d9;">
+  <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: #F6F5F5;">
 
        
     
 
 
-	
+    
 
 
-	<div class="kt-grid kt-grid--hor kt-grid--root">
-		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
-			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper" style="margin-top: -10%;">
-				
-				<div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
-											<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-							
+    <div class="kt-grid kt-grid--hor kt-grid--root">
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper" style="margin-top: -10%;">
+                
+                <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
+                                            <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+                            
 <!-- begin:: Content -->
-	<div class="kt-container  kt-grid__item kt-grid__item--fluid">
-		<div class="kt-wizard-v4" id="kt_user_add_user" data-ktwizard-state="step-first">
+    <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+        <div class="kt-wizard-v4" id="kt_user_add_user" data-ktwizard-state="step-first">
     <!--begin: Form Wizard Nav -->
     <div class="kt-wizard-v4__nav">
         <div class="kt-wizard-v4__nav-items nav">
             <!--doc: Replace A tag with SPAN tag to disable the step link click -->
             <a class="kt-wizard-v4__nav-item nav-item"  data-ktwizard-type="step" data-ktwizard-state="current">
                 <div class="kt-wizard-v4__nav-body">
-                    <div class="kt-wizard-v4__nav-number">
+                    <div class="kt-wizard-v4__nav-number"style="background-color: #afd135;">
                         1
                     </div>
                     <div class="kt-wizard-v4__nav-label">
-                        <div class="kt-wizard-v4__nav-label-title">
+                        <div class="kt-wizard-v4__nav-label-title" style="color: #034ea2;">
                             Profile
                         </div>
                         <div class="kt-wizard-v4__nav-label-desc">
@@ -194,11 +194,11 @@ a
             </a>
             <a class="kt-wizard-v4__nav-item nav-item"  data-ktwizard-type="step">
                 <div class="kt-wizard-v4__nav-body">
-                    <div class="kt-wizard-v4__nav-number">
+                    <div class="kt-wizard-v4__nav-number"style="background-color: #afd135;">
                         2
                     </div>
                     <div class="kt-wizard-v4__nav-label">
-                        <div class="kt-wizard-v4__nav-label-title">
+                        <div class="kt-wizard-v4__nav-label-title"style="color: #034ea2;">
                             Account
                         </div>
                         <div class="kt-wizard-v4__nav-label-desc">
@@ -209,11 +209,11 @@ a
             </a>
             <a class="kt-wizard-v4__nav-item nav-item"  data-ktwizard-type="step">
                 <div class="kt-wizard-v4__nav-body">
-                    <div class="kt-wizard-v4__nav-number">
+                    <div class="kt-wizard-v4__nav-number"style="background-color: #afd135;">
                         3
                     </div>
                     <div class="kt-wizard-v4__nav-label">
-                        <div class="kt-wizard-v4__nav-label-title">
+                        <div class="kt-wizard-v4__nav-label-title"style="color: #034ea2;">
                             Address
                         </div>
                         <div class="kt-wizard-v4__nav-label-desc">
@@ -224,11 +224,11 @@ a
             </a>
             <a class="kt-wizard-v4__nav-item nav-item"  data-ktwizard-type="step">
                 <div class="kt-wizard-v4__nav-body">
-                    <div class="kt-wizard-v4__nav-number">
+                    <div class="kt-wizard-v4__nav-number"style="background-color: #afd135;">
                         4
                     </div>
                     <div class="kt-wizard-v4__nav-label">
-                        <div class="kt-wizard-v4__nav-label-title">
+                        <div class="kt-wizard-v4__nav-label-title"style="color: #034ea2;">
                             Submission
                         </div>
                         <div class="kt-wizard-v4__nav-label-desc">
@@ -243,7 +243,7 @@ a
  
 
     <div class="kt-portlet">
-         <a href="view/common/bulkinvite.php"><button style="font-size:20px;margin-left: 70%;" class="btn btn-danger"><i class="fa fa-industry"> BulkInvite</i></button></a>
+         
         <div class="kt-portlet__body kt-portlet__body--fit">
             <div class="kt-grid">
                 <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v4__wrapper">
@@ -251,7 +251,10 @@ a
                     <form class="kt-form" id="kt_user_add_form">
                         <!--begin: Form Wizard Step 1-->
                         <div class="kt-wizard-v4__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
-
+                           <!--  <button style="font-size:15px;float:right;background-color:#afd135;border:none;" class="btn btn-danger"><a href="view/common/bulkinvite.php" style="color:white;"> Bulk Invite</a></button> -->
+                           <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="float: right;background-color:#afd135;border:none;font-size:15px;padding:12px;">
+      <a href="view/common/bulkinvite.php" style="color:white;">Bulk Invite</a>   
+    </button>
                             <div class="kt-heading kt-heading--md">User's Profile Details:</div>
                             <div class="kt-section kt-section--first">
                                 <div class="kt-wizard-v4__form">
@@ -268,8 +271,8 @@ a
                                                                 <input type="file" name="kt_user_add_user_avatar">
                                                             </label>
                                                             <span class="kt-avatar__cancel" data-toggle="kt-tooltip" title="Cancel avatar">
-																<i class="fa fa-times"></i>
-															</span>
+                                                                <i class="fa fa-times"></i>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -298,7 +301,7 @@ a
                                                     <label class="col-xl-3 col-lg-3 col-form-label">Email Address</label>
                                                     <div class="col-lg-9 col-xl-9">
                                                         <div class="input-group">
-                                                            <div class="input-group-prepend"><span class="input-group-text"><i class="la la-at"></i></span></div>
+                                                            
                                                             <input type="text" class="form-control" id="email">
                                                         </div>
                                                     </div>
@@ -313,7 +316,7 @@ a
                                                     <label class="col-xl-3 col-lg-3 col-form-label">Phone</label>
                                                     <div class="col-lg-9 col-xl-9">
                                                         <div class="input-group">
-                                                            <div class="input-group-prepend"><span class="input-group-text"><i class="la la-phone"></i></span></div>
+                                                            
                                                             <input type="text" class="form-control" placeholder="Phone" id="phone" aria-describedby="basic-addon1">
                                                         </div>
                                                        
@@ -350,7 +353,7 @@ a
                                                 </div>
                                                 <div class="form-group row">
                                                     <label class="col-xl-3 col-lg-3 col-form-label">Time Zone</label>
-                                                    <div class="col-lg-9 col-xl-9">
+                                                    <div class="col-xl-8 col-lg-8 col-form-label">
                                                         <select class="form-control">
                                                             <option data-offset="-39600" value="International Date Line West">(GMT-11:00) International Date Line West</option>
                                                             <option data-offset="-39600" value="Midway Island">(GMT-11:00) Midway Island</option>
@@ -388,80 +391,80 @@ a
 
                         <!--begin: Form Wizard Step 3-->
                         <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
-							<div class="kt-heading kt-heading--md">Setup Your Address</div>
-							<div class="kt-form__section kt-form__section--first">
-								<div class="kt-wizard-v4__form">
-									<div class="form-group">
-										<label>Address Line </label>
-										<input type="text" class="form-control" id="address1" placeholder="Address Line 1" value="Address Line 1">
-										
-									</div>
-									
-									<div class="row">
-										<div class="col-xl-6">
-											<div class="form-group">
-												<label>Postcode</label>
-												<input type="text" class="form-control" id="postcode" placeholder="Postcode" value="2000">
-												
-											</div>
-										</div>
-										<div class="col-xl-6">
-											<div class="form-group">
-												<label>City</label>
-												<input type="text" class="form-control" id="city" placeholder="City" value="London">
-												
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xl-6">
-											<div class="form-group">
-												<label>State</label>
-												<input type="text" class="form-control" id="state" placeholder="State" value="VIC">
-												
-											</div>
-										</div>
-										<div class="col-xl-6">
-											<div class="form-group">
-											<label>Country:</label>
-											<select name="country" class="form-control" id="country">
-												<option value="">Select</option>
-												<option value="AF">Afghanistan</option>
-												<option value="AX">Åland Islands</option>
-												<option value="AL">Albania</option>
-												<option value="DZ">Algeria</option>
-												<option value="AS">American Samoa</option>
-												<option value="AD">Andorra</option>
-												<option value="AO">Angola</option>
-												<option value="AI">Anguilla</option>
-												<option value="AQ">Antarctica</option>
-												<option value="AG">Antigua and Barbuda</option>
-												<option value="AR">Argentina</option>
-												<option value="AM">Armenia</option>
-												<option value="AW">Aruba</option>
-												<option value="AU" selected="">Australia</option>
-												<option value="AT">Austria</option>
-												<option value="AZ">Azerbaijan</option>
-												<option value="BS">Bahamas</option>
-												<option value="BH">Bahrain</option>
-												<option value="BD">Bangladesh</option>
-												<option value="BB">Barbados</option>
-												<option value="BY">Belarus</option>
-												<option value="BE">Belgium</option>
-												<option value="BZ">Belize</option>
-												<option value="BJ">Benin</option>
-												<option value="BM">Bermuda</option>
-												<option value="BT">Bhutan</option>
-												<option value="BO">Bolivia, Plurinational State of</option>
-												
-									
-											</select>
-										</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+                            <div class="kt-heading kt-heading--md">Setup Your Address</div>
+                            <div class="kt-form__section kt-form__section--first">
+                                <div class="kt-wizard-v4__form">
+                                    <div class="form-group">
+                                        <label>Address Line </label>
+                                        <input type="text" class="form-control" id="address1" placeholder="Address Line 1" value="Address Line 1">
+                                        
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label>Postcode</label>
+                                                <input type="text" class="form-control" id="postcode" placeholder="Postcode" value="2000">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <input type="text" class="form-control" id="city" placeholder="City" value="London">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label>State</label>
+                                                <input type="text" class="form-control" id="state" placeholder="State" value="VIC">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                            <label>Country:</label>
+                                            <select name="country" class="form-control" id="country">
+                                                <option value="">Select</option>
+                                                <option value="AF">Afghanistan</option>
+                                                <option value="AX">Åland Islands</option>
+                                                <option value="AL">Albania</option>
+                                                <option value="DZ">Algeria</option>
+                                                <option value="AS">American Samoa</option>
+                                                <option value="AD">Andorra</option>
+                                                <option value="AO">Angola</option>
+                                                <option value="AI">Anguilla</option>
+                                                <option value="AQ">Antarctica</option>
+                                                <option value="AG">Antigua and Barbuda</option>
+                                                <option value="AR">Argentina</option>
+                                                <option value="AM">Armenia</option>
+                                                <option value="AW">Aruba</option>
+                                                <option value="AU" selected="">Australia</option>
+                                                <option value="AT">Austria</option>
+                                                <option value="AZ">Azerbaijan</option>
+                                                <option value="BS">Bahamas</option>
+                                                <option value="BH">Bahrain</option>
+                                                <option value="BD">Bangladesh</option>
+                                                <option value="BB">Barbados</option>
+                                                <option value="BY">Belarus</option>
+                                                <option value="BE">Belgium</option>
+                                                <option value="BZ">Belize</option>
+                                                <option value="BJ">Benin</option>
+                                                <option value="BM">Bermuda</option>
+                                                <option value="BT">Bhutan</option>
+                                                <option value="BO">Bolivia, Plurinational State of</option>
+                                                
+                                    
+                                            </select>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!--end: Form Wizard Step 3-->
 
                         <!--begin: Form Wizard Step 4-->
@@ -498,10 +501,10 @@ a
                             <div class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
                                 Previous
                             </div>
-                            <div class="btn btn-success btn-md btn-tall btn-wide kt-font-bold " data-ktwizard-type="action-submit" id="managerUserButton" onclick="manageUser()">
+                            <div class="btn btn-md btn-tall btn-wide kt-font-bold " data-ktwizard-type="action-submit" id="managerUserButton" onclick="manageUser()" style="background-color:#afd135;color: white;">
                                 Submit
                             </div>
-                            <div class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="showvalue()">
+                            <div class="btn btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="showvalue()" style="background-color: #034ea2; color: white">
                                 Next Step
                             </div>
                         </div>
@@ -520,7 +523,7 @@ a
 </div>
 </div>
 </div>
-	<div class="kt-grid kt-grid--hor kt-grid--root" style="margin-top: -100px;">
+    <div class="kt-grid kt-grid--hor kt-grid--root" style="margin-top: -100px;">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
@@ -532,20 +535,20 @@ a
 
 
 <div class="kt-portlet">
-<div class="kt-portlet__head kt-portlet__head--lg" style="background-color:#2a5aa8;">
+<div class="kt-portlet__head kt-portlet__head--lg" >
 <div class="kt-portlet__head-label">
 <span class="kt-portlet__head-icon">
-<i class="kt-font-brand flaticon2-line-chart"></i>
+<i class="kt-font flaticon2-line-chart" style="color: #034ea2;"></i>
 </span>
 
-<h3 class="kt-portlet__head-title" style="color: white;">
+<h3 class="kt-portlet__head-title" >
 USER MANAGEMENT
 </h3>
 
 </div>
-<div>
-  <button class="btn btn-success" style="float: right;"><a href="view/common/addadminuser.php" style="color:white;">Add User</a></button>
-   <button class="btn btn-danger" ><a href="view/common/bulkinvite.php" style="color:white;">Bulk Invite</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div><br>
+  <button class="btn" style="float: right;background-color:#afd135;"><a href="view/common/addadminuser.php" style="color:white;">Add User</a></button>
+   <button class="btn" style="background-color: #034ea2;" ><a href="view/common/bulkinvite.php" style="color:white;">Bulk Invite</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   
 </div>
 
@@ -581,7 +584,7 @@ USER MANAGEMENT
                     <td><?php echo $data['created_at'];?></td>
                     <td><?php echo $data['company_id']; ?></td>
                 
-                       <td><button class="btn btn-primary"><a href="/coronaspeak/view/common/edituserprofile.php?userId=<?php echo $data['id']; ?>" style="color: white;">Edit</a></button></td>
+                       <td><button class="btn" style="background-color: #034ea2;"><a href="/coronaspeak/view/common/edituserprofile.php?userId=<?php echo $data['id']; ?>" style="color: white;">Edit</a></button></td>
                        <!-- <td><button class="btn btn-danger"><a href="/freshgrc/view/common/addadminuser.php" style="color: white;">New</a></button></td> -->
                    
                     </tr>
@@ -706,8 +709,8 @@ include '../sidemenu.php';
                             <script src="./assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
       
                             <script src="./assets/js/demo3/pages/crud/datatables/extensions/buttons.js" type="text/javascript"></script>
-		    	   <script src="./assets/js/demo2/scripts.bundle.js" type="text/javascript"></script>
-				<!--end::Global Theme Bundle -->
+                   <script src="./assets/js/demo2/scripts.bundle.js" type="text/javascript"></script>
+                <!--end::Global Theme Bundle -->
 
         
                     <!--begin::Page Scripts(used by this page) -->

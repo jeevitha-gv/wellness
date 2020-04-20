@@ -1,12 +1,15 @@
+
 <!DOCTYPE html>
 
 <html lang="en" >
     <!-- begin::Head -->
     <head>
 <base href="/wellness/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="utf-8"/>
 
-        <title>| Dashboard</title>
+        <title></title>
         <meta name="description" content="Latest updates and statistic charts">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -52,48 +55,20 @@
 <link href="./assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
   <link href="./assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" href="./assets/media/logos/fixnix.png" />
+        <link rel="shortcut icon" href="./assets/media/logos/favicon.ico" />
    
+<style type="text/css">
+  i.fa {
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px #034EA2;
+  padding: 0.5em 0.6em;
 
+}
+
+</style>
     </head>
 
-      <style type="text/css">
-          i.fa {
-          display: inline-block;
-          border-radius: 50%;
-          box-shadow: 0px 0px 2px #034EA2;
-          padding: 0.5em 0.6em;
-
-        }
-
-        </style>
-  <!--  <style type="text/css">
-    .goog-logo-link, .goog-logo-link:link, .goog-logo-link:visited, .goog-logo-link:hover, .goog-logo-link:active{
-        visibility: hidden;
-    }
-    .goog-te-gadget{
-            margin-top: 20px;
-    }
-    #demo1{
-        cursor:pointer;
-    }
-    .goog-te-banner-frame.skiptranslate {
-    display: none !important;
-    }
-body {
-    top: 0px !important;
-    }
- 
-.form-popup {
-  display: none;
-  position: fixed;
- 
-}
-a
-{
-  color: white;
-}
-</style> -->
     <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading"  >
 
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " >
@@ -131,45 +106,63 @@ a
 <!-- end: Header Menu --> <!-- begin:: Header Topbar -->
 <div class="kt-header__topbar">
 
-    <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
+
+   <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
  
 
-           <a href="view/common/project.php" class="kt-header__topbar-icon" title="Project & Task">
-           <i class="kt-menu__link-icon fa flaticon2-analytics-2" style="color: #034EA2;"></i>
-           <span class="kt-hidden kt-hiddenbadge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
-         </div>&nbsp;
-
-
-        <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
-          <a href="view/common/timeline.php" class="kt-header__topbar-icon" title="Timeline">
-           <i class="fa flaticon-chat" style="color: #034EA2;"></i>
+           <a class="kt-header__topbar-icon" title="Business Unit" href="view/common/overview.php"><i class="fa flaticon-calendar-1" style="color: #034EA2"></i>
            <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
          </div>&nbsp;
 
 
-           <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
-              <a href="blower/blowlist.php" class="kt-header__topbar-icon" title="View Whistle">
-               <i class="fa flaticon-list" style="color: #034EA2;"></i>
-               <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
+        <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
+          <a href="view/common/addadminuser.php" class="kt-header__topbar-icon" title="Add User">
+          <i class="fa flaticon2-user" style="color: #034EA2"></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
          </div>&nbsp;
 
-          <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
-         <a href="#" class="kt-header__topbar-icon" title="Notification">
-               <i class="fa flaticon2-bell-alarm-symbol" style="color: #034EA2;"></i>
-               <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
+
+           <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
+              <a href="view/common/project.php" class="kt-header__topbar-icon" title="Project & Task">
+           <i class="kt-menu__link-icon fa flaticon2-analytics-2" style="color: #034EA2"></i>
+           <span class="kt-hidden kt-hiddenbadge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
+         </div>&nbsp;
+   <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
+           <a href="view/common/timeline.php" class="kt-header__topbar-icon" title="Timeline">
+                      <i class="fa flaticon-time" style="color: #034EA2"></i>
+           <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
+         </div>&nbsp;
+
+
+     <!--  <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
+          <a href="view/policy/ModuleSelection.php?i=1" class="kt-header__topbar-icon" title="Setup Guide">
+           <i class="fa flaticon-globe" style="color: #034EA2"></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
+         </div>&nbsp; -->
+   <!--        <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
+          <a href="view/common/paymentoverview.php" class="kt-header__topbar-icon" title="Payment">
+           <i class="fa flaticon-presentation-1" style="color: #034EA2"></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
+
        <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
 
    </div>
  </div>&nbsp;
- <div class="kt-header__topbar-item kt-header__topbar-item--langs">
+ -->
+   <div class="kt-header__topbar-item kt-header__topbar-item--langs">
    <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
      <span class="kt-header__topbar-icon" title="Logout" onclick="logout();">
- <img src="assets/icons/logout.svg" alt="" />
+ <img src="assets/icons/logout.svg">
 </span>
    </div>
 </div>
 
-
+<!-- <div id="google_translate_element"></div> -->
+<!-- <div class="kt-header__topbar-item kt-header__topbar-item--langs">
+   <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+     <span class="kt-header__topbar-icon" title="Logout" onclick="logout();">
+ <img src="./assets/media/icons/logout.svg" alt="" />
+</span>
+   </div>
+</div>
+ -->
 </div>
 
 <!-- end:: Header Topbar -->
@@ -180,7 +173,11 @@ a
 </div>
 
 </div>
-
+<style type="text/css">
+  img {
+    border-radius: 50%;
+  }
+</style>
 
 <script type="text/javascript">
     function logout(){
@@ -282,5 +279,3 @@ a
             </body>
     <!-- end::Body -->
 </html>
-
-<!-- site header updated -->

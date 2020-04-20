@@ -1,6 +1,7 @@
 <?php
-session_start();
+
 include "../php/common/config.php";
+session_start();
     $query = "SELECT * FROM `wellness` WHERE (status='created' and risk='Low') or (status='Reported' and risk='Low') or (status='reinvestigate' and risk='Low') ORDER BY id DESC";
     $result = mysqli_query($link,$query);
 

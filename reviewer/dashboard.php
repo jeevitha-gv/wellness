@@ -1,52 +1,73 @@
 <?php
+   session_start();
     include "../php/common/config.php";
-    $query = "SELECT count(status) as count FROM `case` WHERE status='created' ORDER BY id DESC";
+    $query = "SELECT count(status) as count FROM `wellness` WHERE status='created' ORDER BY id DESC";
     $result = mysqli_query($link,$query);
-      $sql = "SELECT count(status) as count FROM `case` WHERE status='Reported' ORDER BY id DESC";
+      $sql = "SELECT count(status) as count FROM `wellness` WHERE status='Reported' ORDER BY id DESC";
     $result1 = mysqli_query($link,$sql);
-    $sql2 = "SELECT count(status) as count FROM `info` WHERE status='created' ORDER BY id DESC";
+     $sql2 = "SELECT count(status) as count FROM `wellness` WHERE status='closed' ORDER BY id DESC";
     $result2 = mysqli_query($link,$sql2);
-      $sql3 = "SELECT count(status) as count FROM `info` WHERE status='Analyzed' ORDER BY id DESC";
+     $sql3 = "SELECT count(status) as count FROM `wellness` WHERE status='Reported' ORDER BY id DESC";
     $result3 = mysqli_query($link,$sql3);
-    
 ?>
 <!DOCTYPE html>
 <html>
 
+  
+<!DOCTYPE html>
+<html>
+
   <head lang="en">
+        <base href="/wellness/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Reviewer | Dashboard</title>
-    <base href="/wellness/">
-    <script src="https://code.highcharts.com/highcharts.js"></script> 
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css" />
-    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
-    <script type="text/javascript" src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>      
-    <link rel="stylesheet" type="text/css" href="assets/jquery-ui-1.11.4/jquery-ui.css" />    
-    <script src="js/audit/auditManagement.js"></script> 
-    <script src="js/audit/auditByCompliance.js"></script>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-<script src="https://code.highcharts.com/modules/treemap.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-<script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+    <title>wellness | Dashboard</title>
 
-   
+
+ 
+   <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/maps/modules/map.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
-                    
+                   
    <link href="assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
-
+<link rel="shortcut icon" href="./assets/media/company-logos/speakup1.png" />
   </head>
+   <style type="text/css">
+   #shadow
+{
+display: inline-block;
+border-radius: 5px !important;
+box-shadow:3px 3px 3px 3px #CFCFCF;
+  width:90%;
+ 
+ 
+}
+@media only screen and (max-width: 767px)
+{
+  #shadow
+{
+display: inline-block;
+  box-shadow:3px 3px 3px 3px #CFCFCF;
+  border-radius: 5px !important;
+margin-left: -1px;
+width:100%;
 
-    <style>
+
+}
+}
+
+ </style>
+      <style>
 
 
     .tab {
@@ -96,7 +117,7 @@
     .highcharts-credits{
       visibility: hidden;
     }
-    .jqstooltip { 
+    .jqstooltip {
       position: absolute;
       left: 0px;
       top: 0px;
@@ -105,7 +126,7 @@
       background-color: rgba(0,0,0,0.6);
       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;
     }
-     .jqsfield { 
+     .jqsfield {
         color: white;
         font: 10px arial, san serif;
         text-align: left;
@@ -115,25 +136,9 @@
       }
       #chartdiv1 {
         background-color: white;
-       height: 350px;     
+       height: 350px;    
       }
-      #chartdiv2 {
-        height: 350px;
-        background-color: white;
-      }
-      #chartdiv3{
-        background-color: white;
-        height: 620px;      
-      }
-       #chart_4 {
-        height: 620px;
-        background-color: white;
-      }
-      #chart_7
-      {
-        height: 620px;
-        background-color: white; 
-      }      
+       
       #chartdiv1 a, #chartdiv2 a, #chartdiv3 a, #chart_4 a{
       position: absolute;
       text-decoration: none;
@@ -145,13 +150,14 @@
       left: 5px;
       top: 5px;    
     }
-    
+   
       </style>
-      <?php 
-        include 'siteHeader2.php';
+ 
+      <?php
+        include '../case/siteHeader2.php';
 
       ?>
-       <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: #E2E2DD;">
+       <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: #F6F5F5;">
        <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
@@ -166,8 +172,8 @@
 <div class="row">
   <div class="col-md-3">
 
-    <a href="/wellness/reviewer/noOfNewWhistle.php" style="color: #5D4E4F;">
-    <label style="border: 1px #ffffff; background-image: linear-gradient(to right,#F5FCFF, #DBF3FA, #B7E9F7, #92DFF3, #7AD7F0); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;  ">
+    <a href="/wellness/investigator/noOfPlan.php" style="color: #5D4E4F;">
+    <label style="border: 1px #ffffff;width: 100%; height: 150px; padding-left: 10%; padding-top: 12%;background-color:white;" id="shadow">
       <span class="kt-widget17__icon">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--brand">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -177,22 +183,22 @@
             </g>
         </svg> </span>
         <br><br>
-                             <?php
+                     <?php
  if($rows=mysqli_fetch_assoc($result)) {
-  ?> 
-      <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 16px;">
-          New Case
-      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ?>
+      <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
+          New wellness
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
-        <?php
+      <?php
     }
     ?>
     </label>
   </a>
   </div>
   <div class="col-md-3">
-     <a href="/wellness/reviewer/noOfInvestigatedWhistle.php" style="color: #5D4E4F;">
-    <label style="border: 1px #ffffff;background-image: linear-gradient(to right,#B08D57, #9C7A3C, #895E1A, #804A00); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;  ">
+     <a href="/wellness/investigator/noOfInvestigatedWhistle.php" style="color: #5D4E4F;">
+    <label style="border: 1px #ffffff;width: 100%; height: 150px; padding-left: 10%; padding-top: 12%;background-color:white;" id="shadow">
       <span class="kt-widget17__icon">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -202,13 +208,14 @@
             </g>
         </svg> </span>
         <br><br>
-          <?php
+                             <?php
  if($rows=mysqli_fetch_assoc($result1)) {
-  ?> 
-      <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 16px;">
-          Investigated Info
-      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count']; ?></span>
+  ?>
+      <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
+          Investigated wellness
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
     }
     ?>
@@ -216,8 +223,8 @@
   </a>
   </div>
   <div class="col-md-3">
-    <a href="/wellness/reviewer/noOfNewIdea.php" style="color: #5D4E4F;">
-    <label style="border: 1px #ffffff;background-image: linear-gradient(to right,#ED81EE, #DE6DF1, #C74EF4, #AF2EFA); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;  ">
+    <a href="/wellness/investigator/noOfReinvestigatedWhistle.php" style="color: #5D4E4F;">
+    <label style="border: 1px #ffffff;width: 100%; height: 150px; padding-left: 10%; padding-top: 12%;background-color:white;" id="shadow">
       <span class="kt-widget17__icon">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--warning">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -227,13 +234,13 @@
             </g>
         </svg> </span>
         <br><br>
-          <?php
- if($rows=mysqli_fetch_assoc($result2)) {
-  ?>
-      <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 16px;">
-          New Case
-      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count']; ?></span>
+                                    <?php
+ if($rows=mysqli_fetch_assoc($result3)) {
+  ?>  
+      <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
+          Reinvestigated Info
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
     }
     ?>
@@ -242,8 +249,8 @@
   </a>
   </div>
   <div class="col-md-3">
-    <a href="/wellness/reviewer/noOfAnalystIdea.php" style="color: #5D4E4F;">
-    <label style="border: 1px #ffffff; background-color: #af8c9d;background-image: linear-gradient(315deg, #af8c9d 0%, #8cacac 74%); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;">
+    <a href="/wellness/investigator/noOfDueFollowup.php" style="color: #5D4E4F;">
+    <label style="border: 1px #ffffff;width: 100%; height: 150px; padding-left: 10%; padding-top: 12%;background-color:white;" id="shadow">
       <!-- background color -->
       <!-- background-color: #bdd4e7; background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%); -->
      <span class="kt-widget17__icon">
@@ -255,14 +262,14 @@
             </g>
         </svg> </span>
         <br><br>
-                    <?php
- if($rows=mysqli_fetch_assoc($result3)) {
-  ?>
-      <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 16px;">
-         Analyst Idea
-      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count']; ?></span>
-      <?php 
+                                              <?php
+ if($rows=mysqli_fetch_assoc($result2)) {
+  ?>  
+      <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
+          Due for Followup
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
+      <?php
     }
     ?>
     </label>
@@ -272,170 +279,288 @@
 <br>
 
 
-
 <div class="row">
-  <div class="col-md-12">
-
+<div class="col-md-12">
+        <!--begin:: Widgets/Trends-->
 <div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
 <div class="kt-portlet__head kt-portlet__head--noborder">
 <div class="kt-portlet__head-label">
   <h3 class="kt-portlet__head-title">
-       Case Category
+   Wellness Heat
       </h3>
 </div>
 </div>
 <div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
 <div class="kt-widget4 kt-widget4--sticky">
 <div class="kt-widget4__chart">
+
+<div id="chartdiv1" class="display-none" style="display: block;height: 600px;width: 100%;"></div>
+
 <div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
-  <div>
-    <a href="reviewer/noOfWhistleCategory.php">
-  <div id="chartdiv1" style="display: block;height: 600px;width: 100%;"></div></a>
-</div>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-
 <div class="kt-widget4__item">
-  <script> 
+</div>
+</div>  
+</div>
+</div>
 
-  $(document).ready( function() {
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+        <!--begin:: Widgets/Trends-->
+<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
+<div class="kt-portlet__head kt-portlet__head--noborder">
+<div class="kt-portlet__head-label">
+  <h3 class="kt-portlet__head-title">
+    Wellness Category
+      </h3>
+</div>
+</div>
+<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
+<div class="kt-widget4 kt-widget4--sticky">
+<div class="kt-widget4__chart">
 
-            $.ajax({
-              type:"POST",
-              dataType: "json",
-              url: "case/json.php",
-              data:"",
-              success:category
-            }); 
-          });
+<div id="chartdiv2" class="display-none" style="display: block;height: 600px;width: 100%;"></div>
 
-            function category(data){
+<div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
+<div class="kt-widget4__item">
+</div>
+</div>  
+</div>
+</div>
 
-   //console.log(data);
-  var chartData=[];
-for(i=0;i<data.length;i++)
-{
-  if(data[i].category=="infection")
-     {
-    chartData.push({"name":data[i].createat,"y":parseInt(data[i].count),"value":data[i].category,"color":"#D98668"});
-      }
-       if(data[i].category=="Possibleinfection")
-     {
-    chartData.push({"name":data[i].createat,"y":parseInt(data[i].count),"value":data[i].category,"color":"#AEBFC3"});
-      }
-    }
-      console.log(chartData);
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
 
-Highcharts.chart('chartdiv1', {
-    chart: {
-        type: 'heatmap',
-        inverted: true
-    },
-
-    // data: {
-    //     csv: document.getElementById('csv').innerHTML
-    // },
-
-    title: {
-        text: '',
-        align: 'left'
-    },
-
-    subtitle: {
-        text: '',
-        align: 'left'
-    },
-
-    // xAxis: {
-    //     tickPixelInterval: 50,
-    //     min: Date.UTC(2019, 5, 1),
-    //     max: Date.UTC(201, 5, 30)
-    // },
-
-    yAxis: {
-        title: {
-            text: null
-        },
-        labels: {
-            format: '{value}:'
-        },
-        minPadding: 0,
-        maxPadding: 0,
-        startOnTick: true,
-        endOnTick: true,
-        tickPositions: [1],
-        tickWidth: [1,2],
-        min: 0,
-        max: 80
-    },
-
-    // colorAxis: {
-    //     stops: [
-    //         [0, '#3060cf'],
-    //         [1, '#fffbbc'],
-    //         [4, '#c4463a']
-    //     ],
-    //     min: -5
-    // },
-  tooltip: {
-            headerFormat: '<br/>',
-            pointFormat: '{point.name:%Y-%m-%d %H:%M} {point.y}:00: <b>{point.value} </b>'
-        },
-   "series": [{
-        name:'case',
-        colorByPoint: true,
-        data:chartData,
-        // one day
+ <script type="text/javascript">
       
-    }]
+  Highcharts.chart('chartdiv1', {
+
+    chart: {
+            type: 'heatmap',
+            marginTop: 40,
+            marginBottom: 40,
+
+},
+
+        plotOptions: {
+            heatmap: {
+                allowPointSelect: true
+            }
+        },
+
+        title: {
+            text: ''
+        },
+
+        xAxis: {
+            categories: ['Extreme', 'High', 'Medium', 'Low', 'Negligible']
+        },
+
+        yAxis: {
+            categories: ['Remote', 'Unlikely', 'Possible', 'Likely', 'Propable'],
+            title: null
+        },
+
+        colorAxis: {
+            min: 0,
+            minColor: '#FFFFFF',
+            maxColor: Highcharts.getOptions().colors[0]
+        },
+
+        legend: {
+            align: 'right',
+            layout: 'vertical',
+            margin: 0,
+            verticalAlign: 'top',
+            y: 25,
+            symbolHeight: 520
+        },
+
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> <br><b>' + this.point.value + '</b> People on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>';
+            }
+        },
+   
+
+
+        series: [{
+            name: '',
+            borderWidth: 1,
+            drilldown: true,
+            data: [{
+                x: 0,
+                y: 0,
+                value: '5',
+                color:'#83B8F8',
+             
+                drilldown: 'foo'
+            }, {
+                x: 0,
+                y: 1,
+                value: '2',
+                 color:'#D7E8FB'
+            }, {
+                x: 0,
+                y: 2,
+                value: '',
+                 color:'#83B8F8'
+               
+            }, {
+                x: 0,
+                y: 3,
+                value: '3',
+                 color:'#D7E8FB'
+               
+            }, {
+                x: 0,
+                y: 4,
+                value: '1',
+                 color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 1,
+                y: 0,
+                value: '' ,
+                color:'#D7E8FB'
+             
+            }, {
+                x: 1,
+                y: 1,
+                value: '2',
+                 color:'#83B8F8'
+            }, {
+                x: 1,
+                y: 2,
+                value: '',
+                 color:'#D7E8FB'
+            }, {
+                x: 1,
+                y: 3,
+                value: '',
+                 color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 1,
+                y: 4,
+                value:'4' ,
+                color:'#D7E8FB'
+            }, {
+                x: 2,
+                y: 0,
+                value: '1',
+                color:'#83B8F8'
+            }, {
+                x: 2,
+                y: 1,
+                value: '3',
+                color:'#D7E8FB'
+            }, {
+                x: 2,
+                y: 2,
+                value: '',
+                 color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 2,
+                y: 3,
+                value: '',
+                 color:'#D7E8FB'
+            }, {
+                x: 2,
+                y: 4,
+                value: '' ,
+                color:'#83B8F8'
+            }, {
+                x: 3,
+                y: 0,
+                value: '5',
+                color:'#D7E8FB'
+            }, {
+                x: 3,
+                y: 1,
+                value: '2',
+                 color:'#83B8F8'
+            }, {
+                x: 3,
+                y: 2,
+                value: '',
+                 color:'#D7E8FB',
+                drilldown: 'foo'
+            }, {
+                x: 3,
+                y: 3,
+                value: '3',
+                 color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 3,
+                y: 4,
+                value: '',
+                 color:'#D7E8FB'
+            }, {
+                x: 4,
+                y: 0,
+                value: '4',
+                color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 4,
+                y: 1,
+                value: '4',
+                color:'#D7E8FB'
+            }, {
+                x: 4,
+                y: 2,
+                value: '',
+                color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 4,
+                y: 3,
+                value: '5' ,
+                 color:'#D7E8FB'
+            }, {
+                x: 4,
+                y: 4,
+                value: '6',
+                color:'#83B8F8'
+            }],
+            dataLabels: {
+                enabled: true,
+                color: 'black',
+                style: {
+                    textShadow: 'none',
+                    HcTextStroke: null
+                }
+            }
+        }],
+
+        drilldown: {
+            series: []
+        }
+
+ 
 });
-}
+   
 
- </script>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+      </script>
 
 
-
-</div>
-<div class="row">
-  <div class="col-md-12">
-
-<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
-<div class="kt-portlet__head kt-portlet__head--noborder">
-<div class="kt-portlet__head-label">
-  <h3 class="kt-portlet__head-title">
-       Info Category
-      </h3>
-</div>
-</div>
-<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
-<div class="kt-widget4 kt-widget4--sticky">
-<div class="kt-widget4__chart">
-<div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
-  <div>
-    <a href="reviewer/noOfWhistleCategory.php">
-  <div id="chartdiv2" style="display: block;height: 600px;width: 100%;"></div></a>
-</div>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-
-<div class="kt-widget4__item">
   <script type="text/javascript">
       Highcharts.chart('chartdiv2', {
          chart: {
@@ -444,7 +569,7 @@ Highcharts.chart('chartdiv1', {
             enabled: true,
             alpha: 15,
             beta: 15,
-            depth: 50,
+            depth: 100,
             viewDistance: 25
         }
     },
@@ -453,11 +578,11 @@ Highcharts.chart('chartdiv1', {
         enabled: false
     },
     xAxis: {
-      categories: ["Accountting & Other Financial Impropriety", "Bribery or Corruption", "Money Laundering", "Sanctions", "Theft/Fraud", "Health and Safety"],
+      categories: ["Anxiety", "Depression", "Stress", "SelfEsteem", "Interruptions", "Health and Safety"],
     },
     plotOptions: {
         series: {
-            depth: 25,
+            depth: 10,
             colorByPoint: true
         }
     },
@@ -469,26 +594,7 @@ Highcharts.chart('chartdiv1', {
 });
     </script>
 
- </script>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
-
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
 <?php 
 include "sidemenu.php";
  ?>

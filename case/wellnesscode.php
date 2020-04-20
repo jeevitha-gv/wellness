@@ -22,25 +22,27 @@ if(isset($_POST['submit']))
 
 
 ?>
+<!DOCTYPE html>
 
-
- <!DOCTYPE html>
 <html lang="en" >
- <head><!--begin::Base Path (base relative path for assets of this page) -->
+    <!-- begin::Head -->
+    <head><!--begin::Base Path (base relative path for assets of this page) -->
 <base href="/wellness/"><!--end::Base Path -->
-     <meta charset="utf-8"/>
+        <meta charset="utf-8"/>
 
-        <title>Emotional Wellness</title>
-        <meta name="description" content="Base form control examples">
+        <title></title>
+        <meta name="description" content="Wizard examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
         <!--begin::Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">        <!--end::Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">        <!--end::Fonts -->
+
+        
+                    <!--begin::Page Custom Styles(used by this page) -->
+                             <link href="./assets/css/demo2/pages/wizard/wizard-1.css" rel="stylesheet" type="text/css" />
+                        <!--end::Page Custom Styles -->
+        
         <!--begin:: Global Mandatory Vendors -->
-        <!--begin::Page Custom Styles(used by this page) -->
-          <link href="./assets/css/demo2/pages/wizard/wizard-1.css" rel="stylesheet" type="text/css" />
-                     <link href="assets/css/demo2/pages/support-center/home-2.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 <!--end:: Global Mandatory Vendors -->
 
@@ -76,18 +78,15 @@ if(isset($_POST['submit']))
 <!--end:: Global Optional Vendors -->
 
 <!--begin::Global Theme Styles(used by all pages) -->
-                   
+                    
                     <link href="./assets/css/demo2/style.bundle.css" rel="stylesheet" type="text/css" />
-
-                    <!-- <link href="./assets/css/demo2/style.bundle.css" rel="stylesheet" type="text/css" /> -->
                 <!--end::Global Theme Styles -->
 
         <!--begin::Layout Skins(used by all pages) -->
                 <!--end::Layout Skins -->
 
- <link rel="shortcut icon" href="assets/media/logos/fixnix.png" />
-<?php include '../siteheader.php';?>
-</head>
+        <link rel="shortcut icon" href="./assets/media/logos/favicon.ico" />
+    </head>
 <script type="text/javascript">
   function closeWin()
   {
@@ -96,17 +95,20 @@ if(isset($_POST['submit']))
   text:'Your Info has been created!',
   type:'success'
   }).then(function() {
-      window.location="/wellness/intro.php";
+      window.location="/coronaspeak/intro.php";
   });
   }
 </script>
+<?php
+  include "../siteheader.php";
+?>
 
-  <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading"> <br><br>
+  <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: white;"> <br><br>
 
 
 <?php
 
-$sql = "SELECT `infowellkey`,`infowellsec` from `wellness` order by id DESC limit 1";
+$sql = "SELECT `infowellkey`,`infowellsec`,`risk` from `wellness` order by id DESC limit 1";
 $result = mysqli_query($link, $sql);
 if (mysqli_num_rows($result) > 0) {
 
@@ -114,35 +116,88 @@ if (mysqli_num_rows($result) > 0) {
 {
 
 ?>
-<div class="container">
-<button type="button" class="btn btn-danger" onclick="closeWin()" style="float: right;">Close</button>
-</div>
-<div class="container">
+<!-- <div class="container">
+  <button type="button" class="btn btn-succcess" style="background-color: #afd135;"  onclick="document.getElementById('view').style.display='block'">View</button>
+<button type="button" class="btn btn-info" onclick="closeWin()" style="background-color: #034ea2;float: right;">Close</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-          <div class="container" style="padding-left: 20%;">
+</div>
+<div id="view" class="modal">
+ 
+  <form class="modal-content" action="" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('view').style.display='none'" class="close" title="Close Modal">&times;</span>
+     <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+    <!-- </div> -->
+
+ <!--    <div class="container" style="line-height:350%;text-align: center;">
+      <label for="email" style=" font-size: 1.2rem;"  ><i class="fa fa-user-nurse" style="background-color:#034ea2;font-size: 30px;border-radius: 50px;color: white;"><b>Infection Meter</b></i></label>
+      <br>
+      <?php if($row['risk']=="low")
+      {
+        ?>
+         <button class="btn" style="color: white;background-color: #F9D304;border-radius: 150px;"><?php echo $row['risk'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-Stay home;Worse- get hospital.</span>
+<?php } ?>
+      <?php if($row['risk']=="medium")
+      {
+        ?>
+         <button class="btn" style="color: white;background-color: #F58711;border-radius: 150px;"><?php echo $row['risk'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor ; Self isolate in home.</span>
+<?php } ?>
+          <?php if($row['risk']=="high")
+      {
+        ?>
+         <button class="btn" style="color: white;background-color: #FA2E00;border-radius: 150px;"><?php echo $row['risk'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor immediately, get covid19 test</span>
+<?php } ?>
+        
+
+        </div>
+
+
+  </form>
+</div> -->
+<div class="container" style="border:2px solid gray; box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;">
+
+          <div class="container" >
          
             <div>
 <!--                 <div class="" style="text-align: center;font-size: 20px;"><strong>WhistleBlower - Remember this is for future use</strong></div> -->
-              <div class="modal-body">
+              <div class="modal-body" style="text-align: center;">
+                  <label style="font-size: 20px;"><b>Infection Meter</b></label><br>
+      <br>
+      <?php if($row['risk']=="Low")
+      {
+        ?>
+         <button class="btn" style="color: white;background-color: #F9D304;border-radius: 150px;"><?php echo $row['risk'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-Stay home;Worse- get hospital.</span>
+<?php } ?>
+      <?php if($row['risk']=="Medium")
+      {
+        ?>
+         <button class="btn" style="color: white;background-color: #F58711;border-radius: 150px;"><?php echo $row['risk'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor ; Self isolate in home.</span>
+<?php } ?>
+          <?php if($row['risk']=="High")
+      {
+        ?>
+         <button class="btn" style="color: white;background-color: #FA2E00;border-radius: 150px;"><?php echo $row['risk'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor immediately, get covid19 test</span>
+<?php } ?>
+        
                <div class="form-group">
                 <label style="font-size: 20px;"><b>Speak Number</b></label><br>
-                <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color:black;font-size: 36px;"><?php echo substr($row['infowellsec'], 0, 4) . "  " . substr($row['infowellsec'], 4, 4) . "  " . substr($row['infowellsec'],8,4) . "  " . substr($row['infowellsec'], 12, 4);?></span>
-                <!-- <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color: #ffffff;font-size: 36px;"><?php echo  $row['ran'];?></span> -->
-                <input type="text" id="copy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['infowellsec']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color:black;font-size: 36px;"><?php echo substr($row['infowellkey'], 0, 4) . "  " . substr($row['infowellkey'], 4, 4) . "  " . substr($row['infowellkey'],8,4) . "  " . substr($row['infowellkey'], 12, 4);?></span>
+                <!-- <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color: #ffffff;font-size: 36px;"><?php echo  $row['infowellkey'];?></span> -->
+                <input type="text" id="copy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['infowellkey']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;
                 <button id="cpybtn" style="background: transparent; border-radius: 50px; width: 40px; height: 40px;" title="Copy to Clipboard"><i class="fa flaticon2-copy" style="color: red; font-size: 20px;"></i></button>
             </div>
 
 
              
  <div class="form-group">
-              <label style="font-size: 20px;"><b>Speak code</b></label><br>
-              <span id="quantity" class="no" maxlength="14" style="border-color: #30B7B7; color: black; font-size: 36px;"><?php echo substr($row['infowellkey'], 0, 4) . "  " . substr($row['infowellkey'], 4, 4) . "  " . substr($row['infowellkey'],8,4) . "  " . substr($row['infowellkey'], 12, 4);?></span>
-              <input type="text" id="secCopy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['infowellkey']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <label style="font-size: 20px;"><b>Secret code</b></label><br>
+              <span id="quantity" class="no" maxlength="14" style="border-color: #30B7B7; color: black; font-size: 36px;"><?php echo substr($row['infowellsec'], 0, 4) . "  " . substr($row['infowellsec'], 4, 4) . "  " . substr($row['infowellsec'],8,4) . "  " . substr($row['infowellsec'], 12, 4);?></span>
+              <input type="text" id="secCopy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['infowellsec']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button id="cpySec" style="background: transparent; border-radius: 50px; width: 40px; height: 40px;" title="Copy to Clipboard"><i class="fa flaticon2-copy" style="color: red; font-size: 20px;"></i></button>
              </div>
 
                <br>
-              <input type="text" id="together" style="position: absolute; left: -1000px; top: -1000px;" value="Case Number: <?php echo $row['infowellsec']; ?>       Secret Code: <?php echo $row['infowellkey']; ?>">
+              <input type="text" id="together" style="position: absolute; left: -1000px; top: -1000px;" value="speak Number: <?php echo $row['infowellkey']; ?>       Secret Code: <?php echo $row['infowellsec']; ?>">
               <button id="tog" style="background: transparent; border-radius: 50px; width: 100px; height: 50px; color: red; margin-left: 15%;" title="Copy together to Clipboard">Copy Together</button>
 
               </div>
@@ -156,12 +211,14 @@ if (mysqli_num_rows($result) > 0) {
             </div>
    
    <div>
-                <div class="form-group">
+                <div class="form-group" style="text-align: center;">
                   <label style="font-size: 16px;" ><span style="color: black; font-size: 34px;">Remember this for future use</span></label>
                 </div>
               </div>
             </div>
             </div>
+            <br>
+            <br>
 
 
 
@@ -169,12 +226,8 @@ if (mysqli_num_rows($result) > 0) {
 }
 }
 ?>
-
-          
-
-          
-               <!--  <div class="col-sm-1"> -->
-               
+<?php
+include "../footer.php"; ?>
 <script type="text/javascript">
   const myInp = document.getElementById("copy");
   const btnCopy = document.getElementById("cpybtn");
@@ -210,14 +263,14 @@ if (mysqli_num_rows($result) > 0) {
     document.execCommand("Copy");
   }
 </script>
-<?php include '../footer.php';?>
+
 
 <script>
             var KTAppOptions = {"colors":{"state":{"brand":"#2c77f4","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
         </script>
         <!-- end::Global Config -->
-      <script src="../assets/js/demo3/scripts.bundle.js" type="text/javascript"></script>
-      <script src="../assets/toggleButton/bootstrap-toggle.min.js"></script>
+      <script src="assets/js/demo3/scripts.bundle.js" type="text/javascript"></script>
+      <script src="assets/toggleButton/bootstrap-toggle.min.js"></script>
       <script type="text/javascript" src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>  
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.boot strapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -228,17 +281,17 @@ if (mysqli_num_rows($result) > 0) {
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
    
     <!--begin:: Global Mandatory Vendors -->
-<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/custom/js/vendors/sweetalert2.init.js" type="text/javascript"></script>
+<script src="assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+<script src="assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
+<script src="assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+<script src="assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
+<script src="assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+<script src="assets/vendors/custom/js/vendors/sweetalert2.init.js" type="text/javascript"></script>
 
          
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -249,5 +302,3 @@ if (mysqli_num_rows($result) > 0) {
 
 </body>
 </html>
-
-<!-- updated with footer all A-->

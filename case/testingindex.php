@@ -1,5 +1,6 @@
-infowellsec<?php
+<?php
     include "../php/common/config.php";
+    session_start();
       $infowellsec = $_GET['id'];
     $query = "SELECT * FROM `wellness` WHERE infowellsec='$infowellsec'";
   $result=mysqli_query($link,$query);
@@ -21,7 +22,7 @@ infowellsec<?php
         }
        else
        {
-           header("Location:clinicview.php");
+           header("Location:testingview.php");
        }
     }
  

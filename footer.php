@@ -119,8 +119,8 @@
          <div  class="kt-footer__section">
 
 
-          <button type="button" class="btn btn-success" title="Admin"  onclick="document.getElementById('id01').style.display='block'"style="background: white;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;float: right;">Admin</button><br><br>
-        
+        <!--   <button type="button" class="btn btn-success" title="Admin"  onclick="document.getElementById('id01').style.display='block'"style="background: white;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;float: right;">Admin</button><br><br>
+         -->
         <h5 class="kt-footer__title" style="color: white;margin-left: 12px;">Follow Us</h5>
 <div class="kt-footer__content">
                 <div class="kt-footer__nav">
