@@ -590,10 +590,10 @@ The maps and district information provides latest data on Covid19 infections, de
                 </div>
                 <div class="kt-wizard-v2__nav-label">
                   <div class="kt-wizard-v2__nav-label-title">
-                   WORLD CASES
+                  Mental and Substance
                   </div>
                   <div class="kt-wizard-v2__nav-label-desc">
-                    WORLD CASES
+                    <!-- WORLD CASES -->
                   </div>
                 </div>
               </div>
@@ -605,17 +605,45 @@ The maps and district information provides latest data on Covid19 infections, de
                 </div>
                 <div class="kt-wizard-v2__nav-label">
                   <div class="kt-wizard-v2__nav-label-title">
-                    TOP 10 COUNTRIES
+               Population with depression
                   </div>
                   <div class="kt-wizard-v2__nav-label-desc">
-                    Choose Your countries Map
+                    <!-- Choose Your countries Map -->
                   </div>
                 </div>
               </div>
             </a>
            
-           
-         
+              <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step">
+              <div class="kt-wizard-v2__nav-body">
+                <div class="kt-wizard-v2__nav-icon">
+                  <i class="flaticon-responsive" style="color: #034ea2;"></i>
+                </div>
+                <div class="kt-wizard-v2__nav-label">
+                  <div class="kt-wizard-v2__nav-label-title">
+               Population with Anxiety
+                  </div>
+                  <div class="kt-wizard-v2__nav-label-desc">
+                    <!-- Choose Your countries Map -->
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step">
+              <div class="kt-wizard-v2__nav-body">
+                <div class="kt-wizard-v2__nav-icon">
+                  <i class="flaticon-truck" style="color: #afd135;"></i>
+                </div>
+                <div class="kt-wizard-v2__nav-label">
+                  <div class="kt-wizard-v2__nav-label-title">
+               Population with bipolar
+                  </div>
+                  <div class="kt-wizard-v2__nav-label-desc">
+                    <!-- Choose Your countries Map -->
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
         <!--end: Form Wizard Nav -->
@@ -633,15 +661,14 @@ The maps and district information provides latest data on Covid19 infections, de
                
              
                                                 <div class="row">
-                                                        <div class="col-md-12" id="worldmap">
+                                                        <div class="col-md-12">
                                                            <div class="header" style="background: #afd135;height: 6px;">
                                                                                
                                                                         </div>
                                                                 <div class="card" style="border:2px solid #D9D7D6; box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;">
                                                                       
                                                                         <div class="card-body">
-                                                                                <div id="regions_div" style="height: 550px;">
-                                                                                </div>
+                                                                                <iframe src="https://ourworldindata.org/grapher/mental-and-substance-use-as-share-of-disease" style="width: 100%; height: 600px; border: 0px none;"></iframe>
                                                                         </div>
                                                                 </div>
                                                         </div>
@@ -668,24 +695,7 @@ The maps and district information provides latest data on Covid19 infections, de
                                                                                
                                                                         </div>
                                                                         <div class="card-body">
-                                                                                <div class="table-responsive">
-                                                                                <table class="table" id="my_table">
-                                                                                        <thead style="font-size: 16px;">
-                                                                                                <tr>
-                                                                                                <!-- <th scope="col">#</th> -->
-                                                                                                <th scope="col">Country</th>
-                                                                                                <th scope="col">Confirmed</th>
-                                                                                                <th scope="col">Death</th>
-                                                                                              <!--   <th scope="col">Case</th>
-                                                                                                <th scope="col">Info</th> -->
-                                                                                                </tr>
-                                                                                        </thead>
-
-                                                                                        <tbody style="font-size: 16px;">
-
-                                                                                        </tbody>
-                                                                                </table>
-                                                                                </div>
+                                                                               <iframe src="https://ourworldindata.org/grapher/share-with-depression" style="width: 100%; height: 600px; border: 0px none;"></iframe>
                                                                         </div>
                                                                              <style>
                                                         /* For the table */
@@ -711,6 +721,54 @@ The maps and district information provides latest data on Covid19 infections, de
               </div>
             </div>
           </div>
+
+             <div class="kt-wizard-v2__content" data-ktwizard-type="step-content">
+            <!-- <div class="kt-heading kt-heading--md">Setup Your Current Location</div> -->
+            <div class="kt-form__section kt-form__section--first">
+              <div class="kt-wizard-v2__form">
+               
+               <div class="col-md-12" id="corona_logo">
+                                                                <div class="card" style=" box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;">
+                                             <div class="header" style="background: #afd135;height: 6px;">
+                                                                               
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                              <iframe src="https://ourworldindata.org/grapher/share-with-anxiety-disorders" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+                                                                        </div>
+                                                             
+                                                                </div>
+                                             
+                                                      </div>
+                                                     
+
+
+              </div>
+            </div>
+          </div>
+                       <div class="kt-wizard-v2__content" data-ktwizard-type="step-content">
+            <!-- <div class="kt-heading kt-heading--md">Setup Your Current Location</div> -->
+            <div class="kt-form__section kt-form__section--first">
+              <div class="kt-wizard-v2__form">
+               
+               <div class="col-md-12" id="corona_logo">
+                                                                <div class="card" style=" box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;">
+                                             <div class="header" style="background: #afd135;height: 6px;">
+                                                                               
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                          <iframe src="https://ourworldindata.org/grapher/share-with-bipolar-disorder" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+                                                                        </div>
+                                                             
+                                                                </div>
+                                             
+                                                      </div>
+                                                     
+
+
+              </div>
+            </div>
+          </div>
+          
           <!--end: Form Wizard Step 2-->
 
           <!--begin: Form Wizard Step 3-->
