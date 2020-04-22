@@ -2079,4 +2079,6 @@ $("#details1").show();
 
 });
 </script>
+
 <?php include '../footer.php'; ?>
+
