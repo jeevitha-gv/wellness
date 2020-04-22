@@ -1,6 +1,7 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM `case` WHERE status='closed' ORDER BY id DESC";
+    session_start();
+    $query = "SELECT * FROM `wellness` WHERE status='closed' ORDER BY id DESC";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -11,7 +12,7 @@
 <base href="/wellness/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Investigator-coronaspeak</title>
+        <title>wellness-reviewer</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -78,7 +79,7 @@
 
  
       <?php 
-        include 'siteHeader2.php';
+        include '../case/siteHeader2.php';
 
       ?>
     <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" >

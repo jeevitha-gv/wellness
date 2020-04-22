@@ -149,7 +149,7 @@ Clinic Lists
      <?php } ?>
 
 </td>
-         <td><a href="case/index.php?id=<?php echo $rows['infowellsec'];?>" class="btn btn-primary">Counselor</a></td>
+         <td><a href="case/index.php?id=<?php echo $rows['infowellsec'];?>" class="btn btn-primary" style="background-color: #034ea2;">Counselor</a></td>
       
 </tbody>
 <?php
