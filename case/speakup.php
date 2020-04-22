@@ -147,46 +147,46 @@ $trembling=$_POST['trembling'];
 $difficultwork=$_POST['difficultwork'];
 $infowellkey=$_POST['infowellkey'];
 $infowellsec=$_POST['infowellsec'];
+
 $status="created";
-$i=1;
-for($i=1;$i<=45;$i++)
+if($upset=="")
 {
-if ($i<10) {
- 
+  $risk="Low";
 $sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
-
-values('$dist','$udetails','$name','$email','$phone','$address','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','Low','$created')";
+values('$dist','$udetails','$name','$email','$phone','$address','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','created')";
 if(mysqli_query($link,$sql))
 {
          echo "successfully";
          header("location:wellnesscode.php");
 }
 }
-if ($i>10&&$i<=20) {
- 
+if($nervous!=""||$saddepressed!=""||$impatient!=""||$faintness!=""||$lostinterest!=""||$worthperson!=""||$touchy!=""||$noticeably!=""||$goodreason!="")
+{
+$risk="Medium";
 $sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
-
-values('$dist','$udetails','$name','$email','$phone','$address','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','Medium','$created')";
+values('$dist','$udetails','$name','$email','$phone','$address','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','created')";
 if(mysqli_query($link,$sql))
 {
          echo "successfully";
          header("location:wellnesscode.php");
 }
 }
-if ($i>21) {
- 
+if($worthwhile1!=""||$winddown!=""||$swallowing!=""||$enjoyment!=""||$physicalexertion!=""||$feltdown!=""||$irritable!=""||$closepanic!=""||$somethingupset!=""||$trivial!=""||$enthusiastic!=""||$interruptions!=""||$nervoustension!=""||$prettyworthless!=""||$intolerant!=""||$terrified!=""||$hopefulabout!=""||$meaningless!=""||$agitated!=""||$panic!=""||$trembling!=""||$difficultwork!="")
+{
+  $risk="High";
 $sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
-
-values('$dist','$udetails','$name','$email','$phone','$address','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','High','$created')";
+values('$dist','$udetails','$name','$email','$phone','$address','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','created')";
 if(mysqli_query($link,$sql))
 {
          echo "successfully";
          header("location:wellnesscode.php");
 }
-}
 
 }
+else
+{
 
+}
 
 
 }
@@ -2080,6 +2080,3 @@ $("#details1").show();
 });
 </script>
 <?php include '../footer.php'; ?>
-
-
-<!-- updated with footer all ABR-->
