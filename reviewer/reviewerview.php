@@ -98,13 +98,13 @@
 
 
 <div class="kt-portlet">
-<div class="kt-portlet__head kt-portlet__head--lg" style="background-color:#2a5aa8;">
+<div class="kt-portlet__head kt-portlet__head--lg" style="background-color:#034ea2;">
 <div class="kt-portlet__head-label">
 <span class="kt-portlet__head-icon">
-<i class="kt-font-brand flaticon2-line-chart"></i>
+<i class="kt-font-brand flaticon2-line-chart" style="color: white;font-size: 30px;"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-
+Clinic Review List
 </h3>
 </div>
 
@@ -140,7 +140,7 @@
         <td><?php echo $rows['risk'];?></td>
         
          <td><button class="btn btn-warning" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
-           <td><button type="button" class="btn btn-primary"><a href="reviewer/index.php?id=<?php echo $rows['infowellsec'];?>" style="color: white;"> Review</a></button></td>
+           <td><button type="button" class="btn btn-primary" style="background-color: #034ea2;"><a href="reviewer/index.php?id=<?php echo $rows['infowellsec'];?>" style="color: white;"> Review</a></button></td>
   </tr>
 </tbody>
 <?php

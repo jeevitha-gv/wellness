@@ -214,7 +214,7 @@ width:100%;
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
           Investigated wellness
       </span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
     }

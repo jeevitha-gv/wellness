@@ -899,7 +899,7 @@ First off, this is a secure consulting room and your identity is protected. We u
          
                  <input type="submit" name="submit" id="case" value="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit" style="background-color:#afd135;border:2px solid #afd135;">
 
-            <button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="showvalue()" style="background-color:#034ea2;">
+            <button class="btn btn-info btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="showvalue()" style="background-color:#034ea2;">
               Next Step
             </button>
           </div>
@@ -1906,7 +1906,7 @@ First off, this is a secure consulting room and your identity is protected. We u
             </button>
           
                  <input type="submit" name="sub" value="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit" style="background-color:#afd135;border:2px solid #afd135;">
-            <button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="mum()">
+            <button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="mum()" style="background-color:#034ea2">
               Next Step
             </button>
           </div>

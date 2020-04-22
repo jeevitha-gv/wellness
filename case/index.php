@@ -181,14 +181,14 @@ Case - <?php echo $_GET['id'];?>
             <label for="example-month-input" class="col-2 col-form-label" style="font-size: 15px;">Genuine: </label>
             <div class="col-10">
              
-              <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+              <label class="kt-radio kt-radio--solid kt-radio--primary" style="color: black;">
          <input type="radio" name="genuine" value="Anonymous" id="Anonymous" checked="checked">Yes
-         <span></span>
+         <span style="background-color: #afd135;"></span>
        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <label class="kt-radio kt-radio--solid kt-radio--danger" style="color: black;">
              <input type="radio" name="genuine" value="disclose" id="disclose">No
 
-             <span></span>
+             <span style="background-color: #034ea2;"></span>
            </label>
             </div>  
           </div>
@@ -215,9 +215,9 @@ Case - <?php echo $_GET['id'];?>
 
 </div>
 
-<div class="container">
+<div class="container" >
  
-  <input type="submit" name="submit" class="btn btn-danger" style="float: right;" onclick="alert()">
+  <input type="submit" name="submit" class="btn btn" style="float: right;background-color: #afd135;color: white;" onclick="alert()" >
 
 </div>
 <div class="container">
@@ -227,7 +227,7 @@ Case - <?php echo $_GET['id'];?>
 
 </div>
 <div class="container">
-  <a data-toggle="collapse" data-target="#data" style="font-size: 16px;"><button class="flaticon2-arrow" style="border-radius: 25px; background-color: #86346C; color: #ffffff;margin-top: -8%;">  History</button></a>
+  <a data-toggle="collapse" data-target="#data" style="font-size: 16px;"><button class="flaticon2-arrow" style="border-radius: 25px; background-color: #034ea2; color: #ffffff;margin-top: -8%;">  History</button></a>
 </div><br>
 </form>
 
