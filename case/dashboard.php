@@ -668,3 +668,5 @@ Highcharts.chart('chartdiv1', {
 
  </style>
 
+
+<!-- Updates -->
