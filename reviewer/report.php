@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM `wellness` where status='permanentlyclosed' order by id desc";
+    $query = "SELECT * FROM `wellness` where status='permanentlyclosed' and risk='Low' order by id desc";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -88,7 +88,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Clinic Report Lists
+Intake Report Lists
 </h3>
 </div>
 
@@ -120,6 +120,7 @@ Clinic Report Lists
       <td><?php echo $rows['dist'];?></td>
      <td><?php echo $rows['name'];?></td>
       <td><?php echo $rows['phone'];?></td>
+       <td><?php echo $rows['risk'];?></td>
  
 <td>
       <?php

@@ -1,5 +1,6 @@
 <?php
 require_once '../../php/common/dashboard.php';
+session_start();
 $manager = new dashboard();
 $allUsers = $manager->getAllUsersForTicket();
 $totalusers = count($allUsers);
@@ -233,7 +234,7 @@ $companyId=$id[0]['id'];
 							</div> 
 						</div>
 						  <div class="form-group">
-                                    <button class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"  onclick="saveProject()">Save</button>
+                                    <button class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" style="background-color: #afd135;border:none;" onclick="saveProject()">Save</button>
                                 </div> 
 					</div>
                           

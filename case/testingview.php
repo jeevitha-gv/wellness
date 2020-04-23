@@ -105,7 +105,7 @@ session_start();
 <i class="flaticon2-line-chart" style="color: white;font-size: 30px;"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Testing Lists
+Counsellor Lists
 </h3>
 </div>
 

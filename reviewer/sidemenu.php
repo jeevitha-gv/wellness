@@ -31,19 +31,19 @@
 
 <ul class="kt-menu__nav ">
 
-<li class="kt-menu__item " aria-haspopup="true"><a href="./reviewer/reviewerview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-layers-1"></i><span class="kt-menu__link-text" style="text-align: center;"><br>Clinic</span></a>
+<li class="kt-menu__item " aria-haspopup="true"><a href="./reviewer/reviewerview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-layers-1"></i><span class="kt-menu__link-text" style="text-align: center;"><br>Intake</span></a>
 </li>
-<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/testingview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Testing</span></a>
-</li>
-
-<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/hospitalview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Hospital</span></a>
+<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/testingview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Counsellor</span></a>
 </li>
 
-<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/report.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-drop"></i><span class="kt-menu__link-text" style="text-align: center;">Clinic <br>Report</span></a></li>
+<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/hospitalview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Psychiatrist</span></a>
+</li>
 
-<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/testingreport.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-drop"></i><span class="kt-menu__link-text" style="text-align: center;">Testing <br>Report</span></a></li>
+<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/report.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-drop"></i><span class="kt-menu__link-text" style="text-align: center;">Intake <br>Report</span></a></li>
 
-<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/hospitalreport.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text" style="text-align: center;"> Hospital Report</span></a></li>
+<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/testingreport.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-drop"></i><span class="kt-menu__link-text" style="text-align: center;">Counsellor <br>Report</span></a></li>
+
+<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/hospitalreport.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text" style="text-align: center;"> Psychiatrist Report</span></a></li>
 
 
 </ul>
