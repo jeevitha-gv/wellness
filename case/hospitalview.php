@@ -104,7 +104,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Clinic Lists
+psychiatrist Lists
 </h3>
 </div>
 
@@ -155,7 +155,7 @@ Clinic Lists
      <?php } ?>
 
 </td>
-         <td><a href="case/hospitalindex.php?id=<?php echo $rows['infowellsec'];?>" class="btn btn-primary" style="background-color: #034ea2;">Counselor</a></td>
+         <td><a href="case/hospitalindex.php?id=<?php echo $rows['infowellsec'];?>" class="btn btn-primary" style="background-color: #034ea2;">psychiatrist</a></td>
       
 </tbody>
 <?php

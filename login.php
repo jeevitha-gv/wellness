@@ -1,7 +1,7 @@
 <?php
  include 'php/common/config.php';
  session_start();
-  if(isset($_POST['login']) || isset($_POST['admin']))
+  if(isset($_POST['login']))
   {
    $email=$_POST['email'];
     $password=$_POST['password'];
@@ -19,7 +19,7 @@
                {
                
                  // echo "Sucessfully";
-                header("location:/wellness/view/common/overview.php");
+                header("location:/wellness/case/dashboard.php");
                // break;
                }
         

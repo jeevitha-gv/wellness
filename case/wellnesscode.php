@@ -1,4 +1,71 @@
 <?php
+ include '../php/common/config.php';
+ session_start();
+  if(isset($_POST['admin']))
+  {
+   $email=$_POST['email'];
+    $password=$_POST['password'];
+      $sql="SELECT email,password FROM user Where email= '" . $email. "' and password= '" . $password. "'";
+     $result=mysqli_query($link,$sql);
+            if($rows=mysqli_fetch_assoc($result))
+             { 
+               $_SESSION['email']=$email;
+           $_SESSION['password']=$password;  
+            $_SESSION['last_name']=$name;   
+              $password == 'wellness';
+               if($_SESSION['email']=='wellness@nixwhistle.com'&& $rows['password'] == 'wellness')
+               {
+                 // echo "Sucessfully";
+                header("location:/wellness/case/dashboard.php");
+               // break;
+               }
+         
+
+               if($_SESSION['email']=='clinic' && $_SESSION['password'] == 'wellness')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/wellness/case/clinicview.php");
+               // break;
+               }
+               if($_SESSION['email']=='testing' && $_SESSION['password'] == 'wellness')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/wellness/case/testingview.php");
+               // break;
+               }
+                 if($_SESSION['email']=='hospital' && $_SESSION['password'] == 'wellness')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/wellness/case/hospitalview.php");
+               // break;
+               }
+           else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
+               {
+                 // echo "Sucessfully";
+                header("location:/wellness/idea/view.php");
+               }
+            else if($rows['email']=='investigator@nixwhistle.co'&& $rows['password']=='investigator')
+               {
+                 // echo "Sucessfully";
+                header("location:/wellness/investigator/view.php");
+               }
+               else if($rows['email']=='reviewer@nixwhistle.co'&& $rows['password']=='reviewer')
+               {
+                 // echo "Sucessfully";
+                header("location:/wellness/reviewer/reviewerview.php");
+               }
+             }
+             else
+               {
+                // echo "Error: " . $sql . "<br>" . $link->error;
+                // alert("incorrect username and password");
+               }
+  }
+?>
+<?php
 include "../php/common/config.php";
 if(isset($_POST['submit']))
 {
@@ -22,6 +89,7 @@ if(isset($_POST['submit']))
 
 
 ?>
+
 <!DOCTYPE html>
 
 <html lang="en" >
@@ -37,11 +105,11 @@ if(isset($_POST['submit']))
         <!--begin::Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">        <!--end::Fonts -->
 
-        
+       
                     <!--begin::Page Custom Styles(used by this page) -->
                              <link href="./assets/css/demo2/pages/wizard/wizard-1.css" rel="stylesheet" type="text/css" />
                         <!--end::Page Custom Styles -->
-        
+       
         <!--begin:: Global Mandatory Vendors -->
 <link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 <!--end:: Global Mandatory Vendors -->
@@ -78,7 +146,7 @@ if(isset($_POST['submit']))
 <!--end:: Global Optional Vendors -->
 
 <!--begin::Global Theme Styles(used by all pages) -->
-                    
+                   
                     <link href="./assets/css/demo2/style.bundle.css" rel="stylesheet" type="text/css" />
                 <!--end::Global Theme Styles -->
 
@@ -147,7 +215,7 @@ if (mysqli_num_rows($result) > 0) {
         ?>
          <button class="btn" style="color: white;background-color: #FA2E00;border-radius: 150px;"><?php echo $row['risk'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor immediately, get covid19 test</span>
 <?php } ?>
-        
+       
 
         </div>
 
@@ -178,27 +246,26 @@ if (mysqli_num_rows($result) > 0) {
         ?>
          <button class="btn" style="color: white;background-color: #FA2E00;border-radius: 150px;"><?php echo $row['risk'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor immediately, get covid19 test</span>
 <?php } ?>
-        
+      <br><br>
                <div class="form-group">
                 <label style="font-size: 20px;"><b>Speak Number</b></label><br>
-                <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color:black;font-size: 36px;"><?php echo substr($row['infowellkey'], 0, 4) . "  " . substr($row['infowellkey'], 4, 4) . "  " . substr($row['infowellkey'],8,4) . "  " . substr($row['infowellkey'], 12, 4);?></span>
-                <!-- <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color: #ffffff;font-size: 36px;"><?php echo  $row['infowellkey'];?></span> -->
-                <input type="text" id="copy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['infowellkey']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;
-                <button id="cpybtn" style="background: transparent; border-radius: 50px; width: 40px; height: 40px;" title="Copy to Clipboard"><i class="fa flaticon2-copy" style="color: red; font-size: 20px;"></i></button>
+                  <span id="quantity" class="no" maxlength="14" style="border-color: #30B7B7; color: black; font-size: 36px;"><?php echo substr($row['infowellsec'], 0, 4) . "  " . substr($row['infowellsec'], 4, 4) . "  " . substr($row['infowellsec'],8,4) . "  " . substr($row['infowellsec'], 12, 4);?></span>
+              <input type="text" id="secCopy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['infowellsec']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;
+              <button id="cpySec" style="background: transparent; border-radius: 50px; width: 40px; height: 40px;" title="Copy to Clipboard"><i class="fa flaticon2-copy" style="color: red; font-size: 20px;"></i></button>
             </div>
 
 
              
  <div class="form-group">
-              <label style="font-size: 20px;"><b>Secret code</b></label><br>
-              <span id="quantity" class="no" maxlength="14" style="border-color: #30B7B7; color: black; font-size: 36px;"><?php echo substr($row['infowellsec'], 0, 4) . "  " . substr($row['infowellsec'], 4, 4) . "  " . substr($row['infowellsec'],8,4) . "  " . substr($row['infowellsec'], 12, 4);?></span>
-              <input type="text" id="secCopy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['infowellsec']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <button id="cpySec" style="background: transparent; border-radius: 50px; width: 40px; height: 40px;" title="Copy to Clipboard"><i class="fa flaticon2-copy" style="color: red; font-size: 20px;"></i></button>
+              <label style="font-size: 20px;"><b>Secret Key</b></label><br>
+                <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color:black;font-size: 36px;"><?php echo substr($row['infowellkey'], 0, 4) . "  " . substr($row['infowellkey'], 4, 4) . "  " . substr($row['infowellkey'],8,4) . "  " . substr($row['infowellkey'], 12, 4);?></span>
+                <input type="text" id="copy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['infowellkey']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="cpybtn" style="background: transparent; border-radius: 50px; width: 40px; height: 40px;" title="Copy to Clipboard"><i class="fa flaticon2-copy" style="color: red; font-size: 20px;"></i></button>
              </div>
 
                <br>
-              <input type="text" id="together" style="position: absolute; left: -1000px; top: -1000px;" value="speak Number: <?php echo $row['infowellkey']; ?>       Secret Code: <?php echo $row['infowellsec']; ?>">
-              <button id="tog" style="background: transparent; border-radius: 50px; width: 100px; height: 50px; color: red; margin-left: 15%;" title="Copy together to Clipboard">Copy Together</button>
+              <input type="text" id="together" style="position: absolute; left: -1000px; top: -1000px;" value="speak Number: <?php echo $row['infowellkey']; ?>          Secret Code: <?php echo $row['infowellsec']; ?>">
+              <button id="tog" style="background: transparent; border-radius: 50px; width: 100px; height: 50px; color: red;" title="Copy together to Clipboard">Copy Together</button>
 
               </div>
 
@@ -302,3 +369,4 @@ include "../footer.php"; ?>
 
 </body>
 </html>
+

@@ -16,7 +16,7 @@
                         
 					<div class="kt-aside__brand kt-grid__item" id="kt_aside_brand">
 						<div class="kt-aside__brand-logo">
-								<a href="view/common/overview.php">
+								<a href="case/dashboard.php">
 								<img src=" ./assets/media/company-logos/whistle.png" alt="" width="100px" height="100px" />
 							</a>
                                                                 	
@@ -35,7 +35,7 @@
 							 if($_SESSION['email']=='clinic')
                                     {
                                     	?>
-								<li class="kt-menu__item " aria-haspopup="true"><a href="case/clinicview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Clinic counsellor</span></a>
+								<li class="kt-menu__item " aria-haspopup="true"><a href="case/clinicview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Intake</span></a>
 								</li>
 								<li class="kt-menu__item " aria-haspopup="true"><a href="case/Report.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-drop"></i><span class="kt-menu__link-text" style="text-align: center;">Report</span></a></li>
 							<?php } ?>
@@ -43,27 +43,28 @@
 							 if($_SESSION['email']=='testing' )
                                     {
                                     	?>
-							  	<li class="kt-menu__item " aria-haspopup="true"><a href="case/testingview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Testing Center counsellor</span></a>
+							  	<li class="kt-menu__item " aria-haspopup="true"><a href="case/testingview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">counsellor</span></a>
 								</li>
 							<?php } ?>
 								<?php 
 							 if($_SESSION['email']=='hospital')
                                     {
                                     	?>
-									<li class="kt-menu__item " aria-haspopup="true"><a href="case/hospitalview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Hospital counsellor</span></a>
+									<li class="kt-menu__item " aria-haspopup="true"><a href="case/hospitalview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">psychiatrist</span></a>
 								</li>
                            <?php } ?>
                            <?php 
                            	 if($_SESSION['email']=='wellness@nixwhistle.com')
                            	 {
                            	 	?>
-                           	 		<li class="kt-menu__item " aria-haspopup="true"><a href="case/clinicview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Clinic counsellor</span></a>
+                           	 		<li class="kt-menu__item " aria-haspopup="true"><a href="case/clinicview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Intake</span></a>
 								</li>
-								 	<li class="kt-menu__item " aria-haspopup="true"><a href="case/testingview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Testing Center counsellor</span></a>
+								 	<li class="kt-menu__item " aria-haspopup="true"><a href="case/testingview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">counsellor</span></a>
 								</li>
-								<li class="kt-menu__item " aria-haspopup="true"><a href="case/hospitalview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Hospital counsellor</span></a>
+								<li class="kt-menu__item " aria-haspopup="true"><a href="case/hospitalview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Psychiatrist</span></a>
 								</li>
-                           	 
+                           	 <li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/dashboard.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Reviewer</span></a>
+								</li>
                            	 <?php } ?>
 								
 

@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM `wellness` where status='permanentlyclosed' order by id desc";
+    $query = "SELECT * FROM `wellness` where status='permanentlyclosed' and risk='Medium' order by id desc";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -103,7 +103,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Idea Lists
+Counsellor Report Lists
 </h3>
 </div>
 
@@ -136,7 +136,7 @@ Idea Lists
      <td><?php echo $rows['name'];?></td>
       <td><?php echo $rows['phone'];?></td>
      
-       
+        <td><?php echo $rows['risk'];?></td>
        <td>
         <?php
         if($rows['risk']=="Medium")

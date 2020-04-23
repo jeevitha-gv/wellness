@@ -1,6 +1,7 @@
 <?php 
 require_once '../../php/common/dashboard.php';
 require_once __DIR__.'/timelinemanager.php';
+session_start();
 //timeline
 $timeManager = new TimeManager();
 $users = $timeManager->users(); //user choice

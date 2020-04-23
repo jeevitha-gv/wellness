@@ -140,7 +140,7 @@ include 'siteHeader2.php';
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item">
 
 <div class="kt-portlet">
-<div class="kt-portlet__head kt-portlet__head--lg" style="background-color:#2a5aa8;">
+<div class="kt-portlet__head kt-portlet__head--lg" style="background-color:#034EA2;">
 <div class="kt-portlet__head-label">
 <span class="kt-portlet__head-icon">
 <i class="kt-font-btipnod flaticon2-line-chart"></i>
@@ -166,7 +166,7 @@ if($rows1=mysqli_fetch_assoc($result1)) {
 <label style="font-size: 14px;"><strong>Case Update</strong></label>
 <div class="">
   <input type="hidden" name="id" value="<?php echo $rows1['id'];?>">
-<textarea type="text" class="form-control" style="height: 150px;" disabled><?php echo $rows1['Synopsis'];?></textarea>
+<textarea type="text" class="form-control" style="height: 150px;border-color: #034EA2;" disabled><?php echo $rows1['Synopsis'];?></textarea>
 
 </div>
 </div>
@@ -178,15 +178,15 @@ if($rows1=mysqli_fetch_assoc($result1)) {
 <br>
   <div class="container">
   <label class="kt-radio kt-radio--solid kt-radio--success">
-  <input type="radio" name="radio1" value="1"/>Resolution<span></span></label>&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="radio1" value="1"/>Resolution<span style="background-color:#afd135;"></span></label>&nbsp;&nbsp;&nbsp;
   <label class="kt-radio kt-radio--solid kt-radio--danger">
-<input type="radio" name="radio1" value="2"/>Re-Investigate<span></span></label>
+<input type="radio" name="radio1" value="2"/>Re-Investigate<span style="background-color:#034EA2;"></span></label>
 <br>
 
     <!-- <label style="font-size: 14px;"><strong>Resolution </strong></label> -->
 <div class="rad ra1" style="display: none">
 <!--  <span id="resolution" class="form-control" style="font-size: 13px;height: 150px;"></span> -->
-<textarea id="resolution" name="resolution" class="form-control" style="font-size: 13px;height: 150px; border-color: #A1E6EA;" placeholder="Resolution"></textarea>
+<textarea id="resolution" name="resolution" class="form-control" style="font-size: 13px;height: 150px; border-color: #034EA2;" placeholder="Resolution"></textarea>
         </div>
 
 
@@ -195,7 +195,7 @@ if($rows1=mysqli_fetch_assoc($result1)) {
 
 <!--  <span id="resolution" class="form-control" style="font-size: 13px;height: 150px;"></span> -->
 
-<textarea name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #A1E6EA;" placeholder="Re-Investigate"></textarea>
+<textarea name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #034EA2;" placeholder="Re-Investigate"></textarea>
 <!-- <span id="reinvestigation" class="form-control" style="font-size: 13px;height: 150px;"></span>
  -->        </div>
 
@@ -230,8 +230,8 @@ if($rows1=mysqli_fetch_assoc($result1)) {
 </script> 
 
   <div class="container">
-<button type="button" id="toggle" class="flaticon2-arrow" style="border-radius: 25px; background-color: #86346C; color: #ffffff; font-size: 16px;margin-top: 8%;">  History</button>
-<input type="submit" name="submit" value="Review" class="btn btn-danger" style="float: right;" data-toggle="modal" data-target="#update" onclick="alert()">
+<button type="button" id="toggle" class="flaticon2-arrow" style="border-radius: 25px; background-color: #034EA2; color: #ffffff; font-size: 16px;margin-top: 8%;">  History</button>
+<input type="submit" name="submit" value="Review" class="btn" style="float: right; background-color: #afd135;color: white;" data-toggle="modal" data-target="#update" onclick="alert()">
 </div>
 
 <div id="toggleData" class="collapse">
@@ -662,14 +662,14 @@ if ($rows=mysqli_fetch_assoc($result)) {
     ?>
     <div class="container">
    <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Management Synopsis - <?php echo $count;?></b></label>
+  <label style="font-size: 14px;  background-color: #afd135;color: white;"><b>Management Synopsis - <?php echo $count;?></b></label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
        <?php echo $rows2['Synopsis'];?>
       </div>
    </div><br>
     <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Updated to `case` - <?php echo $count;?></b></label>
+  <label style="font-size: 14px;  background-color: #afd135;color: white;"><b>Updated to `case` - <?php echo $count;?></b></label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
         <?php echo $rows2['WBU'];?>

@@ -93,7 +93,7 @@ session_start();
 <i class="flaticon-rotate" style="color: white;font-size: 30px;"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Clinic Lists
+Intake Lists
 </h3>
 </div>
 
@@ -149,7 +149,7 @@ Clinic Lists
      <?php } ?>
 
 </td>
-         <td><a href="case/index.php?id=<?php echo $rows['infowellsec'];?>" class="btn btn-primary" style="background-color: #034ea2;">Counselor</a></td>
+         <td><a href="case/index.php?id=<?php echo $rows['infowellsec'];?>" class="btn btn-primary" style="background-color: #034ea2;">Intake</a></td>
       
 </tbody>
 <?php

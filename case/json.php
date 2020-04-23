@@ -1,7 +1,7 @@
 <?php
 include "../php/common/config.php";
 
-$query = "SELECT createat, count(status) as count,category  FROM `case` group by createat,category";
+$query = "SELECT likelihood as x, impact as y, likelihood*impact as heat FROM wellness WHERE likelihood=impact IS NOT NULL ORDER BY likelihood,impact";
 
 $result = mysqli_query($link,$query);
 // print_r($result);

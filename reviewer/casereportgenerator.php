@@ -132,77 +132,314 @@ Case - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
  if ($rows=mysqli_fetch_assoc($result)) {
   
   ?>
+  
 
-            <div id="people1" class="container">
-          <div class="row form-group">
-<div class="col-md-12">
-<label><strong>Category:</strong></label><br>
- <input type="text" class="form-control" disabled value="<?php echo $rows['category'];?>">
-</div><br>
 
-</div>
-</div>  
-
-<div id="people1" class="container">
-<br>
-<div class="row">
-  <div class="input-group">
-   <div class="col-md-4 input_val">
-     <label>FullName:</label>
-    <!--<input type="text" placeholder="Name" class="form-control" id="persons" style="border-color: #216582;" >-->
- <input type="text" class="form-control" disabled value="<?php echo $rows['name'];?>">
-   </div>
-   <div class="col-md-4 input_val">
-     <label>Email:</label>
-     <!--<input type="text" placeholder="Designation" class="form-control" style="border-color: #216582;">-->
- <input type="text" class="form-control" disabled value="<?php echo $rows['email'];?>">
-   </div>
-   <div class="col-md-4 input_val">
-     <label>PhoneNo:</label>
-    <!-- <input type="text" placeholder="Department" class="form-control" style="border-color: #216582;">-->
- <input type="text" class="form-control" disabled value="<?php echo $rows['phone'];?>">
-   </div>
- 
-<!-- <div class="input-group after-add-more col-md-1">
-           <button class="btn add-more" type="button" title="Add Row"><i style="color:green;font-size:20px;" class="fa flaticon-plus"></i></button>
-       </div> -->
-
-       </div>
-   </div>
-</div><br>
 <div class="container control-group">
-   
+<div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">District</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" id="company" name="company" class="form-control"value="<?php echo $rows['dist']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">category</label><br>
+           <input type="text" id="category" name="category" class="form-control"value="<?php echo $rows['zipcode']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+<br>
+
+       <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">1. I found myself getting upset by quite trivial things ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['quitetrivial']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">2. I was aware of dryness of my mouth ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['dryness']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">3.  I couldn't seem to experience any positive feeling at all ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['positivefeeling']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">4. I experienced breathing difficulty (eg, excessively rapid breathing, breathlessness in the absence of physical exertion) ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['breathing']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">5. I just couldn't seem to get going ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['getgoing']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">6. I tended to over-react to situations ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['situations']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+
+
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">7. I had a feeling of shakiness (eg, legs going to give way) ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['shakiness']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">8. I found it difficult to relax ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['relax']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">9. I found myself in situations that made me so anxious I was most relieved when they ended ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['anxious']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">10. I felt that I had nothing to look forward to ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['forward']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">11. I found myself getting upset rather easily ??</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['upset']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">12.I felt that I was using a lot of nervous energy ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['nervous']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">13.  I felt sad and depressed ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['saddepressed']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">14.  I found myself getting impatient when I was delayed in any way (eg, lifts, traffic lights, being kept waiting) ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['impatient']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">15.I had a feeling of faintness ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['faintness']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">16. I felt that I had lost interest in just about everything ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['lostinterest']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+       <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">17.I felt I wasn't worth much as a person ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['worthperson']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">18. I felt that I was rather touchy ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['touchy']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">19. I perspired noticeably (eg, hands sweaty) in the absence of high temperatures or physical exertion ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['noticeably']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">20. I felt scared without any good reason ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['goodreason']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+       <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">21.  I felt that life wasn't worthwhile ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['worthwhile']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">22. I found it hard to wind down ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['winddown']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">23. I had difficulty in swallowing ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['swallowing']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">24.I couldn't seem to get any enjoyment out of the things I did ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['enjoyment']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">25. I was aware of the action of my heart in the absence of physical exertion (eg, sense of heart rate increase, heart missing a beat) ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['physicalexertion']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">26. I felt down-hearted and blue ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['feltdown']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">27. I found that I was very irritable ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['irritable']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">28.I felt I was close to panic ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['closepanic']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">29.  I found it hard to calm down after something upset me ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['somethingupset']; ?>"disabled style="background: transparent;">
+        </div>
+
+
+
+        <div class="col-md-6">
+          <label style="color: black;">30. I feared that I would be "thrown" by some trivial but unfamiliar task ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['trivial']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">31. I was unable to become enthusiastic about anything ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['enthusiastic']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">32.I found it difficult to tolerate interruptions to what I was doing ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['interruptions']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">33. I was in a state of nervous tension ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['nervoustension']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">34.  I felt I was pretty worthless ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['prettyworthless']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">35. I was intolerant of anything that kept me from getting on with what I was doing ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['intolerant']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">36. I felt terrified ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['terrified']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+       <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">37. I could see nothing in the future to be hopeful about ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['hopefulabout']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">38. I felt that life was meaningless ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['meaningless']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+
+
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">39. I found myself getting agitated   ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['agitated']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">40. I was worried about situations in which I might panic and make a fool of myself ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['panic']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+             <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">41. I experienced trembling (eg, in the hands) ?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['trembling']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">42. I found it difficult to work up the initiative to do things ?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['difficultwork']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>   
 </div>
 <br>
+
 <div class="container">
-<div class="form-group">
-  <label style="font-size: 14px;">Description:</label>
-      <div class="">
-<!--    <textarea type="text" class="form-control"  id="Synopsis" value="<?php echo $rows['Description'];?>" placeholder="" disabled  style="height: 150px; border-color:#A1E6EA"> </textarea> -->
- <textarea type="text" class="form-control"  id="Synopsis" placeholder="" disabled style="height: 150px; border-color:#A1E6EA"><?php echo $rows['Description'];?></textarea>
-   <span id="apdate" style="color: red;"></span>
-</div>
-   </div>
- </div>
-<div class="container">
-<div class="form-group">
-  <label style="font-size: 14px;">Synopsis:</label>
-      <div class="">
-   <textarea type="text" class="form-control"  id="Synopsis" placeholder="" disabled style="height: 150px; border-color:#A1E6EA"><?php echo $rows['Synopsis'];?></textarea>
-   <span id="apdate" style="color: red;"></span>
-</div>
-   </div>
+
 
 
    <br>
-   <div class="container">
-<div class="form-group">
-  <label style="font-size: 14px;  background-color: coral;">Artifacts</label>
-  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-        <a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
-      </div>
-   </div>
- </div> 
+
  <?php
  }
  ?>

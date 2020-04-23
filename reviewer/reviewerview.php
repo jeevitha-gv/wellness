@@ -104,7 +104,7 @@
 <i class="kt-font-brand flaticon2-line-chart" style="color: white;font-size: 30px;"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Clinic Review List
+Intake Review List
 </h3>
 </div>
 

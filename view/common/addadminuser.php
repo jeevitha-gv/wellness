@@ -1,5 +1,6 @@
 <?php 
 require_once __DIR__.'/../../php/user/userManager.php';
+session_start();
 $companyId=$_POST['companyId'];
     // error_log("userid".print_r($companyId,true));
     $manager = new UserManager();

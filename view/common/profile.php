@@ -70,7 +70,7 @@ $companyId=$id[0]['id'];
                 <div class="profile-usermenu">
                   <ul class="nav">
                     <li>
-                      <a href="view/common/overview.php">
+                      <a href="case/dashboard.php">
                       <i class="icon-home"></i> Overview </a>
                     </li>
                     <li>
