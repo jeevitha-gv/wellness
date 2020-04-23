@@ -235,7 +235,7 @@ width:100%;
  if($rows=mysqli_fetch_assoc($result3)) {
   ?>  
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
-          Recounsell
+          Recounsel
       </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
