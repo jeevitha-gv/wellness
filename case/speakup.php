@@ -1386,3 +1386,15 @@ $("#details1").show();
 
 }
 </script>
+
+<script type="text/javascript">
+    function login(){
+                debugger
+                 $.ajax({
+                        dataType: "json",
+                        type: "POST",
+                        url: "/wellness/header.php"
+                         });
+              window.location="/wellness/case/dashboard.php";
+            }
+</script>

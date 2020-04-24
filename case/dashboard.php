@@ -1,7 +1,6 @@
 <?php
-
-    include "../php/common/config.php";
-       session_start();
+ include "../php/common/config.php";
+    session_start();
     $query = "SELECT count(status) as count FROM `wellness` WHERE status='created' ORDER BY id DESC";
     $result = mysqli_query($link,$query);
       $sql = "SELECT count(status) as count FROM `wellness` WHERE status='Reported' ORDER BY id DESC";
