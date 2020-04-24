@@ -398,7 +398,7 @@ span.psw {
       <label for="password" style=" font-size: 1.2rem;" i class="fa fa-lock">&nbsp;&nbsp;<b>PASSWORD:</b></label>
     <input class="form-control" type="password" placeholder="Password" name="password" id="password"><br><br>
         <center>
-      <button type="submit" name="admin" style="background: #034ea2;border-radius: 8px;width:30%;height:50px;border:2px solid #034ea2;font-weight: 500;color: white;">Login</button>
+      <button type="button" name="admin" style="background: #034ea2;border-radius: 8px;width:30%;height:50px;border:2px solid #034ea2;font-weight: 500;color: white;" onclick="login()">Login</button>
       </center>
      
     </div>
