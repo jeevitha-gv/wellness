@@ -1,4 +1,212 @@
+<?php
+include "../php/common/config.php";
+ session_start();
+  if(isset($_POST['admin']))
+  {
+   $email=$_POST['email'];
+    $password=$_POST['password'];
+      $sql="SELECT email,password FROM user Where email= '" . $email. "' and password= '" . $password. "'";
+     $result=mysqli_query($link,$sql);
+            if($rows=mysqli_fetch_assoc($result))
+             {
+               $_SESSION['email']=$email;
+           $_SESSION['password']=$password;  
+            $_SESSION['last_name']=$name;  
+              $password == 'wellness';
+                             
+               if($_SESSION['email']=='wellness@nixwhistle.com'&& $rows['password'] == 'wellness')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/wellness/case/dashboard.php");
+               // break;
+               }
+             
+               if($_SESSION['email']=='clinic' && $_SESSION['password'] == 'wellness')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/wellness/case/clinicview.php");
+               // break;
+               }
+               if($_SESSION['email']=='testing' && $_SESSION['password'] == 'wellness')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/wellness/case/testingview.php");
+               // break;
+               }
+                 if($_SESSION['email']=='hospital' && $_SESSION['password'] == 'wellness')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/wellness/case/hospitalview.php");
+               // break;
+               }
+           else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
+               {
+                 // echo "Sucessfully";
+                header("location:/wellness/idea/view.php");
+               }
+            else if($rows['email']=='investigator@nixwhistle.co'&& $rows['password']=='investigator')
+               {
+                 // echo "Sucessfully";
+                header("location:/wellness/investigator/view.php");
+               }
+               else if($rows['email']=='reviewer@nixwhistle.co'&& $rows['password']=='reviewer')
+               {
+                 // echo "Sucessfully";
+                header("location:/wellness/reviewer/reviewerview.php");
+               }
+             }
+             else
+               {
+                // echo "Error: " . $sql . "<br>" . $link->error;
+                // alert("incorrect username and password");
+               }
+  }
+?>
 
+
+<?php
+if(isset($_POST['submit']))
+{
+     $infowellsec=$_POST['infowellsec'];
+     $infowellkey=$_POST['infowellkey'];
+
+     $sql="SELECT infowellsec, infowellkey from wellness where infowellsec='$infowellsec' and infowellkey='$infowellkey'";
+     $result=mysqli_query($link,$sql);
+     if($row=mysqli_fetch_assoc($result))
+     {
+         if($row['infowellsec']==$infowellsec && $row['infowellkey']==$infowellkey)
+         {
+             header("location:../case/followup.php?infowellsec=".$row['infowellsec']);
+         }
+     }
+     else
+     {
+         echo "error".$sql.$link->error;
+     }
+}
+
+
+?>
+
+<?php
+
+if(isset($_POST['sub']))
+{
+$dist=$_POST['dist'];
+$udetails=$_POST['udetails'];
+$name=$_POST['name'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$address=$_POST['address'];
+$family = $_POST['family'];
+$category=$_POST['category'];
+$quitetrivial=$_POST['quitetrivial'];
+$dryness=$_POST['dryness'];
+$positivefeeling=$_POST['positivefeeling'];
+$breathing=$_POST['breathing'];
+$getgoing=$_POST['getgoing'];
+$situations=$_POST['situations'];
+$shakiness=$_POST['shakiness'];
+$relax=$_POST['relax'];
+$anxious=$_POST['anxious'];
+$forward=$_POST['forward'];
+$upset=$_POST['upset'];
+$nervous=$_POST['nervous'];
+$saddepressed=$_POST['saddepressed'];
+$impatient=$_POST['impatient'];
+$faintness=$_POST['faintness'];
+$lostinterest=$_POST['lostinterest'];
+$worthperson=$_POST['worthperson'];
+$touchy=$_POST['touchy'];
+$noticeably=$_POST['noticeably'];
+$goodreason=$_POST['goodreason'];
+$worthwhile=$_POST['worthwhile'];
+$winddown=$_POST['winddown'];
+$swallowing=$_POST['swallowing'];
+$enjoyment=$_POST['enjoyment'];
+$physicalexertion=$_POST['physicalexertion'];
+$feltdown=$_POST['feltdown'];
+$irritable=$_POST['irritable'];
+$closepanic=$_POST['closepanic'];
+$somethingupset=$_POST['somethingupset'];
+$trivial=$_POST['trivial'];
+$enthusiastic=$_POST['enthusiastic'];
+$interruptions=$_POST['interruptions'];
+$nervoustension=$_POST['nervoustension'];
+$prettyworthless=$_POST['prettyworthless'];
+$intolerant=$_POST['intolerant'];
+$terrified=$_POST['terrified'];
+$hopefulabout=$_POST['hopefulabout'];
+$meaningless=$_POST['meaningless'];
+$agitated=$_POST['agitated'];
+$panic=$_POST['panic'];
+$trembling=$_POST['trembling'];
+$difficultwork=$_POST['difficultwork'];
+$infowellkey=$_POST['infowellkey'];
+$infowellsec=$_POST['infowellsec'];
+
+$status="created";
+if($worthwhile1<=2||$winddown<=2||$swallowing<=2||$enjoyment<=2||$physicalexertion<=2||$feltdown<=2||$irritable<=2||$closepanic<=2||$somethingupset<=2||$trivial<=2||$enthusiastic<=2||$interruptions<=2||$nervoustension<=2||$prettyworthless<=2||$intolerant<=2||$terrified<=2||$hopefulabout<=2||$meaningless<=2||$agitated<=2||$panic<=2||$trembling<=2||$difficultwork<=2)
+{
+  $risk="Low";
+$sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,family,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
+values('$dist','$udetails','$name','$email','$phone','$address','$family','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','created')";
+if(mysqli_query($link,$sql))
+{
+         echo "successfully";
+         header("location:wellnesscode.php");
+}
+}
+if(($worthwhile1>=3 && $worthwhile1<=6)|| ($winddown>=3 && $winddown<=6)|| ($swallowing>=3 && $swallowing<=6)||($enjoyment>=3 && $enjoyment<=6)||($physicalexertion>=3 && $physicalexertion<=6)||($feltdown>=3 && $feltdown<=6)||($irritable>=3 && $irritable<=6)||($closepanic>=3 && $closepanic<=6)||($somethingupset>=3 && $somethingupset<=6)||($trivial>=3 && $trivial<=6)||($enthusiastic>=3 && $enthusiastic<=6)||($interruptions>=3 && $interruptions<=6)||($nervoustension>=3 && $nervoustension<=6)||($prettyworthless>=3 && $prettyworthless<=6)||($intolerant>=3 && $intolerant<=6)||($terrified>=3 && $terrified<=6)||($hopefulabout>=3 && $hopefulabout<=6)||($meaningless>=3 && $meaningless<=6)||($agitated>=3 && $agitated<=6)||($panic>=3 && $panic<=6)||($trembling>=3 && $trembling<=6)||($difficultwork>=3 && $difficultwork<=6))
+{
+$risk="Medium";
+$sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,family,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
+values('$dist','$udetails','$name','$email','$phone','$address','$family','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','created')";
+if(mysqli_query($link,$sql))
+{
+         echo "successfully";
+         header("location:wellnesscode.php");
+}
+}
+if($worthwhile1>6||$winddown>6||$swallowing>6||$enjoyment>6||$physicalexertion>6||$feltdown>6||$irritable>6||$closepanic>6||$somethingupset>6||$trivial>6||$enthusiastic>6||$interruptions>6||$nervoustension>6||$prettyworthless>6||$intolerant>6||$terrified>6||$hopefulabout>6||$meaningless>6||$agitated>6||$panic>6||$trembling>6||$difficultwork>6)
+{
+  $risk="High";
+$sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,family,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
+values('$dist','$udetails','$name','$email','$phone','$address','$family','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','created')";
+if(mysqli_query($link,$sql))
+{
+         echo "successfully";
+         header("location:wellnesscode.php");
+}
+
+}
+else
+{
+
+}
+
+
+}
+
+
+     
+
+?>
+<style type="text/css">
+  .nav-item:hover{
+    border-bottom:3px solid #024da0;
+
+
+  }
+   .nav-item
+   {
+    border:2px solid transparent;
+   }
+</style>
 <!DOCTYPE html>
 <html>
  <head><!--begin::Base Path (base relative path for assets of this page) -->
@@ -101,18 +309,6 @@
 
 }
 </style>
-
-<style type="text/css">
-  .nav-item:hover{
-    border-bottom:3px solid #024da0;
-
-
-  }
-   .nav-item
-   {
-    border:2px solid transparent;
-   }
-</style>
 <?php include '../siteheader.php'; ?>
 
  <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: white;">
@@ -169,9 +365,739 @@ First off, this is a secure consulting room and your identity is protected. We u
                  
                 </ul>
                 <div class="tab-content">
-                    
+                    <div class="tab-pane" id="kt_tabs_1_1" role="tabpanel">
 
+
+<div class="kt-grid kt-grid--hor kt-grid--root" style="">
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+
+<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+<!-- begin:: Content -->
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+    <div class="kt-portlet">
+  <div class="kt-portlet__body kt-portlet__body--fit">
+    <div class="kt-grid  kt-wizard-v1 kt-wizard-v1--white" id="kt_wizard_v1" data-ktwizard-state="step-first">
+      <div class="kt-grid__item">
+        <!--begin: Form Wizard Nav -->
+        <div class="kt-wizard-v1__nav">
+          <div class="kt-wizard-v1__nav-items">
+            <!--doc: Replace A tag with SPAN tag to disable the step link click -->
+            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
+              <div class="kt-wizard-v1__nav-body">
+                <div class="kt-wizard-v1__nav-icon">
+                  <i class="flaticon-bus-stop"></i>
+                </div>
+                <div class="kt-wizard-v1__nav-label">
+                  1. Your Info
+                </div>
+              </div>
+            </a>
+            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step">
+              <div class="kt-wizard-v1__nav-body">
+                <div class="kt-wizard-v1__nav-icon">
+                  <i class="flaticon-list"></i>
+                </div>
+                <div class="kt-wizard-v1__nav-label">
+                  2. Symptoms
+                </div>
+              </div>
+            </a>
+            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step">
+              <div class="kt-wizard-v1__nav-body">
+                <div class="kt-wizard-v1__nav-icon">
+                  <i class="flaticon-responsive"></i>
+                </div>
+                <div class="kt-wizard-v1__nav-label">
+                  3. Other Symptoms
+                </div>
+              </div>
+            </a>
+            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step">
+              <div class="kt-wizard-v1__nav-body">
+                <div class="kt-wizard-v1__nav-icon">
+                  <i class="flaticon-truck"></i>
+                </div>
+                <div class="kt-wizard-v1__nav-label">
+                  4. Travel
+                </div>
+              </div>
+            </a>
+            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step">
+              <div class="kt-wizard-v1__nav-body">
+                <div class="kt-wizard-v1__nav-icon">
+                  <i class="flaticon-globe"></i>
+                </div>
+                <div class="kt-wizard-v1__nav-label">
+                  5. Review and Submit
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!--end: Form Wizard Nav -->
+
+      </div>
+      <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v1__wrapper">
+        <!--begin: Form Wizard Form-->
+        <form class="kt-form"  method="POST" >
+          <!--begin: Form Wizard Step 1-->
+          <div class="kt-wizard-v1__content" data-ktwizard-type="step-content" data-ktwizard-state="current" id="kt_form">
+            <!-- <div class="kt-heading kt-heading--md">Setup Your Current Location</div> -->
+            <div class="kt-form__section kt-form__section--first">
+              <div class="kt-wizard-v1__form">
+
+                <div class="row">
+                  <div class="col-md-12">
+
+
+
+                <div name="Description" style="display: ;">
+            <p style="font-size: 20px; font-weight: 500">District :</p>
+            <div>
+                <div id="searchbox2">
+           
+<select id="district" name="city" class="form-control"  style="border-color:#B8B8BB;background:transparent;">
+     
+       <option>Select your District</option>
+         <option value='Chennai'  data-title="Chennai">Chennai</option>
+         <option value='Ariyalur'  data-title="Ariyalur">Ariyalur</option>
+         <option value='Chengalpattu'  data-title="Chengalpattu">Chengalpattu</option>
+         <option value='Coimbatore'  data-title="Coimbatore">Coimbatore</option>
+         <option value='Cuddalore'  data-title="Cuddalore">Cuddalore</option>
+         <option value='Dharmapuri'  data-title="Dharmapuri">Dharmapuri</option>
+         <option value='Dindigul'  data-title="Dindigul">Dindigul</option>
+         <option value='Erode'  data-title="Erode">Erode</option>
+         <option value='Kallakurichi'  data-title="Kallakurichi">Kallakurichi</option>
+         <option value='Kanchipuram'  data-title="Kanchipuram">Kanchipuram</option>
+         <option value='Kanniyakumari'  data-title="Kanniyakumari">Kanniyakumari</option>
+         <option value='Karur'  data-title="Karur">Karur</option>
+         <option value='Krishnagiri'  data-title="Krishnagiri">Krishnagiri</option>
+         <option value='Madurai'  data-title="Madurai">Madurai</option>
+         <option value='Mayiladuthurai'  data-title="Mayiladuthurai">Mayiladuthurai</option>
+         <option value='Nagapattinam'  data-title="Nagapattinam">Nagapattinam</option>
+         <option value='Namakkal'  data-title="Namakkal">Namakkal</option>
+         <option value='Nilgiris'  data-title="Nilgiris">Nilgiris</option>
+         <option value='Perambalur'  data-title="Perambalur">Perambalur</option>
+         <option value='Pudukkottai'  data-title="Pudukkottai">Pudukkottai</option>
+         <option value='Ramanathapuram'  data-title="Ramanathapuram">Ramanathapuram</option>
+         <option value='Ranipet'  data-title="Ranipet">Ranipet</option>
+         <option value='Salem'  data-title="Salem">Salem</option>
+         <option value='Sivagangai'  data-title="Sivagangai">Sivagangai</option>
+         <option value='Tenkasi'  data-title="Tenkasi">Tenkasi</option>
+         <option value='Thanjavur'  data-title="Thanjavur">Thanjavur</option>
+         <option value='Theni'  data-title="Theni">Theni</option>
+         <option value='Thoothukudi'  data-title="Thoothukudi">Thoothukudi</option>
+         <option value='Tiruchirappalli'  data-title="Tiruchirappalli">Tiruchirappalli</option>
+         <option value='Tirunelveli'  data-title="Tirunelveli">Tirunelveli</option>
+         <option value='Tirupattur'  data-title="Tirupattur">Tirupattur</option>
+         <option value='Tiruppur'  data-title="Tiruppur">Tiruppur</option>
+         <option value='Tiruvallur'  data-title="Tiruvallur">Tiruvallur</option>
+         <option value='Tiruvannamalai'  data-title="Tiruvannamalai">Tiruvannamalai</option>
+         <option value='Tiruvarur'  data-title="Tiruvarur">Tiruvarur</option>
+         <option value='Vellore'  data-title="Vellore">Vellore</option>
+         <option value='Viluppuram'  data-title="Viluppuram">Viluppuram</option>
+         <option value='Virudhunagar'  data-title="Virudhunagar">Virudhunagar</option>
+
+</select>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+<br>
+<br>
+
+
+
+
+                                        <div class="form-group">
+                                      <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size: 20px; font-weight: 500">Your Details:</label>
+                    </div>  
+                     <div class="form-group ">
+             
+              <label class="kt-radio kt-radio--solid kt-radio--info" style="color: black;font-size: 14px;background-color: ">
+         <input type="radio" name="radio1" value="Anonymous" id="Anonymous" checked="checked">Keen to be Anonymous
+         <span></span>
+       </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black; font-size: 14px;">
+             <input type="radio" name="radio1" value="disclose" id="disclose"> Keen to disclose
+
+             <span></span>
+           </label>
+
+
+      </div>
+     </div>
+
+     <div id="details">
+            <div class="row">
+         <div class="col-md-4 ">
+           <input type="text" placeholder="FullName" id="name" name="name" class="form-control">&nbsp;
+        </div>
+      <div class="col-md-4">
+        <input type="text" placeholder="Age" id="email" name="email" class="form-control">&nbsp;
+      </div>
+      <div class="col-md-4">
+        <input type="text" placeholder="Phone" id="phone" name="phone" class="form-control" >
+      </div>
+
+
+  </div>
+  <div class="row">
+     <div class="col-md-12">
+        <input type="text" placeholder="Address" id="address" name="address" class="form-control" >
+      </div>
+  </div>
+
+</div>
+       
+   <input type="hidden" name="secretkey" id="secretkey">
+          <input type="hidden" name="ran" id="ran">
  
+
+   <!--              <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">1. For whom are You taking this test?</p>
+                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yourself" name="taking_test" value="For yourself">
+                    <label for="yourself">For yourself</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="parent" name="taking_test" value="Parent">
+                    <label for="parent">Parent</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="spouce" name="taking_test" value="Spouce">
+                    <label for="spouce">Spouce</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="Child" name="taking_test" value="Child">
+                    <label for="Child">Child</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="someone_else" name="taking_test" value="Someone else">
+                    <label for="someone_else">Someone else</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">2. What is your age group?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="under12" name="age" value="Less Than 12">
+                    <label for="under12">Less Than 12</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="above12" name="age" value="12-50">
+                    <label for="above12">12-50</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="above51" name="age" value="51-60">
+                    <label for="above51">51-60</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="above60" name="age" value=">60">
+                    <label for="above60">>60</label><span></span> </label><br>
+                   
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">3. What is your gender?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label><span></span></label><br>
+                                       
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">4. Do you have fever?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="normal" name="fever" value="Normal">
+                    <label for="normal">Normal</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="moderate" name="fever" value="Moderate">
+                    <label for="moderate">Moderate</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="heavy" name="fever" value="Heavy">
+                    <label for="heavy">Heavy</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="notAware" name="fever" value="Not aware">
+                    <label for="notAware">Not aware</label><span></span></label><br>
+                                       
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">5. Do you have dry cough?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="drycough" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="no" name="drycough" value="No">
+                    <label for="no">No</label><span></span></label><br>
+                                       
+                </div> -->
+               
+             
+              </div>
+            </div>
+          </div>
+          <!--end: Form Wizard Step 1-->
+
+          <!--begin: Form Wizard Step 2-->
+          <div class="kt-wizard-v1__content" data-ktwizard-type="step-content">
+<!--             <div class="kt-heading kt-heading--md">Enter the Details of your Delivery</div>
+ -->            <div class="kt-form__section kt-form__section--first">
+              <div class="kt-wizard-v1__form">
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">6. Do you have lost or less Feeling to smell?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="feelingsmell" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="normal" name="feelingsmell" value="Normal">
+                    <label for="normal">Normal</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">7. Do you have throat pain?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="throatpain" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="normal" name="throatpain" value="Normal">
+                    <label for="normal">Normal</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">8. Does your Body feel weak?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="bodyweak" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="normal" name="bodyweak" value="Normal">
+                    <label for="normal">Normal</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">9. Do you have No Hunger?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="nohunger" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="normalHunger" name="nohunger" value="Normal hunger">
+                    <label for="normalHunger">Normal hunger</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">10. Do you have normal or heavy cough?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="coughrange" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="normal" name="coughrange" value="Normal">
+                    <label for="normal">Normal</label><span></span></label><br>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          <!--end: Form Wizard Step 2-->
+
+          <!--begin: Form Wizard Step 3-->
+     
+
+
+          <!--end: Form Wizard Step 3-->
+
+          <!--begin: Form Wizard Step 4-->
+          <div class="kt-wizard-v1__content" data-ktwizard-type="step-content">
+            <!-- <div class="kt-heading kt-heading--md">Setup Your Delivery Location</div> -->
+            <div class="kt-form__section kt-form__section--first">
+              <div class="kt-wizard-v1__form">
+                  <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">16. Have you  visited outside state or country  in last 21 days?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="visitedoutside" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="no" name="visitedoutside" value="No">
+                    <label for="no">No</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">17. Have you  came in contact with anyone affected?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="contactaffect" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="no" name="contactaffect" value="No">
+                    <label for="no">No</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">18. Have you visited any of the corona infected countries in last 21 days?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="china" name="infectedcountry" value="China">
+                    <label for="china">China</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="italy" name="infectedcountry" value="Italy">
+                    <label for="italy">Italy</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="spain" name="infectedcountry" value="Spain">
+                    <label for="spain">Spain</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="iran" name="infectedcountry" value="Iran">
+                    <label for="iran">Iran</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="europe" name="infectedcountry" value="Europe">
+                    <label for="europe">Europe</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="middle_east" name="infectedcountry" value="Middle East">
+                    <label for="middle_east">Middle East</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="southeast_asia" name="infectedcountry" value="Southeast asia">
+                    <label for="southeast_asia">Southeast asia</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="country_not_listed" name="infectedcountry" value="Country not listed">
+                    <label for="country_not_listed">Country not listed</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="not_visited" name="infectedcountry" value="Not visited">
+                    <label for="not_visited">Not visited</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">19. Have you or your family came in contact with anyone affected in last 21 days?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="familycontact" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="no" name="familycontact" value="No">
+                    <label for="no">No</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">20. Do you have any of these health condition?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="checkbox" id="diabetes" name="healthcondition" value="Diabetes">
+                    <label for="diabetes">Diabetes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="checkbox" id="high_bp" name="healthcondition" value="High BP">
+                    <label for="high_bp">High BP</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="checkbox" id="heart_diseases" name="healthcondition" value="Heart Diseases">
+                    <label for="heart_diseases">Heart Diseases</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="checkbox" id="kidney" name="healthcondition" value="Kidney">
+                    <label for="kidney">Kidney</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="checkbox" id="lungs" name="healthcondition" value="Lungs">
+                    <label for="lungs">Lungs</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="checkbox" id="stroke" name="healthcondition" value="Stroke">
+                    <label for="stroke">Stroke</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="checkbox" id="immuno" name="healthcondition" value="Immuno compromised condition">
+                    <label for="immuno">Immuno compromised condition</label><span></span></label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="checkbox" id="noneoftheabove" name="healthcondition" value="None of the above">
+                    <label for="noneoftheabove">None of the above</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">21. Any disease symptoms in 24 hours?</p>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="yes" name="diseasesymptoms" value="Yes">
+                    <label for="yes">Yes</label><span></span> </label><br>
+                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <input type="radio" id="normal" name="diseasesymptoms" value="Normal">
+                    <label for="normal">Normal</label><span></span></label><br>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">22. Other info</p>
+                    <textarea type="text" rows="8" class="form-control output" name="Description" id="Description"  placeholder="Type something here....." style="border-color:#B8B8BB;background:transparent;"></textarea>
+                </div>
+                <div class="form-group">
+                  <p style="font-size: 20px; font-weight: 500">23. Proof</p>
+                    <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2">
+                      <div class="dropzone-msg dz-message needsclick">
+                          <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
+                          <!-- <span class="dropzone-msg-desc">Upload up to 10 files</span> -->
+                          <label for="Artifacts" aria-hidden="true">
+                   <img src="csv.svg" title="Upload File" width="35" height="35" >
+                           <input type="file" name="Artifacts" id="Artifacts" style="display: none;">
+                         </label>
+                      </div>
+                    </div>
+                </div>
+               
+               
+                 
+              </div>
+            </div>
+          </div>
+          <!--end: Form Wizard Step 4-->
+
+          <!--begin: Form Wizard Step 5-->
+          <div class="kt-wizard-v1__content" data-ktwizard-type="step-content">
+            <div class="kt-heading kt-heading--md">Review your Details and Submit</div>
+            <div class="kt-form__section kt-form__section--first">
+              <div class="kt-wizard-v1__review">
+                <div class="kt-wizard-v1__review-item">
+                  <div class="kt-wizard-v1__review-title">
+                    Your info
+                  </div>
+                  <div class="kt-wizard-v1__review-content">
+                    <label><b>City:  </b></label><p id="district1"></p>
+                    <label><b>ZipCode:  </b></label><p id="zipcode1"></p>
+                    <label><b>1. From whom are you taking this test :  </b></label><p id="result1"></p>
+                    <label><b>2. What is your age group :  </b></label><p id="result2"></p>
+                    <label><b>3. What is your gender :  </b></label><p id="result3"></p>
+                    <label><b>4. Do you have fever :  </b></label><p id="result4"></p>
+                    <label><b>5. Do you have dry cough :  </b></label><p id="result5"></p>
+                  </div>
+                </div>
+                <div class="kt-wizard-v1__review-item">
+                  <div class="kt-wizard-v1__review-title">
+                    Symptoms
+                  </div>
+                  <div class="kt-wizard-v1__review-content">
+                    <label><b>6. Do you have lost or less Feeling to smell :  </b></label><p id="result6"></p>
+                    <label><b>7. Do you have throat pain :  </b></label><p id="result7"></p>
+                    <label><b>8. Does your Body feel weak :  </b></label><p id="result8"></p>
+                    <label><b>9. Do you have No Hunger :  </b></label><p id="result9"></p>
+                    <label><b>10. Do you have normal or heavy cough :  </b></label><p id="result10"></p>
+                  </div>
+                </div>
+                <div class="kt-wizard-v1__review-item">
+                  <div class="kt-wizard-v1__review-title">
+                    Other Symptoms
+                  </div>
+                  <div class="kt-wizard-v1__review-content">
+                    <label><b>11. Do you have breath shortness :  </b></label><p id="result11"></p>
+                    <label><b>12. Do you have normal breathing :  </b></label><p id="result12"></p>
+                    <label><b>13. Do you Feel drowsy or sleep :  </b></label><p id="result13"></p>
+                    <label><b>14. Do you feel Pain in chest :  </b></label><p id="result14"></p>
+                    <label><b>15. Do you have Weakness across body :  </b></label><p id="result15"></p>
+                  </div>
+                </div>
+                <div class="kt-wizard-v1__review-item">
+                  <div class="kt-wizard-v1__review-title">
+                    Travel
+                  </div>
+                  <div class="kt-wizard-v1__review-content">
+                    <label><b>16. Have you visited outside state or country in last 21 days :  </b></label><p id="result16"></p>
+                    <label><b>17. Have you came in contact with anyone affected :  </b></label><p id="result17"></p>
+                    <label><b>18. Have you visited any of the corona infected countries in last 21 days :  </b></label><p id="result18"></p>
+                    <label><b>19. Have you or your family came in contact with anyone affected in last 21 days :  </b></label><p id="result19"></p>
+                    <label><b>20. Do you have any of these health condition :  </b></label><p id="result20"></p>
+                    <label><b>21. Any disease symptoms in 24 hours :  </b></label><p id="result21"></p>
+                    <label><b>22. Other info :  </b></label><p id="result22"></p>
+                    <label><b>23. Proof :  </b></label><p id="result23"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end: Form Wizard Step 5-->
+
+          <!--begin: Form Actions -->
+          <div class="kt-form__actions">
+            <button class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
+              Previous
+            </button>
+         
+                 <input type="submit" name="submit" id="case" value="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit" style="background-color:#afd135;border:2px solid #afd135;">
+
+            <button class="btn btn-info btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="showvalue()" style="background-color:#034ea2;">
+              Next Step
+            </button>
+          </div>
+
+       
+          <!--end: Form Actions -->
+        </form>
+        <!--end: Form Wizard Form-->
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+
+ <div class="tab-pane" id="kt_tabs_1_3" role="tabpanel">
+      <form class="kt-form" method="post">
+                    <!--begin: Form Wizard Step 1-->
+                    <div class="kt-wizard-v1__content" data-ktwizard-type="step-content" data-ktwizard-state="current" style="padding-left: 10%; padding-right: 10%;">
+                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300">Setup Your Current Info:</div>
+                        <div class="kt-form__section kt-form__section--first">
+                            <div class="kt-wizard-v1__form">
+                                <div class="form-group">
+                                 <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Info:</label>
+                    </div>  
+
+                              <div class="row">
+                                  <div class="col-md-2" style="text-align: center;">
+                                     <i class="fa fa-user-shield" style="font-size: 50px; color: #034ea2;"></i>
+                                 
+                                    <div>
+                                      Death
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2" style="text-align: center;">
+                                    <i class="fa fa-hands-helping" style="font-size: 50px; color: #afd135;"></i>
+                                    <div>
+                                      Neighborhood Alert
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2" style="text-align: center;">
+                                     <i class="fa fa-bus-alt" style="font-size: 50px; color: #034ea2;"></i>
+                                    <div>
+                                      Travel Alert
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2" style="text-align: center;">
+                                    <i class="la la-feed" style="font-size: 50px; color: #afd135;"></i>
+                                    <div>
+                                      Medicine
+                                    </div>
+                                  </div>
+                                     <div class="col-md-2" style="text-align: center;">
+                                    <i class="flaticon-shopping-basket" style="font-size: 50px; color: #034ea2;"></i>
+                                    <div>
+                                      Grocery
+                                    </div>
+                                  </div>
+                                     <div class="col-md-2" style="text-align: center;">
+                                    <i class="fa fa-ambulance" style="font-size: 50px; color: #afd135;"></i>
+                                    <div>
+                                      Operation
+                                    </div>
+                                  </div>
+                                </div>
+           
+                                  <!--   <span class="form-text text-muted">Please enter your Address.</span> -->
+                                </div>
+                                        <div class="form-group">
+                                               <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">District:</label>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                                        <select name="countries1" class="form-control">
+                                                 <option>Select your District</option>
+         <option value='Chennai'  data-title="Chennai">Chennai</option>
+         <option value='Ariyalur'  data-title="Ariyalur">Ariyalur</option>
+         <option value='Chengalpattu'  data-title="Chengalpattu">Chengalpattu</option>
+         <option value='Coimbatore'  data-title="Coimbatore">Coimbatore</option>
+         <option value='Cuddalore'  data-title="Cuddalore">Cuddalore</option>
+         <option value='Dharmapuri'  data-title="Dharmapuri">Dharmapuri</option>
+         <option value='Dindigul'  data-title="Dindigul">Dindigul</option>
+         <option value='Erode'  data-title="Erode">Erode</option>
+         <option value='Kallakurichi'  data-title="Kallakurichi">Kallakurichi</option>
+         <option value='Kanchipuram'  data-title="Kanchipuram">Kanchipuram</option>
+         <option value='Kanniyakumari'  data-title="Kanniyakumari">Kanniyakumari</option>
+         <option value='Karur'  data-title="Karur">Karur</option>
+         <option value='Krishnagiri'  data-title="Krishnagiri">Krishnagiri</option>
+         <option value='Madurai'  data-title="Madurai">Madurai</option>
+         <option value='Mayiladuthurai'  data-title="Mayiladuthurai">Mayiladuthurai</option>
+         <option value='Nagapattinam'  data-title="Nagapattinam">Nagapattinam</option>
+         <option value='Namakkal'  data-title="Namakkal">Namakkal</option>
+         <option value='Nilgiris'  data-title="Nilgiris">Nilgiris</option>
+         <option value='Perambalur'  data-title="Perambalur">Perambalur</option>
+         <option value='Pudukkottai'  data-title="Pudukkottai">Pudukkottai</option>
+         <option value='Ramanathapuram'  data-title="Ramanathapuram">Ramanathapuram</option>
+         <option value='Ranipet'  data-title="Ranipet">Ranipet</option>
+         <option value='Salem'  data-title="Salem">Salem</option>
+         <option value='Sivagangai'  data-title="Sivagangai">Sivagangai</option>
+         <option value='Tenkasi'  data-title="Tenkasi">Tenkasi</option>
+         <option value='Thanjavur'  data-title="Thanjavur">Thanjavur</option>
+         <option value='Theni'  data-title="Theni">Theni</option>
+         <option value='Thoothukudi'  data-title="Thoothukudi">Thoothukudi</option>
+         <option value='Tiruchirappalli'  data-title="Tiruchirappalli">Tiruchirappalli</option>
+         <option value='Tirunelveli'  data-title="Tirunelveli">Tirunelveli</option>
+         <option value='Tirupattur'  data-title="Tirupattur">Tirupattur</option>
+         <option value='Tiruppur'  data-title="Tiruppur">Tiruppur</option>
+         <option value='Tiruvallur'  data-title="Tiruvallur">Tiruvallur</option>
+         <option value='Tiruvannamalai'  data-title="Tiruvannamalai">Tiruvannamalai</option>
+         <option value='Tiruvarur'  data-title="Tiruvarur">Tiruvarur</option>
+         <option value='Vellore'  data-title="Vellore">Vellore</option>
+         <option value='Viluppuram'  data-title="Viluppuram">Viluppuram</option>
+         <option value='Virudhunagar'  data-title="Virudhunagar">Virudhunagar</option>
+                                        </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                   
+                                    <div class="form-group">
+                                      <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Description:</label>
+                    </div>  
+                         <textarea type="text" rows="8" class="form-control" name="Description1" id="Description1"></textarea>
+                                </div>
+                               <div class="form-group">
+                                      <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Artifacts:</label>
+                    </div>  
+                     <div class="form-group">
+       
+          <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2">
+            <div class="dropzone-msg dz-message needsclick">
+                <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
+                <!-- <span class="dropzone-msg-desc">Upload up to 10 files</span> -->
+                <label for="Artifacts1" aria-hidden="true">
+         <img src="csv.svg" title="Upload File" width="35" height="35" >
+                 <input type="file" name="Artifacts1" id="Artifacts1" style="display: none;">
+               </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+                                        <div class="form-group">
+                                      <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Your Details:</label>
+                    </div>  
+                     <div class="form-group">
+             
+              <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;font-size: 14px;">
+         <input type="radio" name="radio1" value="Anonymous1" id="Anonymous1" checked="checked">Keen to be Anonymous
+         <span></span>
+       </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <label class="kt-radio kt-radio--solid kt-radio--danger" style="color: black; font-size: 14px;">
+             <input type="radio" name="radio1" value="disclose1" id="disclose1"> Keen to disclose
+
+             <span></span>
+           </label>
+
+
+      </div>
+     </div>
+           <div id="details1">
+            <div class="row">
+         <div class="col-md-4">
+           <input type="text" placeholder="FullName" id="name" name="name1" class="form-control" >&nbsp;
+        </div>
+      <div class="col-md-4">
+        <input type="text" placeholder="Email" id="email" name="email1" class="form-control">&nbsp;
+      </div>
+      <div class="col-md-4">
+        <input type="text" placeholder="Phone" id="phone" name="phone1" class="form-control">
+      </div>
+
+
+  </div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                        <input type="hidden" name="passkey1" id="passkey1">
+          <input type="hidden" name="tipno1" id="tipno1">
+                   <div style="text-align:center">  
+    <input type="submit" name="login" id="info" value="submit" class="btn btn-success" style="display: inline-block;border-radius: 8px solid transparent;border:2px solid #afd135;color:#fff;background:#afd135;width: 30%;">
+</div>  
+                </form>
+
+ </div>
 <div class="tab-pane active" id="kt_tabs_1_4" role="tabpanel">
     <div class="kt-container  kt-grid__item kt-grid__item--fluid">
     <div class="kt-portlet">
@@ -229,7 +1155,7 @@ First off, this is a secure consulting room and your identity is protected. We u
       </div>
       <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v3__wrapper">
         <!--begin: Form Wizard Form-->
-        <form class="kt-form" id="kt_form">
+        <form class="kt-form" id="kt_form" method="POST">
           <!--begin: Form Wizard Step 1-->
           <div class="kt-wizard-v3__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
               <div class="kt-form__section kt-form__section--first">
@@ -1118,7 +2044,7 @@ First off, this is a secure consulting room and your identity is protected. We u
               Previous
             </button>
          
-                 <button type="button" name="sub"  class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit" style="background-color:#afd135;border:2px solid #afd135;" onclick="myfunction()">Submit</button>
+                 <input type="submit" name="sub" value="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit" style="background-color:#afd135;border:2px solid #afd135;">
             <button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="showvalue1()">
               Next Step
             </button>
@@ -1229,7 +2155,6 @@ First off, this is a secure consulting room and your identity is protected. We u
                             <script src="./assets/js/demo2/pages/wizard/wizard-3.js" type="text/javascript"></script>
                             <script src="./assets/js/demo2/pages/crud/forms/widgets/select2.js" type="text/javascript"></script>
                             <script src="./assets/js/demo2/pages/crud/forms/widgets/ion-range-slider.js" type="text/javascript"></script>
-                              <script src="js/case/wellnessmanagement.js"></script>
     <!-- end::Body -->
 </body>
 </html>
