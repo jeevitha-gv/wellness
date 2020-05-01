@@ -56,3 +56,11 @@ Error: ENOENT: no such file or directory, watch '/var/www/html/wellness/.git/ref
 > git show :case/wellnesscode.php
 > git show :case/casecode.php
 > git show :case/wellnesscode.php
+> git show :case/wellnesscode.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose

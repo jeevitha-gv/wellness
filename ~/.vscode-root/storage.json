@@ -1384,5 +1384,19 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#1e1e1e"
+    "themeBackground": "#1e1e1e",
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///var/www/html/wellness",
+            "backupPath": "/var/www/html/wellness/~/.vscode-root/Backups/47c7c1361b9348bfa0c376a70bd40a1f",
+            "uiState": {
+                "mode": 0,
+                "x": 0,
+                "y": 54,
+                "width": 1920,
+                "height": 1026
+            }
+        },
+        "openedWindows": []
+    }
 }
