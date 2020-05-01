@@ -1,0 +1,58 @@
+Looking for git in: git
+Using git 2.21.0 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+> git config --get commit.template
+Open repository: /var/www/html/wellness
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :php/common/config.php
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/var/www/html/wellness/.git/refs/remotes/origin/master', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/var/www/html/wellness/.git/refs/remotes/origin/master'
+	at FSWatcher.start (internal/fs/watchers.js:164:26)
+	at Object.watch (fs.js:1232:11)
+	at Object.t.watch (/usr/share/code/resources/app/extensions/git/dist/main.js:1:594639)
+	at T.updateTransientWatchers (/usr/share/code/resources/app/extensions/git/dist/main.js:1:98365)
+	at u.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:50:227)
+	at k.updateModelState (/usr/share/code/resources/app/extensions/git/dist/main.js:1:116241)
+> git show :php/common/constants.php
+> git show :php/common/config.php
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :case/clinicview.php
+> git show :case/followup.php
+> git show :case/intro.php
+> git show :case/json.php
+> git show :case/plan1.php
+> git show :case/Report.php
+> git show :case/reportgenerator.php
+> git show :case/secretkey.php
+> git show :case/sidemenu.php
+> git show :case/sidemenu2.php
+> git show :case/siteHeader.php
+> git show :case/siteHeader2.php
+> git show :case/speak.php
+> git show :case/speakup.php
+> git show :case/speak.php
+> git show :case/index.php
+> git show :case/hospitalindex.php
+> git show :idea/index.php
+> git show :case/index.php
+> git show :case/speakup.php
+> git show :case/wellnesscode.php
+> git show :case/casecode.php
+> git show :case/wellnesscode.php

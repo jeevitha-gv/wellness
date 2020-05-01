@@ -230,7 +230,7 @@ Case - <?php echo $_GET['id'];?>
 
 <script type="text/javascript">
   function alert(){
-    Swal.fire("Successfully Done!");
+    Swal.fire("Thanks for the intake analysis !");
   }
 
 

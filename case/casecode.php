@@ -146,17 +146,17 @@ if (mysqli_num_rows($result) > 0) {
       <?php if($row['heat']=="low")
       {
         ?>
-         <button class="btn" style="color: white;background-color: #F9D304;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-Stay home;Worse- get hospital.</span>
+         <button class="btn" style="color: white;background-color: #F9D304;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-You dont have much to worry, this too will pass. Stay calm. Good luck</span>
 <?php } ?>
       <?php if($row['heat']=="medium")
       {
         ?>
-         <button class="btn" style="color: white;background-color: #F58711;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor ; Self isolate in home.</span>
+         <button class="btn" style="color: white;background-color: #F58711;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-Our counsellors will be able to help you if you come for a live chat session through the chat link in home page</span>
 <?php } ?>
           <?php if($row['heat']=="high")
       {
         ?>
-         <button class="btn" style="color: white;background-color: #FA2E00;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor immediately, get covid19 test</span>
+         <button class="btn" style="color: white;background-color: #FA2E00;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-Please stop by nearby psychiatrist immediately.</span>
 <?php } ?>
         
 
@@ -177,17 +177,17 @@ if (mysqli_num_rows($result) > 0) {
       <?php if($row['heat']=="low")
       {
         ?>
-         <button class="btn" style="color: white;background-color: #F9D304;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-Stay home;Worse- get hospital.</span>
+         <button class="btn" style="color: white;background-color: #F9D304;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-You dont have much to worry, this too will pass. Stay calm. Good luck.</span>
 <?php } ?>
       <?php if($row['heat']=="medium")
       {
         ?>
-         <button class="btn" style="color: white;background-color: #F58711;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor ; Self isolate in home.</span>
+         <button class="btn" style="color: white;background-color: #F58711;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-Our counsellors will be able to help you if you come for a live chat session through the chat link in home page</span>
 <?php } ?>
           <?php if($row['heat']=="high")
       {
         ?>
-         <button class="btn" style="color: white;background-color: #FA2E00;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-consult doctor immediately, get covid19 test</span>
+         <button class="btn" style="color: white;background-color: #FA2E00;border-radius: 150px;"><?php echo $row['heat'];?></button>&nbsp;&nbsp;<span style="font-size: 16px;color: black;">-Please stop by nearby psychiatrist immediately.</span>
 <?php } ?>
         
                <div class="form-group">
