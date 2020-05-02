@@ -53,10 +53,7 @@
 									<li class="kt-menu__item " aria-haspopup="true"><a href="case/hospitalview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">psychiatrist</span></a>
 								</li>
                            <?php } ?>
-                           <?php 
-                           	 if($_SESSION['email']=='wellness@nixwhistle.com')
-                           	 {
-                           	 	?>
+                         
                            	 		<li class="kt-menu__item " aria-haspopup="true"><a href="case/clinicview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Intake</span></a>
 								</li>
 								 	<li class="kt-menu__item " aria-haspopup="true"><a href="case/testingview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">counsellor</span></a>
@@ -65,7 +62,7 @@
 								</li>
                            	 <li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/dashboard.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Reviewer</span></a>
 								</li>
-                           	 <?php } ?>
+                        
 								
 
 								<!-- <li class="kt-menu__item " aria-haspopup="true"><a href="view/audit/auditPublished.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> Reports</span></a></li> -->
