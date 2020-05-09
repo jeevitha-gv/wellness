@@ -264,7 +264,8 @@ if (mysqli_num_rows($result) > 0) {
              </div>
 
                <br>
-              <input type="text" id="together" style="position: absolute; left: -1000px; top: -1000px;" value="speak Number: <?php echo $row['infowellkey']; ?>          Secret Code: <?php echo $row['infowellsec']; ?>">
+              <input type="text" id="together" style="position: absolute; left: -1000px; top: -1000px;" value="Secret Number: <?php echo $row['infowellsec']; ?>
+              speak Code: <?php echo $row['infowellkey']; ?>">
               <button id="tog" style="background: transparent; border-radius: 50px; width: 100px; height: 50px; color: red;" title="Copy together to Clipboard">Copy Together</button>
 
               </div>
@@ -337,7 +338,7 @@ include "../footer.php"; ?>
         </script>
         <!-- end::Global Config -->
       <script src="assets/js/demo3/scripts.bundle.js" type="text/javascript"></script>
-      <script src="assets/toggleButton/bootstrap-toggle.min.js"></script>
+      <!-- <script src="assets/toggleButton/bootstrap-toggle.min.js"></script> -->
       <script type="text/javascript" src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>  
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.boot strapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>

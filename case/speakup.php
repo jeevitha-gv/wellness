@@ -444,7 +444,49 @@ First off, this is a secure consulting room and your identity is protected. We u
                   </div>
                 </div>
 <br>
-
+<div class="form-group">
+   <p style="font-size: 20px; font-weight: 500">Hobbies :</p>
+</div>
+<div class="form-group">
+   <p style="font-size: 15px; font-weight: 300;color: black;">General :</p>
+   <div class="">
+    <select class="form-control">
+      <option>Indoor</option>
+      <option>Outdoor</option>
+    </select>
+   </div>
+  </div>
+  <div class="form-group">
+   <p style="font-size: 15px; font-weight: 300;color: black;">Collection :</p>
+   <div class="">
+    <select class="form-control">
+      <option>Indoor</option>
+      <option>Outdoor</option>
+    </select>
+   </div>
+  </div>
+          
+          <div class="form-group">
+   <p style="font-size: 15px; font-weight: 300;color: black;">Competitive :</p>
+   <div class="">
+    <select class="form-control">
+      <option>Indoor</option>
+      <option>Outdoor</option>
+    </select>
+   </div>
+  </div>
+          
+          <div class="form-group">
+   <p style="font-size: 15px; font-weight: 300;color: black;">Observation :</p>
+   <div class="">
+    <select class="form-control">
+      <option>Indoor</option>
+      <option>Outdoor</option>
+    </select>
+   </div>
+  </div>
+  <br>
+          
                 <div id="div0" name="Description" style="display: ;">
             <p style="font-size: 20px; font-weight: 500">Category :</p>
             <div>
