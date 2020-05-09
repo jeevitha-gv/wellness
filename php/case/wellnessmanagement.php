@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', 'Admin1234#@', 'database');
+$conn = new mysqli('localhost', 'root', 'password', 'database');
 $dist=$_POST['dist'];
 $udetails=$_POST['udetails'];
 $name=$_POST['name'];
@@ -59,30 +59,24 @@ if($worthwhile1<=2||$winddown<=2||$swallowing<=2||$enjoyment<=2||$physicalexerti
   $risk="Low";
 $sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,family,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
 values('$dist','$udetails','$name','$email','$phone','$address','$family','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','$status')";
-if ($conn->query($sql) === TRUE) {
-    // echo "data inserted";
-}
+
 }
 if(($worthwhile1>=3 && $worthwhile1<=6)|| ($winddown>=3 && $winddown<=6)|| ($swallowing>=3 && $swallowing<=6)||($enjoyment>=3 && $enjoyment<=6)||($physicalexertion>=3 && $physicalexertion<=6)||($feltdown>=3 && $feltdown<=6)||($irritable>=3 && $irritable<=6)||($closepanic>=3 && $closepanic<=6)||($somethingupset>=3 && $somethingupset<=6)||($trivial>=3 && $trivial<=6)||($enthusiastic>=3 && $enthusiastic<=6)||($interruptions>=3 && $interruptions<=6)||($nervoustension>=3 && $nervoustension<=6)||($prettyworthless>=3 && $prettyworthless<=6)||($intolerant>=3 && $intolerant<=6)||($terrified>=3 && $terrified<=6)||($hopefulabout>=3 && $hopefulabout<=6)||($meaningless>=3 && $meaningless<=6)||($agitated>=3 && $agitated<=6)||($panic>=3 && $panic<=6)||($trembling>=3 && $trembling<=6)||($difficultwork>=3 && $difficultwork<=6))
 {
   $risk="Medium";
 $sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,family,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
 values('$dist','$udetails','$name','$email','$phone','$address','$family','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','$status')";
-if ($conn->query($sql) === TRUE) {
-    // echo "data inserted";
-}
+
 }
 if($worthwhile1>6||$winddown>6||$swallowing>6||$enjoyment>6||$physicalexertion>6||$feltdown>6||$irritable>6||$closepanic>6||$somethingupset>6||$trivial>6||$enthusiastic>6||$interruptions>6||$nervoustension>6||$prettyworthless>6||$intolerant>6||$terrified>6||$hopefulabout>6||$meaningless>6||$agitated>6||$panic>6||$trembling>6||$difficultwork>6)
 {
   $risk="High";
 $sql="INSERT INTO wellness(dist,udetails,name,email,phone,address,family,category,quitetrivial,dryness,positivefeeling,breathing,getgoing,situations,shakiness,relax,anxious,forward,upset,nervous,saddepressed,impatient,faintness,lostinterest,worthperson,touchy,noticeably,goodreason,worthwhile,winddown,swallowing,enjoyment,physicalexertion,feltdown,irritable,closepanic,somethingupset,trivial,enthusiastic,interruptions,nervoustension,prettyworthless,intolerant,terrified,hopefulabout,meaningless,agitated,panic,trembling,difficultwork,infowellkey,infowellsec,risk,status)
 values('$dist','$udetails','$name','$email','$phone','$address','$family','$category','$quitetrivial','$dryness','$positivefeeling','$breathing','$getgoing','$situations','$shakiness','$relax','$anxious','$forward','$upset','$nervous','$saddepressed','$impatient','$faintness','$lostinterest','$worthperson','$touchy','$noticeably','$goodreason','$worthwhile','$winddown','$swallowing','$enjoyment','$physicalexertion','$feltdown','$irritable','$closepanic','$somethingupset','$trivial','$enthusiastic','$interruptions','$nervoustension','$prettyworthless','$intolerant','$terrified','$hopefulabout','$meaningless','$agitated','$panic','$trembling','$difficultwork','$infowellkey','$infowellsec','$risk','$status')";
+
+}
 if ($conn->query($sql) === TRUE) {
     // echo "data inserted";
 }
-}
-else 
-{
-    // echo "failed";
-}
+
 ?>
