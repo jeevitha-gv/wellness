@@ -1527,4 +1527,4 @@ $("#details1").show();
             }
 </script>
 
-<!-- new -->
+<!-- new hobbies 3-->
