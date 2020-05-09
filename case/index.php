@@ -198,7 +198,7 @@ Case - <?php echo $_GET['id'];?>
 
 <div class="container">
 <div class="form-group">
-  <label style="font-size: 15px;">Management Synopsis :</label>
+  <label style="font-size: 15px;">Psychiatrist Synopsis :</label>
       <div class="">
    <textarea type="text" class="form-control" name="Synopsis" id="Synopsis" placeholder=""  style="height: 150px; border-color:#034EA2"> </textarea>
    <span id="apdate" style="color: red;"></span>
@@ -206,7 +206,7 @@ Case - <?php echo $_GET['id'];?>
    </div>
 
    <div class="form-group">
-  <label style="font-size: 15px;">Update to Citizen:</label>
+  <label style="font-size: 15px;">Update to Patient:</label>
       <div class="">
    <textarea type="text" class="form-control" name="WBU" id="WBU" placeholder="Give WhistleBlower on update"  style="height: 150px; border-color:#034EA2"> </textarea>
    <span id="apdate" style="color: red;"></span>
@@ -233,7 +233,7 @@ Case - <?php echo $_GET['id'];?>
 
 <script type="text/javascript">
   function alert(){
-    Swal.fire("Successfully Done!");
+    Swal.fire("Thanks for the intake analysis !");
   }
 
 
@@ -587,7 +587,7 @@ Case - <?php echo $_GET['id'];?>
 <br>
    
     <div class="form-group">
-  <label style="font-size: 14px;  background-color: #AFD135;"><b>Updated to Case - <?php echo $count;?></b></label>
+  <label style="font-size: 14px;  background-color: #AFD135;"><b>Psychiatrist Analysis - <?php echo $count;?></b></label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
         <?php echo $rows['WBU'];?>
