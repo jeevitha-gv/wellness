@@ -499,6 +499,65 @@ First off, this is a secure consulting room and your identity is protected. We u
       </div>
     </div>
     <br>
+
+
+                <div class="form-group">
+                                      <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size: 20px; font-weight: 500"><strong>Hobbies:<strong></label>
+                    </div>  
+                     <div class="form-group row ">
+             
+              <label class="kt-radio kt-radio--solid kt-radio--info" style="color: black;font-size: 14px;background-color: ">General
+       </label>
+         &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+       <div class="col-md-4">
+         
+ <select id="general" name="general" class="form-control">
+   <option value="Indoor">Indoor</option>
+   <option value="Outdoor">Outdoor</option>
+ </select>
+       </div>
+     </div>
+  <div class="form-group row ">
+            <label class="kt-radio kt-radio--solid kt-radio--info" style="color: black;font-size: 14px;background-color: ">Collection
+       </label>
+       &nbsp; &nbsp;  &nbsp; &nbsp;
+             <div class="col-md-4">
+         
+ <select id="collection" name="collection" class="form-control">
+   <option value="Indoor">Indoor</option>
+   <option value="Outdoor">Outdoor</option>
+ </select>
+       </div>
+ </div>
+   <div class="form-group row ">
+            <label class="kt-radio kt-radio--solid kt-radio--info" style="color: black;font-size: 14px;background-color: ">Competitive
+       </label>&nbsp; &nbsp; 
+                    <div class="col-md-4">
+ <select id="competitive" name="competitive" class="form-control">
+   <option value="Indoor">Indoor</option>
+   <option value="Outdoor">Outdoor</option>
+ </select>
+       </div>
+     </div>
+  <div class="form-group row ">
+
+            <label class="kt-radio kt-radio--solid kt-radio--info" style="color: black;font-size: 14px;background-color: ">Observation
+
+       </label> &nbsp; &nbsp;
+             <div class="col-md-4">
+ <select id="observation" name="observation" class="form-control">
+   <option value="Indoor">Indoor</option>
+   <option value="Outdoor">Outdoor</option>
+ </select>
+       </div>
+        
+
+
+      </div>
+     </div>
+
+
                <div class="form-group">
                   <p style="font-size: 20px; font-weight: 500">1. I found myself getting upset by quite trivial things ?</p>
 
