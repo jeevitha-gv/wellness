@@ -1,6 +1,6 @@
 <?php
- include "../php/common/config.php";
-    session_start();
+   session_start();
+    include "../php/common/config.php";
     $query = "SELECT count(status) as count FROM `wellness` WHERE status='created' ORDER BY id DESC";
     $result = mysqli_query($link,$query);
       $sql = "SELECT count(status) as count FROM `wellness` WHERE status='Reported' ORDER BY id DESC";
@@ -10,39 +10,37 @@
      $sql3 = "SELECT count(status) as count FROM `wellness` WHERE status='Reported' ORDER BY id DESC";
     $result3 = mysqli_query($link,$sql3);
 ?>
-
 <!DOCTYPE html>
 <html>
 
-    <head lang="en">
+  
+<!DOCTYPE html>
+<html>
+
+  <head lang="en">
+        <base href="/wellness/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Wellness-Dashboard</title>
-    <base href="/wellness/">
-     <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
-      <script src="https://code.highcharts.com/highcharts.js"></script>
-     <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-     <script src="https://code.highcharts.com/modules/treemap.js"></script>
-     <script src="https://code.highcharts.com/modules/data.js"></script>
-     <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css" />
-    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
-    <script type="text/javascript" src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>      
-    <link rel="stylesheet" type="text/css" href="assets/jquery-ui-1.11.4/jquery-ui.css" />    
-      <script src="https://cdn.anychart.com/releases/8.1.0/js/anychart-base.min.js"></script>
-      <script src="https://cdn.anychart.com/releases/8.1.0/js/anychart-ui.min.js"></script>
-      <script src="https://cdn.anychart.com/releases/8.1.0/js/anychart-exports.min.js"></script>
-      <script src="https://cdn.anychart.com/releases/8.1.0/js/anychart-heatmap.min.js"></script>
-      <script src="https://code.highcharts.com/highcharts.js"></script>
+    <title>wellness | Dashboard</title>
+
+
+ 
+   <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/maps/modules/map.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
+                   
+   <link href="assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="./assets/media/company-logos/speakup1.png" />
   </head>
    <style type="text/css">
    #shadow
@@ -189,7 +187,7 @@ width:100%;
  if($rows=mysqli_fetch_assoc($result)) {
   ?>
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
-          New Caller
+          New wellness
       </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
@@ -214,9 +212,9 @@ width:100%;
  if($rows=mysqli_fetch_assoc($result1)) {
   ?>
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
-          Being Consulted
+          Investigated wellness
       </span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
     }
@@ -240,7 +238,7 @@ width:100%;
  if($rows=mysqli_fetch_assoc($result3)) {
   ?>  
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
-          Recounsel
+          Reinvestigated Info
       </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
@@ -288,7 +286,7 @@ width:100%;
 <div class="kt-portlet__head kt-portlet__head--noborder">
 <div class="kt-portlet__head-label">
   <h3 class="kt-portlet__head-title">
-   Wellness Category
+   Wellness Heat
       </h3>
 </div>
 </div>
@@ -304,6 +302,35 @@ width:100%;
 </div>  
 </div>
 </div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+        <!--begin:: Widgets/Trends-->
+<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
+<div class="kt-portlet__head kt-portlet__head--noborder">
+<div class="kt-portlet__head-label">
+  <h3 class="kt-portlet__head-title">
+    Wellness Category
+      </h3>
+</div>
+</div>
+<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
+<div class="kt-widget4 kt-widget4--sticky">
+<div class="kt-widget4__chart">
+
+<div id="chartdiv2" class="display-none" style="display: block;height: 600px;width: 100%;"></div>
+
+<div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
+<div class="kt-widget4__item">
+</div>
+</div>  
+</div>
+</div>
+
 </div>
 </div>
 </div>
@@ -317,246 +344,260 @@ width:100%;
 </div>
 </body>
 </html>
-<?php
-include "sidemenu2.php";
- ?>
 
-      <script type="text/javascript">
+ <script type="text/javascript">
+      
+  Highcharts.chart('chartdiv1', {
 
- likelihood = ["","Rare","Unlikely","Creditble","Likely","Almostcertain"];
- impact = ["","Insignificant","Minor","Moderate","Major","Extreme/catastropic"];
- for(var i=0;i<data.length;i++){
-  if (data[i].heat <= 3) {
-    data[i].fill = '#84b761';
-    data[i].heat = '0';
-  }
-  else if(data[i].heat <= 7){
-     data[i].fill = '#ffb74d';
-     data[i].heat = '1';
-  }
-  else if (data[i].heat <= 14) {
-     data[i].fill = '#ef6c00';
-     data[i].heat = '2';
-  }
-  else if (data[i].heat <= 25) {
-     data[i].fill = '#d84315';
-     data[i].heat = '3';
-  }
-  data[i].x = likelihood[data[i].x];
-  data[i].y = impact[data[i].y];
-  
- } 
- data
+    chart: {
+            type: 'heatmap',
+            marginTop: 40,
+            marginBottom: 40,
 
-anychart.onDocumentReady(function () {
-        // Creates Heat Map
-        var chart = anychart.heatMap(data);
+},
 
-        // Sets chart settings and hover chart settings
-        chart.stroke('#fff');
-        chart.hovered()
-                .stroke('6 #fff')
-                .fill('#545f69')
-                .labels({'fontColor': '#fff'});
+        plotOptions: {
+            heatmap: {
+                allowPointSelect: true
+            }
+        },
 
-        // Sets selection mode for single selection
-        chart.interactivity().selectionMode('none');
+        title: {
+            text: ''
+        },
 
-        // Sets title
-        chart.title()
-                .enabled(true)
-                .text('')
-                .padding([0, 0, 20, 0]);
+        xAxis: {
+            categories: ['Extreme', 'High', 'Medium', 'Low', 'Negligible']
+        },
 
-        // variable with list of labels
-        var namesList = ['', '', '', ''];
-        // Sets adjust chart labels
-        chart.labels()
-                .enabled(true)
-                .minFontSize(14)
-                // Formats labels
-                .format(function () {
-                    // replace values with words for points heat
-                   if(this.x=="Creditble"&& this.y=="Insignificant" )
-                    return "3";
-                   if(this.x=="Creditble"&& this.y=="Moderate" )
-                    return "9"
-                   if(this.x=="Likely"&& this.y=="Major" )
-                    return "16";
-                   if(this.x=="Unlikely"&& this.y=="Moderate")
-                    return "6";
-                   if(this.x=="Rare"&& this.y=="Insignificant" )
-                    return "1";
-                   if(this.x=="Rare" && this.y=="Extreme/catastropic")
-                    return "5";
-                   if(this.x=="Almostcertain"&& this.y=="Extreme/catastropic" )
-                    return "25";
-                    
-                });
+        yAxis: {
+            categories: ['Remote', 'Unlikely', 'Possible', 'Likely', 'Propable'],
+            title: null
+        },
 
-        // Sets Axes
-        chart.yAxis().stroke(null);
-        // chart.yAxis().labels().padding([0, 15, 0, 0]);
-        chart.yAxis().ticks(false);
-        chart.xAxis().stroke(null);
-        chart.xAxis().ticks(false);
+        colorAxis: {
+            min: 0,
+            minColor: '#FFFFFF',
+            maxColor: Highcharts.getOptions().colors[0]
+        },
 
-        // Sets Tooltip
-        chart.tooltip().title().useHtml(true);
-        chart.tooltip().useHtml(true)
-                .titleFormat(function () {
-                    return '<b>' + namesList[this.heat] + '</b> Residual Risk';
-                })
-                .format(function () {
-                    return '<span style="color: #CECECE">Likelihood: </span>' + this.x + '<br/>' +
-                            '<span style="color: #CECECE">Impact: </span>' + this.y;
-                });
+        legend: {
+            align: 'right',
+            layout: 'vertical',
+            margin: 0,
+            verticalAlign: 'top',
+            y: 25,
+            symbolHeight: 520
+        },
 
-        // set container id for the chart
-        chart.container('chartdiv1');
-        // initiate chart drawing
-        chart.draw();
-    });
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> <br><b>' + this.point.value + '</b> People on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>';
+            }
+        },
+   
 
+
+        series: [{
+            name: '',
+            borderWidth: 1,
+            drilldown: true,
+            data: [{
+                x: 0,
+                y: 0,
+                value: '5',
+                color:'#83B8F8',
+             
+                drilldown: 'foo'
+            }, {
+                x: 0,
+                y: 1,
+                value: '2',
+                 color:'#D7E8FB'
+            }, {
+                x: 0,
+                y: 2,
+                value: '',
+                 color:'#83B8F8'
+               
+            }, {
+                x: 0,
+                y: 3,
+                value: '3',
+                 color:'#D7E8FB'
+               
+            }, {
+                x: 0,
+                y: 4,
+                value: '1',
+                 color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 1,
+                y: 0,
+                value: '' ,
+                color:'#D7E8FB'
+             
+            }, {
+                x: 1,
+                y: 1,
+                value: '2',
+                 color:'#83B8F8'
+            }, {
+                x: 1,
+                y: 2,
+                value: '',
+                 color:'#D7E8FB'
+            }, {
+                x: 1,
+                y: 3,
+                value: '',
+                 color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 1,
+                y: 4,
+                value:'4' ,
+                color:'#D7E8FB'
+            }, {
+                x: 2,
+                y: 0,
+                value: '1',
+                color:'#83B8F8'
+            }, {
+                x: 2,
+                y: 1,
+                value: '3',
+                color:'#D7E8FB'
+            }, {
+                x: 2,
+                y: 2,
+                value: '',
+                 color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 2,
+                y: 3,
+                value: '',
+                 color:'#D7E8FB'
+            }, {
+                x: 2,
+                y: 4,
+                value: '' ,
+                color:'#83B8F8'
+            }, {
+                x: 3,
+                y: 0,
+                value: '5',
+                color:'#D7E8FB'
+            }, {
+                x: 3,
+                y: 1,
+                value: '2',
+                 color:'#83B8F8'
+            }, {
+                x: 3,
+                y: 2,
+                value: '',
+                 color:'#D7E8FB',
+                drilldown: 'foo'
+            }, {
+                x: 3,
+                y: 3,
+                value: '3',
+                 color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 3,
+                y: 4,
+                value: '',
+                 color:'#D7E8FB'
+            }, {
+                x: 4,
+                y: 0,
+                value: '4',
+                color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 4,
+                y: 1,
+                value: '4',
+                color:'#D7E8FB'
+            }, {
+                x: 4,
+                y: 2,
+                value: '',
+                color:'#83B8F8',
+                drilldown: 'foo'
+            }, {
+                x: 4,
+                y: 3,
+                value: '5' ,
+                 color:'#D7E8FB'
+            }, {
+                x: 4,
+                y: 4,
+                value: '6',
+                color:'#83B8F8'
+            }],
+            dataLabels: {
+                enabled: true,
+                color: 'black',
+                style: {
+                    textShadow: 'none',
+                    HcTextStroke: null
+                }
+            }
+        }],
+
+        drilldown: {
+            series: []
+        }
+
+ 
+});
+   
 
       </script>
-<!-- <script>
 
-  $(document).ready( function() {
 
-            $.ajax({
-              type:"POST",
-              dataType: "json",
-              url: "wellness/json.php",
-              data:"",
-              success:category
-            });
-          });
-
-            function category(data){
-
-   //console.log(data);
-  var chartData=[];
-for(i=0;i<data.length;i++)
-{
-  if(data[i].category=="infection")
-     {
-    chartData.push({"name":data[i].createat,"y":parseInt(data[i].count),"value":data[i].category,"color":"#D98668"});
-      }
-       if(data[i].category=="Possibleinfection")
-     {
-    chartData.push({"name":data[i].createat,"y":parseInt(data[i].count),"value":data[i].category,"color":"#AEBFC3"});
-      }
-    }
-      console.log(chartData);
-
-Highcharts.chart('chartdiv1', {
-    chart: {
-        type: 'heatmap',
-        inverted: true
+  <script type="text/javascript">
+      Highcharts.chart('chartdiv2', {
+         chart: {
+        type: 'column',
+        options3d: {
+            enabled: true,
+            alpha: 15,
+            beta: 15,
+            depth: 100,
+            viewDistance: 25
+        }
     },
-
-    // data: {
-    //     csv: document.getElementById('csv').innerHTML
-    // },
-
     title: {
-        text: 'Highcharts heat map',
-        align: 'left'
+        text: null,
+        enabled: false
     },
-
-    subtitle: {
-        text: '',
-        align: 'left'
+    xAxis: {
+      categories: ["Anxiety", "Depression", "Stress", "SelfEsteem", "Interruptions", "Health and Safety"],
     },
-
-    // xAxis: {
-    //     tickPixelInterval: 50,
-    //     min: Date.UTC(2019, 5, 1),
-    //     max: Date.UTC(201, 5, 30)
-    // },
-
-    yAxis: {
-        title: {
-            text: null
-        },
-        labels: {
-            format: '{value}:'
-        },
-        minPadding: 0,
-        maxPadding: 0,
-        startOnTick: true,
-        endOnTick: true,
-        tickPositions: [1],
-        tickWidth: [1,2],
-        min: 0,
-        max: 80
+    plotOptions: {
+        series: {
+            depth: 10,
+            colorByPoint: true
+        }
     },
-
-    // colorAxis: {
-    //     stops: [
-    //         [0, '#3060cf'],
-    //         [1, '#fffbbc'],
-    //         [4, '#c4463a']
-    //     ],
-    //     min: -5
-    // },
-  tooltip: {
-            headerFormat: '<br/>',
-            pointFormat: '{point.name:%Y-%m-%d %H:%M} {point.y}:00: <b>{point.value} </b>'
-        },
-   "series": [{
-        name:'wellness',
-        colorByPoint: true,
-        data:chartData,
-        // one day
-     
+    series: [{
+        data: [5, 4, 7, 10, 3, 1],
+        name: 'Category',
+        showInLegend: false
     }]
 });
-}
-
- </script> -->
-
- <style type="text/css">
-   .highcharts-figure, .highcharts-data-table table {
-    min-width: 320px;
-    max-width: 800px;
-    margin: 1em auto;
-}
-.highcharts-title
-{
-  display: none;
-}
-
-.highcharts-data-table table {
-  font-family: Verdana, sans-serif;
-  border-collapse: collapse;
-  border: 1px solid #EBEBEB;
-  margin: 10px auto;
-  text-align: center;
-  width: 100%;
-  max-width: 100px;
-}
-.highcharts-data-table caption {
-    padding: 1em 0;
-    font-size: 1.2em;
-    color:red;
-}
-.highcharts-data-table th {
-  font-weight: 600;
-    padding: 0.5em;
-}
-.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
-    padding: 0.5em;
-}
-.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
-}
-.highcharts-data-table tr:hover {
-    background: red;
-}
-
- </style>
+    </script>
 
 
-<!-- Updates -->
+<?php 
+include "sidemenu.php";
+ ?>
+      </body>
+    
+</html>
