@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', 'Admin1234#@', 'database');
+$conn = new mysqli('localhost', 'root', 'password', 'database');
 $dist=$_POST['dist'];
 $udetails=$_POST['udetails'];
 $name=$_POST['name'];
