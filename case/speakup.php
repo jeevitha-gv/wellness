@@ -1526,3 +1526,5 @@ $("#details1").show();
               window.location="/wellness/case/dashboard.php";
             }
 </script>
+
+<!-- new -->
