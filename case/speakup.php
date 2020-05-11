@@ -443,9 +443,8 @@ First off, this is a secure consulting room and your identity is protected. We u
                   </div>
                   </div>
                 </div>
+<br>
 
-  <br>
-          
                 <div id="div0" name="Description" style="display: ;">
             <p style="font-size: 20px; font-weight: 500">Category :</p>
             <div>
@@ -514,9 +513,288 @@ First off, this is a secure consulting room and your identity is protected. We u
        <div class="col-md-4">
          
  <select id="general" name="general" class="form-control">
-   <option value="Indoor">Indoor</option>
-   <option value="Outdoor">Outdoor</option>
+   <option value="Indoor">--Indoor--</option>
+   <option value="">3D printing</option>
+<option value="Acrobatics">Acrobatics</option>
+<option value="Acting">Acting</option>
+<option value="Amateur radio">Amateur radio</option>
+<option value="Animation">Animation</option>
+<option value="Aquascaping">Aquascaping</option>
+<option value="Astrology">Astrology</option>
+<option value="Astronomy">Astronomy</option>
+<option value="Baking">Baking</option>
+<option value="Baton twirling">Baton twirling</option>
+<option value="Blogging">Blogging</option>
+<option value="Building">Building</option>
+<option value="Board/tabletop games">Board/tabletop games</option>
+<option value="Book discussion clubs">Book discussion clubs</option>
+<option value="Book restoration">Book restoration</option>
+<option value="Bowling">Bowling</option>
+<option value="Brazilian jiu-jitsu">Brazilian jiu-jitsu</option>
+<option value="Breadmaking">Breadmaking</option>
+<option value="Bullet journaling">Bullet journaling</option>
+<option value="Cabaret">Cabaret</option>
+<option value="Calligraphy">Calligraphy</option>
+<option value="Candle making">Candle making</option>
+<option value="Car fixing & building">Car fixing & building</option>
+<option value="Card games">Card games</option>
+<option value="Cheesemaking">Cheesemaking</option>
+<option value="Cleaning">Cleaning</option>
+<option value="Clothesmaking">Clothesmaking</option>
+<option value="Coffee roasting">Coffee roasting</option>
+<option value="Collecting">Collecting</option>
+<option value="Coloring">Coloring</option>
+<option value="Computer Programming">Computer Programming</option>
+<option value="Confectionery">Confectionery</option>
+<option value="Cooking">Cooking</option>
+<option value="Cosplaying">Cosplaying</option>
+<option value="Couponing">Couponing</option>
+<option value="Craft">Craft</option>
+<option value="Creative writing">Creative writing</option>
+<option value="Crocheting">Crocheting</option>
+<option value="Cross-stitch">Cross-stitch</option>
+<option value="Crossword puzzles">Crossword puzzles</option>
+<option value="Cryptography">Cryptography</option>
+<option value="Cue sports">Cue sports</option>
+<option value="Dance">Dance</option>
+<option value="Digital arts">Digital arts</option>
+<option value="Distro Hopping">Distro Hopping</option>
+<option value="DJing">DJing</option>
+<option value="Do it yourself">Do it yourself</option>
+<option value="Drama">Drama</option>
+<option value="Drawing">Drawing</option>
+<option value="Drink mixing">Drink mixing</option>
+<option value="Electronics">Electronics</option>
+<option value="Embroidery">Embroidery</option>
+<option value="Experimenting">Experimenting</option>
+<option value="Fantasy sports">Fantasy sports</option>
+<option value="Fashion">Fashion</option>
+<option value="Fashion design">Fashion design</option>
+<option value="Fishkeeping">Fishkeeping</option>
+<option value="Flower arranging">Flower arranging</option>
+<option value="Fly tying">Fly tying</option>
+<option value="Foreign language learning">Foreign language learning</option>
+<option value="Furniture building">Furniture building</option>
+<option value="Tabletop games and role-playing games">Tabletop games and role-playing games</option>
+<option value="Genealogy">Genealogy</option>
+<option value="Gingerbread house making">Gingerbread house making</option>
+<option value="Glassblowing">Glassblowing</option>
+<option value="Graphic design">Graphic design</option>
+<option value="Gunsmithing">Gunsmithing</option>
+<option value="Hacking">Hacking</option>
+<option value="Herp keeping">Herp keeping</option>
+<option value="Home improvement">Home improvement</option>
+<option value="Homebrewing">Homebrewing</option>
+<option value="Houseplant care">Houseplant care</option>
+<option value="Hula hooping">Hula hooping</option>
+<option value="Hydroponics">Hydroponics</option>
+<option value="Ice skating">Ice skating</option>
+
+<option value="Jewelry making">Jewelry making</option>
+<option value="Jigsaw puzzles">Jigsaw puzzles</option>
+<option value="Journaling">Journaling</option>
+<option value="Juggling">Juggling</option>
+<option value="Karaoke">Karaoke</option>
+<option value="Karate">Karate</option>
+<option value="Kendama">Kendama</option>
+
+<option value="Knife making">Knife making</option>
+<option value="Knitting">Knitting</option>
+<option value="Knot tying">Knot tying</option>
+<option value="Kombucha brewing">Kombucha brewing</option>
+<option value="Lace making">Lace making</option>
+<option value="Lapidary">Lapidary</option>
+<option value="Leather crafting">Leather crafting</option>
+
+<option value="Lego building">Lego building</option>
+<option value="Lock picking"></option>
+<option value="Listening to music">Listening to music</option>
+<option value="Listening to podcasts">Listening to podcasts</option>
+<option value="Machining">Machining</option>
+<option value="Macrame">Macrame</option>
+<option value="Magic">Magic</option>
+<option value="Makeup">Makeup</option>
+<option value="Metalworking">Metalworking</option>
+<option value="Model building">Model building</option>
+<option value="Model engineering">Model engineering</option>
+<option value="Nail art">Nail art</option>
+<option value="Needlepoint">Needlepoint</option>
+<option value="Origami">Origami</option>
+<option value="Painting">Painting</option>
+<option value="Palmistry">Palmistry</option>
+<option value="Pet adoption & fostering">Pet adoption & fostering</option>
+<option value="Philately">Philately</option>
+<option value="Photography">Photography</option>
+<option value="Practical jokes">Practical jokes</option>
+<option value="Pressed flower craft">Pressed flower craft</option>
+<option value="Playing musical instruments">Playing musical instruments</option>
+<option value="Poi">Poi</option>
+<option value="Pottery">Pottery</option>
+<option value="Powerlifting">Powerlifting</option>
+<option value="Puzzles">Puzzles</option>
+<option value="Quilling">Quilling</option>
+<option value="Quilting">Quilting</option>
+<option value="Quizzes">Quizzes</option>
+<option value="Rail transport modeling">Rail transport modeling</option>
+<option value="Rapping">Rapping</option>
+<option value="Reading">Reading</option>
+<option value="Refinishing">Refinishing</option>
+<option value="Reiki">Reiki</option>
+<option value="Robot combat">Robot combat</option>
+<option value="Rubik's Cube">Rubik's Cube</option>
+<option value="Scrapbooking">Scrapbooking</option>
+<option value="Sculpting">Sculpting</option>
+<option value="Sewing">Sewing</option>
+<option value="Shoemaking">Shoemaking</option>
+<option value="Singing">Singing</option>
+<option value="Sketching">Sketching</option>
+<option value="Soapmaking">Soapmaking</option>
+<option value="Social media">Social media</option>
+<option value="Stand-up comedy">Stand-up comedy</option>
+<option value="Stamp collecting">Stamp collecting</option>
+<option value="Table tennis">Table tennis</option>
+<option value="Tarot">Tarot</option>
+<option value="Taxidermy">Taxidermy</option>
+<option value="Thrifting">Thrifting</option>
+<option value="Video editing">Video editing</option>
+<option value="Video game developing">Video game developing</option>
+<option value="Video gaming">Video gaming</option>
+<option value="Watching movies">Watching movies</option>
+<option value="Watching television">Watching television</option>
+<option value="Weaving">Weaving</option>
+<option value="Weight training">Weight training</option>
+<option value="Welding">Welding</option>
+<option value="Whittling">Whittling</option>
+<option value="Wikipedia editing">Wikipedia editing</option>
+<option value="Winemaking">Winemaking</option>
+<option value="Wood carving">Wood carving</option>
+<option value="Woodworking">Woodworking</option>
+<option value="Worldbuilding">Worldbuilding</option>
+<option value="Writing">Writing</option>
+<option value="Word searches">Word searches</option>
+<option value="Yo-yoing">Yo-yoing</option>
+<option value="Yoga">Yoga</option>
+
  </select>
+
+
+       </div>
+
+            <div class="col-md-4">
+         
+ <select id="general" name="general" class="form-control">
+   <option value="Outdoor">--Outdoor--</option>
+   <option value="Air sports">Air sports</option>
+<option value="Airsoft">Airsoft</option>
+<option value="Archery">Archery</option>
+<option value="Astronomy">Astronomy</option>
+<option value="Backpacking">Backpacking</option>
+<option value="BASE jumping">BASE jumping</option>
+<option value="Baseball">Baseball</option>
+<option value="Basketball">Basketball</option>
+<option value="Beekeeping">Beekeeping</option>
+<option value="Birdwatching">Birdwatching</option>
+<option value="Blacksmithing">Blacksmithing</option>
+<option value="BMX">BMX</option>
+<option value="Board sports">Board sports</option>
+<option value="Bodybuilding">Bodybuilding</option>
+<option value="Bonsai">Bonsai</option>
+<option value="Butterfly watching">Butterfly watching</option>
+<option value="Camping">Camping</option>
+<option value="Canoeing">Canoeing</option>
+<option value="Canyoning">Canyoning</option>
+<option value="Caving">Caving</option>
+<option value="Composting">Composting</option>
+<option value="Cycling">Cycling</option>
+<option value="Dowsing">Dowsing</option>
+<option value="Driving">Driving</option>
+<option value="Fishing">Fishing</option>
+<option value="Flag football">Flag football</option>
+<option value="Flower growing">Flower growing</option>
+<option value="Flying">Flying</option>
+<option value="Flying disc">Flying disc</option>
+<option value="Foraging">Foraging</option>
+<option value="Fossicking">Fossicking</option>
+<option value="Freestyle football">Freestyle football</option>
+<option value="Gardening">Gardening</option>
+<option value="Geocaching">Geocaching</option>
+<option value="Ghost hunting">Ghost hunting</option>
+<option value="Gold prospecting">Gold prospecting</option>
+<option value="Graffiti">Graffiti</option>
+<option value="Handball">Handball</option>
+<option value="Herbalism">Herbalism</option>
+<option value="Herping">Herping</option>
+<option value="High-power rocketry">High-power rocketry</option>
+<option value="Hiking">Hiking</option>
+<option value="Hobby horsing">Hobby horsing</option>
+<option value="Hooping">Hooping</option>
+<option value="Horseback riding">Horseback riding</option>
+<option value="Hunting">Hunting</option>
+<option value="Inline skating">Inline skating</option>
+<option value="Jogging">Jogging</option>
+<option value="Kayaking">Kayaking</option>
+<option value="Kite flying">Kite flying</option>
+<option value="Kitesurfing">Kitesurfing</option>
+<option value="Lacrosse">Lacrosse</option>
+<option value="LARPing">LARPing</option>
+<option value="Letterboxing">Letterboxing</option>
+<option value="Longboarding">Longboarding</option>
+<option value="Martial arts">Martial arts</option>
+<option value="Metal detecting">Metal detecting</option>
+<option value="Meteorology">Meteorology</option>
+<option value="Motor sports">Motor sports</option>
+<option value="Mountain biking">Mountain biking</option>
+<option value="Mountaineering">Mountaineering</option>
+<option value="Mushroom hunting/mycology">Mushroom hunting/mycology</option>
+<option value="Netball">Netball</option>
+<option value="Nordic skating">Nordic skating</option>
+<option value="Orienteering">Orienteering</option>
+<option value="Paintball">Paintball</option>
+<option value="Parkour">Parkour</option>
+<option value="Photography">Photography</option>
+<option value="Podcast hosting">Podcast hosting</option>
+<option value="Polo">Polo</option>
+<option value="Rafting">Rafting</option>
+<option value="Rappelling">Rappelling</option>
+<option value="Road biking">Road biking</option>
+<option value="Rock climbing">Rock climbing</option>
+<option value="Roller skating">Roller skating</option>
+<option value="Rugby">Rugby</option>
+<option value="Running">Running</option>
+<option value="Sailing">Sailing</option>
+<option value="Sand art">Sand art</option>
+<option value="Scouting">Scouting</option>
+<option value="Scuba diving">Scuba diving</option>
+<option value="Sculling or rowing">Sculling or rowing</option>
+<option value="Shooting">Shooting</option>
+<option value="Shopping">Shopping</option>
+<option value="Skateboarding">Skateboarding</option>
+<option value="Skiing">Skiing</option>
+<option value="Skimboarding">Skimboarding</option>
+<option value="Skydiving">Skydiving</option>
+<option value="Slacklining">Slacklining</option>
+<option value="Snowboarding">Snowboarding</option>
+<option value="Soccer">Soccer</option>
+<option value="Stone skipping">Stone skipping</option>
+<option value="Sun bathing">Sun bathing</option>
+<option value="Surfing">Surfing</option>
+<option value="Survivalism">Survivalism</option>
+<option value="Swimming">Swimming</option>
+<option value="Taekwondo">Taekwondo</option>
+<option value="Tai chi">Tai chi</option>
+<option value="Topiary">Topiary</option>
+<option value="Thru-hiking">Thru-hiking</option>
+<option value="Travel">Travel</option>
+<option value="Urban exploration">Urban exploration</option>
+<option value="Vacation">Vacation</option>
+<option value="Vegetable farming">Vegetable farming</option>
+<option value="Vehicle restoration">Vehicle restoration</option>
+<option value="Walking">Walking</option>
+<option value="Water sports">Water sports</option>
+
+ </select>
+
+ 
        </div>
      </div>
   <div class="form-group row ">
@@ -526,20 +804,185 @@ First off, this is a secure consulting room and your identity is protected. We u
              <div class="col-md-4">
          
  <select id="collection" name="collection" class="form-control">
-   <option value="Indoor">Indoor</option>
-   <option value="Outdoor">Outdoor</option>
+   <option value="Indoor">--Indoor--</option>
+   <option value="Action figure">Action figure</option>
+<option value="Antiquing">Antiquing</option>
+<option value="Art collecting">Art collecting</option>
+<option value="Book collecting">Book collecting</option>
+<option value="Button collecting">Button collecting</option>
+<option value="Cartophily (card collecting)">Cartophily (card collecting)</option>
+<option value="Coin collecting">Coin collecting</option>
+<option value="Comic book collecting">Comic book collecting</option>
+<option value="Deltiology (postcard collecting)">Deltiology (postcard collecting)</option>
+<option value="Die-cast toy">Die-cast toy</option>
+<option value="Dolls">Dolls</option>
+<option value="Element collecting">Element collecting</option>
+<option value="Ephemera collecting">Ephemera collecting</option>
+<option value="Fusilately (phonecard collecting)">Fusilately (phonecard collecting)</option>
+<option value="Knife collecting">Knife collecting</option>
+<option value="Lotology (lottery ticket collecting)">Lotology (lottery ticket collecting)</option>
+<option value="Movie and movie memorabilia collecting">Movie and movie memorabilia collecting</option>
+<option value="Perfume">Perfume</option>
+<option value="Phillumeny">Phillumeny</option>
+<option value="Pin (lapel)">Pin (lapel)</option>
+<option value="Rail transport modelling">Rail transport modelling</option>
+<option value="Record collecting">Record collecting</option>
+<option value="Rock tumbling">Rock tumbling</option>
+<option value="Scutelliphily">Scutelliphily</option>
+<option value="Shoes">Shoes</option>
+<option value="Sports memorabilia">Sports memorabilia</option>
+<option value="Stamp collecting">Stamp collecting</option>
+<option value="Stuffed toy collecting">Stuffed toy collecting</option>
+<option value="Tea bag collecting">Tea bag collecting</option>
+<option value="Ticket collecting">Ticket collecting</option>
+<option value="Toys">Toys</option>
+<option value="Video game collecting">Video game collecting</option>
+<option value="Vintage cars">Vintage cars</option>
+<option value="Vintage clothing">Vintage clothing</option>
+<option value="Vinyl Records">Vinyl Records</option>
+
  </select>
        </div>
+
+       <div class="col-md-4">
+         
+ <select id="collection" name="collection" class="form-control">
+   <option value="Outdoor">--Outdoor--</option>
+   <option value="Antiquities">Antiquities</option>
+<option value="Auto audiophilia">Auto audiophilia</option>
+<option value="Flower collecting and pressing">Flower collecting and pressing</option>
+<option value="Fossil hunting">Fossil hunting</option>
+<option value="Insect collecting">Insect collecting</option>
+<option value="Magnet fishing">Magnet fishing</option>
+<option value="Metal detecting">Metal detecting</option>
+<option value="Mineral collecting">Mineral collecting</option>
+<option value="Rock balancing">Rock balancing</option>
+<option value="Sea glass collecting">Sea glass collecting</option>
+<option value="Seashell collecting">Seashell collecting</option>
+<option value="Stone collecting">Stone collecting</option>
+
+ </select>
+       </div>
+
+       
  </div>
    <div class="form-group row ">
             <label class="kt-radio kt-radio--solid kt-radio--info" style="color: black;font-size: 14px;background-color: ">Competitive
        </label>&nbsp; &nbsp; 
                     <div class="col-md-4">
  <select id="competitive" name="competitive" class="form-control">
-   <option value="Indoor">Indoor</option>
-   <option value="Outdoor">Outdoor</option>
+   <option value="Indoor">--Indoor--</option>
+   <option value="Animal fancy">Animal fancy</option>
+<option value="Axe throwing">Axe throwing</option>
+<option value="Badminton">Badminton</option>
+<option value="Baton twirling">Baton twirling</option>
+<option value="Beauty pageants">Beauty pageants</option>
+<option value="Billiards">Billiards</option>
+<option value="Bowling">Bowling</option>
+<option value="Boxing">Boxing</option>
+<option value="Bridge">Bridge</option>
+<option value="Checkers">Checkers</option>
+<option value="Cheerleading">Cheerleading</option>
+<option value="Chess">Chess</option>
+<option value="Color guard">Color guard</option>
+<option value="Cribbage">Cribbage</option>
+<option value="Curling">Curling</option>
+<option value="Dancing">Dancing</option>
+<option value="Darts">Darts</option>
+<option value="Debate">Debate</option>
+<option value="Eating">Eating</option>
+<option value="Esports">Esports</option>
+<option value="Fencing">Fencing</option>
+<option value="Go">Go</option>
+<option value="Gymnastics">Gymnastics</option>
+<option value="Ice hockey">Ice hockey</option>
+<option value="Ice skating">Ice skating</option>
+<option value="Judo">Judo</option>
+<option value="Jujitsu">Jujitsu</option>
+<option value="Kabaddi">Kabaddi</option>
+<option value="Laser tag">Laser tag</option>
+<option value="Longboarding">Longboarding</option>
+<option value="Mahjong">Mahjong</option>
+<option value="Marbles">Marbles</option>
+<option value="Martial arts">Martial arts</option>
+<option value="Model United Nations">Model United Nations</option>
+<option value="Poker">Poker</option>
+<option value="Shogi">Shogi</option>
+<option value="Slot car racing">Slot car racing</option>
+<option value="Speedcubing">Speedcubing</option>
+<option value="Sport stacking">Sport stacking</option>
+<option value="Table football">Table football</option>
+<option value="Table tennis">Table tennis</option>
+<option value="Volleyball">Volleyball</option>
+<option value="Weightlifting">Weightlifting</option>
+<option value="Wrestling">Wrestling</option>
+
+   
  </select>
        </div>
+
+       <div class="col-md-4">
+ <select id="competitive" name="competitive" class="form-control">
+   <option value="Outdoor">--Outdoor--</option>
+   <option value="Airsoft">Airsoft</option>
+<option value="American football">American football</option>
+<option value="Archery">Archery</option>
+<option value="Association football">Association football</option>
+<option value="Australian rules football">Australian rules football</option>
+<option value="Auto racing">Auto racing</option>
+<option value="Baseball">Baseball</option>
+<option value="Beach volleyball">Beach volleyball</option>
+<option value="Breakdancing">Breakdancing</option>
+<option value="Climbing">Climbing</option>
+<option value="Cricket">Cricket</option>
+<option value="Cycling">Cycling</option>
+<option value="Disc golf">Disc golf</option>
+<option value="Dog sport">Dog sport</option>
+<option value="Equestrianism">Equestrianism</option>
+<option value="Exhibition drill">Exhibition drill</option>
+<option value="Field hockey">Field hockey</option>
+<option value="Figure skating">Figure skating</option>
+<option value="Fishing">Fishing</option>
+<option value="Footbag">Footbag</option>
+<option value="Frisbee (V+https://en.wikipedia.org/wiki/Frisbee)">Frisbee (V+https://en.wikipedia.org/wiki/Frisbee)</option>
+<option value="Golfing">Golfing</option>
+<option value="Handball">Handball</option>
+<option value="Horseback riding">Horseback riding</option>
+<option value="Jukskei">Jukskei</option>
+<option value="Kart racing">Kart racing</option>
+<option value="Knife throwing">Knife throwing</option>
+<option value="Lacrosse">Lacrosse</option>
+<option value="Longboarding">Longboarding</option>
+<option value="Marching band">Marching band</option>
+<option value="Model aircraft">Model aircraft</option>
+<option value="Racquetball">Racquetball</option>
+<option value="Radio-controlled car racing">Radio-controlled car racing</option>
+<option value="Roller derby">Roller derby</option>
+<option value="Rugby league football">Rugby league football</option>
+<option value="Sculling or rowing">Sculling or rowing</option>
+<option value="Shooting sport">Shooting sport</option>
+<option value="Skateboarding">Skateboarding</option>
+<option value="Softball">Softball</option>
+<option value="Speed skating">Speed skating</option>
+<option value="Squash">Squash</option>
+<option value="Surfing">Surfing</option>
+<option value="Swimming">Swimming</option>
+<option value="Table tennis">Table tennis</option>
+<option value="Tennis">Tennis</option>
+<option value="Tennis polo">Tennis polo</option>
+<option value="Tether car">Tether car</option>
+<option value="Tour skating">Tour skating</option>
+<option value="Trapshooting">Trapshooting</option>
+<option value="Triathlon">Triathlon</option>
+<option value="Ultimate frisbee">Ultimate frisbee</option>
+<option value="Volleyball">Volleyball</option>
+<option value="Water polo">Water polo</option>
+
+ </select>
+       </div>
+
+       
+
      </div>
   <div class="form-group row ">
 
@@ -548,10 +991,39 @@ First off, this is a secure consulting room and your identity is protected. We u
        </label> &nbsp; &nbsp;
              <div class="col-md-4">
  <select id="observation" name="observation" class="form-control">
-   <option value="Indoor">Indoor</option>
-   <option value="Outdoor">Outdoor</option>
+   <option value="Indoor">--Indoor--</option>
+  <option value="Fishkeeping">Fishkeeping</option>
+<option value="Learning">Learning</option>
+<option value="Meditation">Meditation</option>
+<option value="Microscopy">Microscopy</option>
+<option value="Reading">Reading</option>
+<option value="Shortwave listening">Shortwave listening</option>
+<option value="Audiophile">Audiophile</option>
+<option value="Videophilia">Videophilia</option>
+
  </select>
        </div>
+
+       <div class="col-md-4">
+ <select id="observation" name="observation" class="form-control">
+   <option value="Outdoor">Outdoor</option>
+   <option value="Aircraft spotting">Aircraft spotting</option>
+<option value="Amateur astronomy">Amateur astronomy</option>
+<option value="Birdwatching">Birdwatching</option>
+<option value="Bus spotting">Bus spotting</option>
+<option value="Geocaching">Geocaching</option>
+<option value="Gongoozling">Gongoozling</option>
+<option value="Herping">Herping</option>
+<option value="Hiking/backpacking">Hiking/backpacking</option>
+<option value="Meteorology">Meteorology</option>
+<option value="Photography">Photography</option>
+<option value="Satellite watching">Satellite watching</option>
+<option value="Trainspotting">Trainspotting</option>
+
+ </select>
+       </div>
+
+       
         
 
 
@@ -1528,4 +2000,4 @@ $("#details1").show();
             }
 </script>
 
-<!-- new hobbies 3-->
+<!-- new hobbies list added-->
