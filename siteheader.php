@@ -343,7 +343,7 @@ span.psw {
     <ul class="nav nav-tabs  nav-tabs-line " role="tablist" style="margin-top:6%;">
     
       <li class="nav-item" id="speak">
-        <a class="nav-link active" href="case/speakup.php" role="tab" style="font-size: 1.2rem;border-bottom:none;">SPEAK</a>
+        <a class="nav-link active" href="case/speakup.php" role="tab" style="font-size: 1.2rem;border-bottom:none;">GET HELP</a>
       </li>
       <li class="nav-item" id="hchat">
         <a class="nav-link" href="https://telegra.ph/Wellness-Speak-04-17-3" role="tab" style="font-size: 1.2rem;border-bottom:none;">CHAT</a>

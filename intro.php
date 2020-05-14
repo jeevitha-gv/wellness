@@ -374,11 +374,11 @@ width:100%;
   <div class="kt-portlet__body" id="banner">
    <div class="banner-container">
 <div class="heading">
-Speakup.Get help - It gets better.
+Speakup we are here to listen.
 </div>
 <div class="sub-heading">
-No matter what's troubling, get the support needed, right here, right now
-</div><br>
+ Feeling lonely and
+isolated, a volunteer is looking forward to talk now.</div><br>
 <div class="home-actions">
 <span class="chat button"><a href="case/speakup.php" style="color: white;">GET STARTED NOW</a></span>
 <span class="appointment button"><a href="https://telegra.ph/Wellness-Speak-04-17-3" style="color: white;">CHAT NOW</a></span>
@@ -440,7 +440,7 @@ How it Works
 <div class="content-container">
 <div class="details-container">
 <span>1</span>
-<span class="details">Self Assess your Emotional Wellness</span>
+<span class="details">Tell us about yourself</span>
 </div>
 <div class="desc">
 If something bothering you feel free to connect with us. We will help you irrespective of any situation.
@@ -457,7 +457,7 @@ We will stay together and fight against it.
 <div class="content-container">
 <div class="details-container">
 <span>2</span>
-<span class="details">Chat with Experts </span>
+<span class="details">Chat with volunteers</span>
 </div>
 <div class="desc">
 Never hesitate to tell us about your symptoms. Share your symptoms and get expert view about how
@@ -474,7 +474,7 @@ you should proceed
 <div class="content-container">
 <div class="details-container">
 <span>3</span>
-<span class="details">Get realtime Information</span>
+<span class="details">Feel connected Learn</span>
 </div>
 <div class="desc">
 The maps and district information provides latest data on Covid19 infections, deaths, most authenticated by government.
@@ -487,13 +487,13 @@ The maps and district information provides latest data on Covid19 infections, de
 </div>
 
 
-<div class="" style="margin-top: -9%;" id="shadow">
+<!-- <div class="" style="margin-top: -9%;" id="shadow">
   <div class="kt-portlet" >
   <div class="kt-portlet__body  kt-portlet__body--fit">
     <div class="row row-no-padding row-col-separator-xl">
-      <div class="col-xl-4 col-md-4 col-sm-4" style="height: 160px;">
+      <div class="col-xl-4 col-md-4 col-sm-4" style="height: 160px;"> -->
         <!--begin:: Widgets/Daily Sales-->
-<div class="kt-portlet kt-portlet--height-fluid">
+<!-- <div class="kt-portlet kt-portlet--height-fluid">
   <div class="kt-widget14">
     <div class="kt-widget14__header kt-margin-b-30">
       <div class="row">
@@ -509,16 +509,16 @@ The maps and district information provides latest data on Covid19 infections, de
       </span>
     </div>
   </div>
-    </div>
+    </div> -->
    <!--  <div class="kt-widget14__chart">
       <canvas  id="kt_chart_daily_sales"></canvas>
     </div> -->
-  </div>
+ <!--  </div>
 </div>  
-</div>
-       <div class="col-xl-4 col-md-4 col-sm-4" style="height: 160px;">
+</div> -->
+       <!-- <div class="col-xl-4 col-md-4 col-sm-4" style="height: 160px;"> -->
         <!--begin:: Widgets/Profit Share-->
-<div class="kt-portlet kt-portlet--height-fluid">
+<!-- <div class="kt-portlet kt-portlet--height-fluid">
   <div class="kt-widget14">
      <div class="kt-widget14__header kt-margin-b-30">
     <div class="row">
@@ -537,11 +537,11 @@ The maps and district information provides latest data on Covid19 infections, de
   </div>
 </div>
   </div>
-</div>    
-<!--end:: Widgets/Profit Share-->     </div>
-      <div class="col-xl-4 col-md-4 col-sm-4" style="height: 160px;">
+</div>  -->   
+<!-- end:: Widgets/Profit Share     </div> -->
+      <!-- <div class="col-xl-4 col-md-4 col-sm-4" style="height: 160px;"> -->
         <!--begin:: Widgets/Revenue Change-->
-<div class="kt-portlet kt-portlet--height-fluid">
+<!-- <div class="kt-portlet kt-portlet--height-fluid">
   <div class="kt-widget14">
     <div class="kt-widget14__header kt-margin-b-30">
       <div class="row">
@@ -566,8 +566,8 @@ The maps and district information provides latest data on Covid19 infections, de
     </div>
   </div>
 </div>
-</div>
-
+</div> -->
+<!-- 
 
 <br>
 <br>
@@ -575,9 +575,9 @@ The maps and district information provides latest data on Covid19 infections, de
                
 
 
+ -->
 
-
-<div>
+<!-- <div> -->
 <div class="kt-grid__item kt-grid__item--fluid">
     <div class="kt-portlet">
   <div class="kt-portlet__body kt-portlet__body--fit">
