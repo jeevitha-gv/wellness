@@ -313,7 +313,7 @@ First off, this is a secure consulting room and your identity is protected. We u
                   <div class="col-md-12">
 
                 <div name="Description" style="display: ;">
-            <p style="font-size: 20px; font-weight: 500">District :</p>
+            <p style="font-size: 20px; font-weight: 500"> Country- State-County :</p>
             <div>
                 <div id="searchbox2">
            
@@ -412,7 +412,7 @@ First off, this is a secure consulting room and your identity is protected. We u
 
 
 <br>
-  <div class="form-group">
+<!--   <div class="form-group">
 
                   <p style="font-size: 20px; font-weight: 500"> How many people living in your home?</p>
                   <div class="row">
@@ -442,7 +442,7 @@ First off, this is a secure consulting room and your identity is protected. We u
                     <label for="someone_else">Five</label><span></span></label>
                   </div>
                   </div>
-                </div>
+                </div> -->
 <br>
 
                 <div id="div0" name="Description" style="display: ;">
