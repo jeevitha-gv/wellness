@@ -1,8 +1,7 @@
-
 <?php
  include 'php/common/config.php';
  session_start();
-  if(isset($_POST['login']))
+  if(isset($_POST['admin']))
   {
    $email=$_POST['email'];
     $password=$_POST['password'];
@@ -336,7 +335,6 @@ width:100%;
   /*#head1:hover
   {
     background-color: #034ea2;
-
   }
    #head2:hover
   {
@@ -374,10 +372,10 @@ width:100%;
   <div class="kt-portlet__body" id="banner">
    <div class="banner-container">
 <div class="heading">
-Speakup.Get help - It gets better.
+Speakup.We are here to listen.
 </div>
 <div class="sub-heading">
-No matter what's troubling, get the support needed, right here, right now
+Feeling Lonely and isolated, a volunteer is waiting to talk to you right now.
 </div><br>
 <div class="home-actions">
 <span class="chat button"><a href="case/speakup.php" style="color: white;">GET STARTED NOW</a></span>
@@ -404,7 +402,7 @@ PRIVATE &amp; CONFIDENTIAL
   <i class="fa fa-theater-masks" style="font-size: 50px; color: #afd135;"></i>
  </div>
 <div class="text">
-ANONYMOUS DISCUSSIONS
+OEN HEART DISCUSSION
 </div>
 </div>
 <div class="col l3 s6">
@@ -412,15 +410,7 @@ ANONYMOUS DISCUSSIONS
 <i class="fa fa-stopwatch" style="font-size: 50px; color: #034ea2;"></i>
 </div>
 <div class="text">
-24X7 ROUND THE CLOCK SUPPORT
-</div>
-</div>
-<div class="col l3 s6">
-<div class="img-container">
-<i class="fa fa-desktop" style="font-size: 50px; color: #afd135;"></i>
-</div>
-<div class="text">ASSURED SUPPORT FROM GOVERNMENT
-
+GLOBAL FRIENDLY SUPPORT
 </div>
 </div>
 </div>
@@ -435,7 +425,7 @@ How it Works
 <div class="col-md-4">
 <div class="help-container">
 <div class="img-container">
-<img src="png/15861585380318471134359992370317.jpg" height="100%" width="100%;"  style="border:2px solid #D9D7D6;border-radius: 25px;">
+<img src="png/images 1.jpg" height="100%" width="100%;"  style="border:2px solid #D9D7D6;border-radius: 25px;">
 </div>
 <div class="content-container">
 <div class="details-container">
@@ -443,8 +433,7 @@ How it Works
 <span class="details">Self Assess your Emotional Wellness</span>
 </div>
 <div class="desc">
-If something bothering you feel free to connect with us. We will help you irrespective of any situation.
-We will stay together and fight against it.
+If something is bothering you, Feel free to connect with us. We will here to help you. 
 </div>
 </div>
 </div>
@@ -457,11 +446,10 @@ We will stay together and fight against it.
 <div class="content-container">
 <div class="details-container">
 <span>2</span>
-<span class="details">Chat with Experts </span>
+<span class="details">Chat with a Friend </span>
 </div>
 <div class="desc">
-Never hesitate to tell us about your symptoms. Share your symptoms and get expert view about how
-you should proceed
+Never hesitate to tell us about how you feel.We will connect you with someone who cares about you.
 </div>
 </div>
 </div>
@@ -469,15 +457,15 @@ you should proceed
 <div class="col-md-4">
 <div class="help-container">
 <div class="img-container">
- <img src="png/15861585623313355370649561358679.jpg" height="100%" width="100%;" style="border:2px solid #D9D7D6;border-radius: 25px;">
+ <img src="png/images.jpg" height="100%" width="100%;" style="border:2px solid #D9D7D6;border-radius: 25px;">
 </div>
 <div class="content-container">
 <div class="details-container">
 <span>3</span>
-<span class="details">Get realtime Information</span>
+<span class="details">Feel Connected and Learn</span>
 </div>
 <div class="desc">
-The maps and district information provides latest data on Covid19 infections, deaths, most authenticated by government.
+Weekly get togethers with Friendsand Share tools to navigate through the unexpected.
 </div>
 </div>
 </div>
@@ -956,7 +944,6 @@ The maps and district information provides latest data on Covid19 infections, de
 </script>
 <!-- <script type="text/javascript">
          $(document).ready( function() {
-
             $.ajax({
               type:"POST",
               dataType: "json",
@@ -965,33 +952,24 @@ The maps and district information provides latest data on Covid19 infections, de
               success:category
             });
           });
-
-
          function category(data){
-
   Highcharts.chart('chartdiv1', {
-
     chart: {
             type: 'heatmap',
             marginTop: 40,
             marginBottom: 40,
-
 },
-
         plotOptions: {
             heatmap: {
                 allowPointSelect: true
             }
         },
-
         title: {
             text: ''
         },
-
         xAxis: {
             categories: ['Extreme', 'High', 'Medium', 'Low', 'Negligible']
         },
-
         yAxis: {
             categories: ['Remote', 'Unlikely', 'Possible', 'Likely', 'Propable'],
             title: null
@@ -1002,7 +980,6 @@ The maps and district information provides latest data on Covid19 infections, de
             minColor: '#FFFFFF',
             maxColor: Highcharts.getOptions().colors[0]
         },
-
         legend: {
             align: 'right',
             layout: 'vertical',
@@ -1011,7 +988,6 @@ The maps and district information provides latest data on Covid19 infections, de
             y: 25,
             symbolHeight: 520
         },
-
    
         tooltip: {
             formatter: function () {
@@ -1026,8 +1002,6 @@ The maps and district information provides latest data on Covid19 infections, de
             }
         },
    
-
-
         series: [{
             name: '',
             borderWidth: 1,
@@ -1180,16 +1154,13 @@ The maps and district information provides latest data on Covid19 infections, de
                 }
             }
         }],
-
         drilldown: {
             series: []
         }
-
  
 });
    
 }
-
       </script> -->
 
       </body>
